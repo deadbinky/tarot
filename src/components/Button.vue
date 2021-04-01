@@ -19,6 +19,7 @@ export default {
   },
   methods: {
     changeSpread () {
+      eventBus.$emit('fireCloseDescription')
       eventBus.$emit('fireChangeSpread')
       this.$store.commit('changeSpread', this.$vnode.key)
     }

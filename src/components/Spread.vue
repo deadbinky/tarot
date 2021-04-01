@@ -1,12 +1,13 @@
 <template>
   <div class='spread'
-    :class='spreadtype'
+    :class='spreadType'
     >
     <Card
-      v-for='card in this.deck.slice(0, this.limit)'
+      v-for='(card, index) in this.deck.slice(0, this.limit)'
       :name='cards[card].name'
       :image='cards[card].image'
-      :key='cards[card].name' />
+      :position='index'
+      :key='card' />
       <p>{{ this.spread.name }}</p>
    </div>
 </template>
@@ -38,16 +39,16 @@
      }
    },
    computed: {
-    ...mapState(['spreadtype']),
+    ...mapState(['spreadType']),
     limit () {
       const s = this.spreads
-      const t = this.spreadtype
+      const t = this.spreadType
       const limit = s[t].limit
       console.log(limit)
       return limit
     },
     spread () {
-      return this.spreads[this.spreadtype]
+      return this.spreads[this.spreadType]
     }
   },
   methods: {
@@ -61,3 +62,9 @@
   }
  }
  </script>
+
+<style scoped lang='sass'>
+  .card
+    margin-left: 5px
+    margin-right: 5px
+</style>

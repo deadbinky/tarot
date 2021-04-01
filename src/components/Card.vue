@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import eventBus from '@/assets/js/eventBus'
 
 export default {
   name: 'Card',
@@ -33,6 +34,10 @@ export default {
     image: {
       type: String,
       required: true
+    },
+    position: {
+      type: Number,
+      required: true
     }
   },
   methods: {
@@ -42,10 +47,13 @@ export default {
         return
       }
 
-
-      //do the gatey thing
-      //if this card is not flipped, flip it
-      //else reveal description
+      const p = {
+        key: this.$vnode.key,
+        direction: 'upright',
+        position: this.position
+      }
+  
+      eventBus.$emit('fireDescribeCard', p)
     }
   }
 }

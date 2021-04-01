@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    spreadtype: 'celticcross'
+    spreadType: 'celticcross'
   },
   mutations: {
-    changeSpread (state, spreadtype) {
-      state.spreadtype = spreadtype
+    changeSpread (state, spreadType) {
+      state.spreadType = spreadType
     }
   },
   actions: {

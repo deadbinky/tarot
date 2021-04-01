@@ -3,7 +3,7 @@ export default {
     name: 'The Fool',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Fool is about new beginnings and embracing possibilities with an open heart and open arms and a fresh spirit',
       reversed: ''
     }
   },
@@ -11,7 +11,7 @@ export default {
     name: 'The Magician',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Magician is a divine manifestor, capable of creating whatever they put their mind to.  They are a conduit to the universe',
       reversed: ''
     }
   },
@@ -19,7 +19,7 @@ export default {
     name: 'The High Priestess',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The High Priestess represents our intuition and internal knowledge.  They are the gateway between the physical and psychic realms',
       reversed: ''
     }
   },
@@ -27,7 +27,7 @@ export default {
     name: 'The Empress',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Empress can represent motherhood, or the birth of something less physical such as an idea, project, or opportunity',
       reversed: ''
     }
   },
@@ -35,7 +35,7 @@ export default {
     name: 'The Emperor',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Emperor represents the father of the deck.  The Emperor is all about rules and guidance, and sometimes gives off an overbearing and controlling energy',
       reversed: ''
     }
   },
@@ -43,7 +43,7 @@ export default {
     name: 'The Hierophant',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Hierophant is the Revealer of Sacred Things, and like the High Priestess, urges you to look inward to your inner teacher.  The Hierophant reminds us that there is much more to existence than just what meets the eye.  The Hierophant can also represent traditional, religious, or social conformity',
       reversed: ''
     }
   },
@@ -51,7 +51,7 @@ export default {
     name: 'The Lovers',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Lovers is a card not only of love, but also of choice.  It can represent the duality present in all of us, or the partnership and connection of another being',
       reversed: ''
     }
   },
@@ -59,7 +59,7 @@ export default {
     name: 'The Chariot',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Chariot is a card of victory and moving forward.  If you\'re contemplating a new direction or path in life, the Chariot urges you forward',
       reversed: ''
     }
   },
@@ -67,7 +67,7 @@ export default {
     name: 'Strength',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'Strength is about internal fortitude',
       reversed: ''
     }
   },
@@ -75,7 +75,7 @@ export default {
     name: 'The Hermit',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Hermit is about self-reflection and pulling back to observe your life and get things in order',
       reversed: ''
     }
   },
@@ -83,7 +83,7 @@ export default {
     name: 'The Wheel of Fortune',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The Wheel of Fortune reminds us that it is always spinning and when it seems like we are in a bad place, the wheel will always spin back out to a good place again',
       reversed: ''
     }
   },
@@ -235,7 +235,7 @@ export default {
     name: 'Eight of Wands',
     image: 'cards/',
     description: {
-      upright: '',
+      upright: 'The eight of wands is about motion.  This can be indicating a lot of projects moving quickly, or upcoming travel, or decisions being made',
       reversed: ''
     }
   },
