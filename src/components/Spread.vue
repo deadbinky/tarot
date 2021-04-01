@@ -4,10 +4,9 @@
     >
     <Card
       v-for='card in this.deck.slice(0, this.limit)'
-      :class='cards[card].name'
       :name='cards[card].name'
-      :key='cards[card].name'
-      />
+      :image='cards[card].image'
+      :key='cards[card].name' />
       <p>{{ this.spread.name }}</p>
    </div>
 </template>

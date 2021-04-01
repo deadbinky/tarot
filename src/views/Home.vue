@@ -4,7 +4,6 @@
       v-for='(spread, index) in spreads'
       :name='spread.name'
       :key='index'
-      :id='index'
       />
     <Spread/>
   </div>

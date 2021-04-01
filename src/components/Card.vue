@@ -1,11 +1,14 @@
 <template>
   <div class='card'
-    :class='name'
-    >
+    :class='{ flipped: flipped }'
+    @click='reveal'>
     <div class='inner'>
       <div class='front'>
       card:
       {{ name }}
+      <br/>
+      image:
+      {{ image }}
       </div>
       <div class='back'>
       </div>
@@ -14,19 +17,35 @@
 </template>
 
 <script>
-import cards from '@/assets/js/cards'
 
 export default {
   name: 'Card',
   data () {
     return {
-      cards: cards
+      flipped: false
     }
   },
   props: {
     name: {
       type: String,
       required: true
+    },
+    image: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    reveal () {
+      if (!this.flipped) {
+        this.flipped = true
+        return
+      }
+
+
+      //do the gatey thing
+      //if this card is not flipped, flip it
+      //else reveal description
     }
   }
 }
@@ -39,7 +58,7 @@ export default {
     perspective: 1000px
     width: 150px
 
-    &:hover .inner
+    &.flipped .inner
       transform: rotateY(180deg)
 
     .inner

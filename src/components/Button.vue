@@ -15,10 +15,6 @@ export default {
     name: {
       type: String,
       required: true
-    },
-    id: {
-      type: String,
-      required: true
     }
   },
   methods: {
