@@ -5,7 +5,7 @@
       @click='close'>x</div>
     <h2>{{ position.name }}</h2>
     <p>{{ position.description }}</p>
-    <img :src='{ image }'/>
+    <img :src='{ img }'/>
     <h3>{{ name }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -23,7 +23,7 @@ export default {
     return {
       cards: cards,
       name: '',
-      image: '',
+      img: '',
       description: '',
       position: {},
       open: false,
@@ -49,9 +49,8 @@ export default {
       const spread = this.spreads[this.spreadType]
       const pos = spread.positions[p.position]
 
-      console.log(pos)
       this.name = card.name
-      this.image = card.image
+      this.image = require ('@/assets/images/cards/' + card.image)
       this.description = card.description[p.direction]
       this.position = {
         name: pos.name,
@@ -71,6 +70,8 @@ export default {
     color: #fff
     opacity: 0
     text-align: center
+    top: 100%
+    transition: all .5s ease-out
 
     &.open
       bottom: 0
@@ -80,6 +81,7 @@ export default {
       position: absolute
       right: 0
       top: 0
+      transition: all .5s ease-in
       width: 100%
 
   .close

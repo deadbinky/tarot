@@ -4,11 +4,7 @@
     @click='reveal'>
     <div class='inner'>
       <div class='front'>
-      card:
-      {{ name }}
-      <br/>
-      image:
-      {{ image }}
+        <img width="100%" :src= img />
       </div>
       <div class='back'>
       </div>
@@ -24,6 +20,11 @@ export default {
   data () {
     return {
       flipped: false
+    }
+  },
+  computed: {
+    img () {
+      return require('@/assets/images/cards/' + this.image)
     }
   },
   props: {
@@ -52,7 +53,7 @@ export default {
         direction: 'upright',
         position: this.position
       }
-  
+
       eventBus.$emit('fireDescribeCard', p)
     }
   }
@@ -62,7 +63,7 @@ export default {
 <style scoped lang='sass'>
   .card
     display: inline-block
-    height: 200px
+    height: 250px
     perspective: 1000px
     width: 150px
 
