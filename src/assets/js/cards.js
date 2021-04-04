@@ -9,7 +9,7 @@ export default {
   },
   themagician: {
     name: 'The Magician',
-    image: '10_Of_Swords.jpg',
+    image: '1_-_The_Magician.jpg',
     description: {
       upright: 'The Magician is a divine manifestor, capable of creating whatever they put their mind to.  They are a conduit to the universe',
       reversed: ''
@@ -17,7 +17,7 @@ export default {
   },
   thehighpriestess: {
     name: 'The High Priestess',
-    image: '10_Of_Swords.jpg',
+    image: '2_-_The_High_Priestess.jpg',
     description: {
       upright: 'The High Priestess represents our intuition and internal knowledge.  They are the gateway between the physical and psychic realms',
       reversed: ''
@@ -25,7 +25,7 @@ export default {
   },
   theempress: {
     name: 'The Empress',
-    image: '10_Of_Swords.jpg',
+    image: '3_-_The_Empress.jpg',
     description: {
       upright: 'The Empress can represent motherhood, or the birth of something less physical such as an idea, project, or opportunity',
       reversed: ''
@@ -33,7 +33,7 @@ export default {
   },
   theemperor: {
     name: 'The Emperor',
-    image: '10_Of_Swords.jpg',
+    image: '4_-_The_Emperor.jpg',
     description: {
       upright: 'The Emperor represents the father of the deck.  The Emperor is all about rules and guidance, and sometimes gives off an overbearing and controlling energy',
       reversed: ''
@@ -49,7 +49,7 @@ export default {
   },
   thelovers: {
     name: 'The Lovers',
-    image: '10_Of_Swords.jpg',
+    image: '6_-_The_Lovers.jpg',
     description: {
       upright: 'The Lovers is a card not only of love, but also of choice.  It can represent the duality present in all of us, or the partnership and connection of another being',
       reversed: ''
@@ -57,7 +57,7 @@ export default {
   },
   thechariot: {
     name: 'The Chariot',
-    image: '10_Of_Swords.jpg',
+    image: '7_-_The_Chariot.jpg',
     description: {
       upright: 'The Chariot is a card of victory and moving forward.  If you\'re contemplating a new direction or path in life, the Chariot urges you forward',
       reversed: ''
@@ -73,7 +73,7 @@ export default {
   },
   thehermit: {
     name: 'The Hermit',
-    image: '10_Of_Swords.jpg',
+    image: '9_-_The_Hermit.jpg',
     description: {
       upright: 'The Hermit is about self-reflection and pulling back to observe your life and get things in order',
       reversed: ''
@@ -81,7 +81,7 @@ export default {
   },
   thewheeloffortune: {
     name: 'The Wheel of Fortune',
-    image: '10_Of_Swords.jpg',
+    image: '10_-_Wheel_Of_Fortune.jpg',
     description: {
       upright: 'The Wheel of Fortune reminds us that it is always spinning and when it seems like we are in a bad place, the wheel will always spin back out to a good place again',
       reversed: ''
@@ -105,7 +105,7 @@ export default {
   },
   death: {
     name: 'Death',
-    image: '10_Of_Swords.jpg',
+    image: '13_-_Death.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -113,7 +113,7 @@ export default {
   },
   temperance: {
     name: 'Temperance',
-    image: '10_Of_Swords.jpg',
+    image: '14_-_Temperance.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -129,7 +129,7 @@ export default {
   },
   thetower: {
     name: 'The Tower',
-    image: '10_Of_Swords.jpg',
+    image: '16_-_The_Tower.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -153,7 +153,7 @@ export default {
   },
   theSun: {
     name: 'The Sun',
-    image: '10_Of_Swords.jpg',
+    image: '19_-_The_Sun.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -169,7 +169,7 @@ export default {
   },
   theworld: {
     name: 'The World',
-    image: '10_Of_Swords.jpg',
+    image: '21_-_The_World.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -185,7 +185,7 @@ export default {
   },
   wandstwo: {
     name: 'Two of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '2_Of_Wands.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -209,7 +209,7 @@ export default {
   },
   wandsfive: {
     name: 'Five of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '5_Of_Wands.jpg',
     description: {
       upright: 'This card can signify conflict or sparring with other people, but it could also signify the courage to compete against others',
       reversed: ''
@@ -217,7 +217,7 @@ export default {
   },
   wandssix: {
     name: 'Six of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '6_Of_Wands.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -225,7 +225,7 @@ export default {
   },
   wandsseven: {
     name: 'Seven of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '7_Of_Wands.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -233,7 +233,7 @@ export default {
   },
   wandseight: {
     name: 'Eight of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '8_Of_Wands.jpg',
     description: {
       upright: 'The eight of wands is about motion.  This can be indicating a lot of projects moving quickly, or upcoming travel, or decisions being made',
       reversed: ''
@@ -241,7 +241,7 @@ export default {
   },
   wandsnine: {
     name: 'Nine of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '9_Of_Wands.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -249,7 +249,7 @@ export default {
   },
   wandsten: {
     name: 'Ten of Wands',
-    image: '10_Of_Swords.jpg',
+    image: '10_Of_Wands.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -257,39 +257,39 @@ export default {
   },
   wandspage: {
     name: 'Page of Wands',
-    image: '10_Of_Swords.jpg',
+    image: 'Page_Of_Wands.jpg',
     description: {
-      upright: '',
+      upright: 'The Page of Wands wants to explore and seek out exciting adventures',
       reversed: ''
     }
   },
   wandsknight: {
     name: 'Knight of Wands',
-    image: '10_Of_Swords.jpg',
+    image: 'Knight_Of_Wands.jpg',
     description: {
-      upright: '',
+      upright: 'The Knight of Wands is fearless and action oriented',
       reversed: ''
     }
   },
   wandsqueen: {
     name: 'Queen of Wands',
-    image: '10_Of_Swords.jpg',
+    image: 'Queen_Of_Wands.jpg',
     description: {
-      upright: '',
+      upright: 'The Queen of Wands is an inspiring, determind, courgeous and joyful figure.  If there\'s and objective at hand, the Queen will accomplish it no matter what the odds',
       reversed: ''
     }
   },
   wandsking: {
     name: 'King of Wands',
-    image: '10_Of_Swords.jpg',
+    image: 'King_Of_Wands.jpg',
     description: {
-      upright: '',
+      upright: 'The King of Wands leads with their gut.  They are brave and they don\'t believe in the no-win scenario.  They are creative thinkers',
       reversed: ''
     }
   },
   cupsace: {
     name: 'Ace of Cups',
-    image: '10_Of_Swords.jpg',
+    image: 'Ace_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -299,7 +299,7 @@ export default {
     name: 'Two of Cups',
     image: '2_Of_Cups.jpg',
     description: {
-      upright: '',
+      upright: 'The two of cups is about communication and duality.  If this card is pulled in reference to another person, you may need to open the lines of communication with them.  If it is pulled in reference to yourself, you may be feeling duality about an issue or need to balance something in your life',
       reversed: ''
     }
   },
@@ -313,7 +313,7 @@ export default {
   },
   cupsfour: {
     name: 'Four of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '4_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -321,7 +321,7 @@ export default {
   },
   cupsfive: {
     name: 'Five of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '5_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -329,7 +329,7 @@ export default {
   },
   cupssix: {
     name: 'Six of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '6_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -337,7 +337,7 @@ export default {
   },
   cupsseven: {
     name: 'Seven of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '7_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -345,7 +345,7 @@ export default {
   },
   cupseight: {
     name: 'Eight of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '8_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -353,7 +353,7 @@ export default {
   },
   cupsnine: {
     name: 'Nine of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '9_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -361,7 +361,7 @@ export default {
   },
   cupsten: {
     name: 'Ten of Cups',
-    image: '10_Of_Swords.jpg',
+    image: '10_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -369,7 +369,7 @@ export default {
   },
   cupspage: {
     name: 'Page of Cups',
-    image: '10_Of_Swords.jpg',
+    image: 'Page_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -377,7 +377,7 @@ export default {
   },
   cupsknight: {
     name: 'Knight of Cups',
-    image: '10_Of_Swords.jpg',
+    image: 'Knight_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -385,7 +385,7 @@ export default {
   },
   cupsqueen: {
     name: 'Queen of Cups',
-    image: '10_Of_Swords.jpg',
+    image: 'Queen_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -393,7 +393,7 @@ export default {
   },
   cupsking: {
     name: 'King of Cups',
-    image: '10_Of_Swords.jpg',
+    image: 'King_Of_Cups.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -401,7 +401,7 @@ export default {
   },
   swordsace: {
     name: 'Ace of Swords',
-    image: '10_Of_Swords.jpg',
+    image: 'Ace_Of_Swords.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -481,7 +481,7 @@ export default {
   },
   swordspage: {
     name: 'Page of Swords',
-    image: '10_Of_Swords.jpg',
+    image: 'Page_Of_Swords.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -489,7 +489,7 @@ export default {
   },
   swordsknight: {
     name: 'Knight of Swords',
-    image: '10_Of_Swords.jpg',
+    image: 'Knight_Of_Swords.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -497,7 +497,7 @@ export default {
   },
   swordsqueen: {
     name: 'Queen of Swords',
-    image: '10_Of_Swords.jpg',
+    image: 'Queen_Of_Swords.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -505,7 +505,7 @@ export default {
   },
   swordsking: {
     name: 'King of Swords',
-    image: '10_Of_Swords.jpg',
+    image: 'King_Of_Swords.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -513,7 +513,7 @@ export default {
   },
   pentaclesace: {
     name: 'Ace of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: 'Ace_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -521,7 +521,7 @@ export default {
   },
   pentaclestwo: {
     name: 'Two of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '2_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -529,7 +529,7 @@ export default {
   },
   pentaclesthree: {
     name: 'Three of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '3_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -537,7 +537,7 @@ export default {
   },
   pentaclesfour: {
     name: 'Four of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '4_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -545,7 +545,7 @@ export default {
   },
   pentaclesfive: {
     name: 'Five of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '5_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -553,7 +553,7 @@ export default {
   },
   pentaclessix: {
     name: 'Six of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '6_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -561,7 +561,7 @@ export default {
   },
   pentaclesseven: {
     name: 'Seven of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '7_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -569,7 +569,7 @@ export default {
   },
   pentacleseight: {
     name: 'Eight of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '8_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -577,7 +577,7 @@ export default {
   },
   pentaclesnine: {
     name: 'Nine of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '9_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -585,7 +585,7 @@ export default {
   },
   pentaclesten: {
     name: 'Ten of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: '10_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -593,7 +593,7 @@ export default {
   },
   pentaclespage: {
     name: 'Page of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: 'Page_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -601,7 +601,7 @@ export default {
   },
   pentaclesknight: {
     name: 'Knight of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: 'Knight_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -609,7 +609,7 @@ export default {
   },
   pentaclesqueen: {
     name: 'Queen of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: 'Queen_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
@@ -617,7 +617,7 @@ export default {
   },
   pentaclesking: {
     name: 'King of Pentacles',
-    image: '10_Of_Swords.jpg',
+    image: 'King_Of_Pentacles.jpg',
     description: {
       upright: '',
       reversed: ''
