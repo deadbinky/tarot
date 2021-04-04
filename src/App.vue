@@ -1,26 +1,16 @@
 <template>
-  <div id="app"
-    :class='{ overlay:describeOn }'>
+  <div id="app">
     <Home/>
   </div>
 </template>
 
 <script>
 import Home from './views/Home.vue'
-import eventBus from '@/assets/js/eventBus'
 
 export default {
   name: 'App',
   components: {
     Home
-  },
-  created () {
-    eventBus.$on('fireDescribeCard', () => {
-      this.describeOn = true
-    }),
-    eventBus.$on('fireCloseDescription', () => {
-      this.describeOn = false
-    })
   }
 }
 </script>
@@ -35,6 +25,4 @@ export default {
     margin: 0
     padding: 0
 
-    &.overlay
-      overflow: hidden
 </style>

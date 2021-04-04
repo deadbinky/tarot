@@ -4,7 +4,7 @@
     @click='reveal'>
     <div class='inner'>
       <div class='front'>
-        <img width="100%" :src= img />
+        <img width="100%" :src='img' />
       </div>
       <div class='back'>
       </div>
@@ -13,13 +13,15 @@
 </template>
 
 <script>
+
 import eventBus from '@/assets/js/eventBus'
 
 export default {
   name: 'Card',
   data () {
     return {
-      flipped: false
+      flipped: false,
+      direction: 'upright'
     }
   },
   computed: {
@@ -49,12 +51,11 @@ export default {
       }
 
       const p = {
+        cardkey: this.$vnode.key,
+        name: this.name,
         image: this.image,
-        key: this.$vnode.key,
-        direction: 'upright',
         position: this.position
       }
-
       eventBus.$emit('fireDescribeCard', p)
     }
   }

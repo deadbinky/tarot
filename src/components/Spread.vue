@@ -8,21 +8,24 @@
       :image='cards[card].image'
       :position='index'
       :key='card' />
+      <Description />
    </div>
 </template>
 
  <script>
  import Card from '@/components/Card'
+ import Description from '@/components/Description'
  import cards from '@/assets/js/cards'
  import spreads from '@/assets/js/spreads'
- import { mapState } from 'vuex'
  import eventBus from '@/assets/js/eventBus'
+ import { mapState } from 'vuex'
 
 
  export default {
    name: 'Spread',
    components: {
-     Card
+     Card,
+     Description
    },
    created () {
      const c = Object.keys(this.cards)
@@ -35,7 +38,9 @@
      return {
        deck: [],
        cards: cards,
-       spreads: spreads
+       spreads: spreads,
+       descriptionImg: '',
+       descriptionName: ''
      }
    },
    computed: {

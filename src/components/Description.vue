@@ -5,7 +5,7 @@
       @click='close'>x</div>
     <h2>{{ position.name }}</h2>
     <p>{{ position.description }}</p>
-    <img width='100%' :src='{ img }'/>
+    <img width='100%' :src='img'/>
     <h3>{{ name }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -23,16 +23,11 @@ export default {
     return {
       cards: cards,
       name: '',
+      img: '',
       description: '',
       position: {},
       open: false,
       spreads: spreads
-    }
-  },
-  props: {
-    img: {
-      type: String,
-      required: true
     }
   },
   created () {
@@ -50,7 +45,7 @@ export default {
   methods: {
     describeCard (p) {
       this.open = true
-      const card = this.cards[p.key]
+      const card = this.cards[p.cardkey]
       const spread = this.spreads[this.spreadType]
       const pos = spread.positions[p.position]
       this.name = card.name
@@ -59,8 +54,7 @@ export default {
         name: pos.name,
         description: pos.description
       }
-      //this.image = card.image
-      //this.img = '~@/assets/images/cards/' + this.image
+      this.img = require('@/assets/images/cards/' + card.image)
     },
     close () {
       this.open = false
