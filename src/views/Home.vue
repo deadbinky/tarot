@@ -6,7 +6,7 @@
       :key='index'
       />
     <Spread />
-    <Description />
+    <Description :img='describeImg'/>
   </div>
 </template>
 
@@ -16,6 +16,7 @@ import Button from '@/components/Button'
 import Spread from '@/components/Spread'
 import Description from '@/components/Description'
 import spreads from '@/assets/js/spreads'
+import eventBus from '@/assets/js/eventBus'
 
 export default {
   name: 'Home',
@@ -26,8 +27,14 @@ export default {
   },
   data () {
     return {
-      spreads: spreads
+      spreads: spreads,
+      describeImg: ''
     }
+  },
+  created () {
+    eventBus.$on('fireDescribeCard', (p) => {
+      this.describeImg = p.image
+    })
   }
 }
 </script>
@@ -36,4 +43,6 @@ export default {
   .home
     height: 100%
     position: relative
+    text-align: center
     width: 100%
+</style>

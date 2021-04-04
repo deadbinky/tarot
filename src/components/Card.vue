@@ -49,6 +49,7 @@ export default {
       }
 
       const p = {
+        image: this.image,
         key: this.$vnode.key,
         direction: 'upright',
         position: this.position
@@ -62,8 +63,8 @@ export default {
 
 <style scoped lang='sass'>
   .card
-    display: inline-block
     height: 250px
+    margin: auto
     perspective: 1000px
     width: 150px
 
@@ -79,6 +80,8 @@ export default {
 
       .front,
       .back
+        border: 1px solid #ccc
+        border-radius: 5px
         backface-visibility: hidden
         height: 100%
         position: absolute
