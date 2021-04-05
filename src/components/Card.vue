@@ -118,14 +118,6 @@ export default {
     opacity: .5
     perspective: 1000px
     position: relative
-    width: 23vw
-
-    &:before
-    content: '?'
-    display: inline-block
-    padding-top: 150%
-    display: block
-
 
     &.click
       opacity: 1
@@ -137,31 +129,31 @@ export default {
 
 
     .inner
-      height: 100%
       bottom: 0
       left: 0
       position: absolute
       right: 0
       top: 0
+      z-index: 1
       transform-style: preserve-3d
       transition: none
-      width: 100%
 
       .front,
       .back
         border: 1px solid #ccc
-        border-radius: 5px
+        border-radius: 10px
+        box-shadow: 0 0 10px RGB(0 0 0 / 15%)
         backface-visibility: hidden
         height: 100%
+        overflow: hidden
         position: absolute
         width: 100%
 
       .front
-        background: #f00
+        background: #fff
         transform: rotateY(180deg)
 
       .back
-        background-color: #000
         background-image: url(~@/assets/images/cards/Card_back.jpg)
         background-position: center center
         background-repeat: no-repeat

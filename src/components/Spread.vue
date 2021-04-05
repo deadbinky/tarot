@@ -89,32 +89,49 @@
     display: grid
     height: 100vh
     justify-content: center
-    margin: 1em auto 0
+    padding-top: 1.15em
     position: relative
     width: 100vw
 
     .card
       margin: 5px auto
 
+      &:before
+      content: '?'
+      display: block
+
     &.pastpresentfuture
       grid-template-columns: repeat(3, 1fr);
+
+      .card
+        width: 30vw
+
+        &:before
+        padding-top: 150%
 
     &.celticcross
       grid-template-columns: repeat(4, 1fr);
       //grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
 
       .card
+        width: 23vw
+
+        &:before
+        padding-top: 153.5%
+
         &:nth-child(1)
           grid-column-start: 2
           grid-column-end: 3
           grid-row-start: 2
           grid-row-end: 3
+          top: 15vh
 
         &:nth-child(2)
           grid-column-start: 2
           grid-column-end: 3
           grid-row-start: 2
           grid-row-end: 3
+          top: 20vh
           transform: rotate(-90deg)
 
         &:nth-child(3)
@@ -122,24 +139,28 @@
           grid-column-end: 2
           grid-row-start: 2
           grid-row-end: 3
+          top: 15vh
 
         &:nth-child(4)
           grid-column-start: 3
           grid-column-end: 4
           grid-row-start: 2
           grid-row-end: 3
+          top: 15vh
 
         &:nth-child(5)
           grid-column-start: 2
           grid-column-end: 3
           grid-row-start: 1
           grid-row-end: 2
+          top: 15vh
 
         &:nth-child(6)
           grid-column-start: 2
           grid-column-end: 3
           grid-row-start: 3
           grid-row-end: 4
+          top: 15vh
 
         &:nth-child(7)
           grid-column-start: 4
