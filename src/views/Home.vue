@@ -1,20 +1,23 @@
 <template>
   <div class='home'>
-    <NewReading />
+    <Menu />
     <Spread />
+    <Description />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Spread from '@/components/Spread'
-import NewReading from '@/components/NewReading'
+import Menu from '@/components/Menu'
+import Description from '@/components/Description'
 
 export default {
   name: 'Home',
   components: {
-    NewReading,
-    Spread
+    Menu,
+    Spread,
+    Description
   }
 }
 </script>
@@ -22,6 +25,7 @@ export default {
 <style scoped lang='sass'>
   .home
     height: 100vh
+    max-width: 100%
     position: relative
     text-align: center
     width: 100vw

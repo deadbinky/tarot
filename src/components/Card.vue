@@ -125,7 +125,7 @@ export default {
 
     &.flipped .inner
       transform: rotateY(180deg)
-      transition: transform 0.8s
+      transition: transform 0.8s 
 
 
     .inner
