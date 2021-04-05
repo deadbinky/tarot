@@ -137,6 +137,9 @@ export default {
     &.reversed
       transform: rotate(180deg)
 
+      &.flipped .inner
+        transform: rotateY(-180deg)
+
     .inner
       bottom: 0
       left: 0

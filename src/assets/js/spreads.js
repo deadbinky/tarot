@@ -1,6 +1,6 @@
 export default {
   single: {
-    name: 'Single Card',
+    name: 'Card Of The Day',
     limit: 1,
     positions: [
       {
