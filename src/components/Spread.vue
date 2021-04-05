@@ -105,10 +105,10 @@
       grid-template-columns: repeat(3, 1fr);
 
     &.celticcross
-      //grid-template-columns: repeat(4, 1fr);
+      height: auto
       grid-template: repeat(4, 1fr) / repeat(4, 1fr)
       .card
-        width: 23vw
+        width: 20vw
 
         &:nth-child(1)
           grid-column: 2/3

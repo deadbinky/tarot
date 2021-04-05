@@ -57,10 +57,14 @@ export default {
       const spread = this.spreads[this.spreadType]
       const pos = spread.positions[p.position]
       const dir = p.reversed
-      let direction = this.getDirection(dir)
+
 
       this.name = card.name
+
+      let direction = this.getDirection(dir)
+
       this.description = card.description[direction]
+
       this.position = {
         name: pos.name,
         description: pos.description
@@ -72,9 +76,11 @@ export default {
       console.log(dir)
       this.reversed = false
       let direction = 'upright'
+
       if (dir) {
         this.reversed = true
         direction = 'reversed'
+        this.name += ' (Reversed)'
       }
       console.log(this.reversed,direction)
       return direction
@@ -126,6 +132,7 @@ export default {
       grid-area: header
       grid-column: 1
       grid-row: 2
+      margin-bottom: 10px
       padding-bottom: 10px
       text-align: center
       width: 100%
@@ -212,5 +219,6 @@ export default {
     @media (min-width: 640px)
       .description
         height: 80vh
+        min-height: auto
         width: 80vw
 </style>
