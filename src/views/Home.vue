@@ -32,6 +32,7 @@ export default {
 <style scoped lang='sass'>
   .home
     height: 100%
+    overflow:hidden
     position: relative
     text-align: center
     width: 100%

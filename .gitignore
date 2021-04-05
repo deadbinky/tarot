@@ -2,6 +2,7 @@
 node_modules
 /dist
 
+bugs
 
 # local env files
 .env.local

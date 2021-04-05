@@ -1,11 +1,11 @@
 <template>
   <div class='description'
     :class='{open: open}'>
+    <img width='100%' :src='img'/>
     <div class='close'
       @click='close'>x</div>
     <h2>{{ position.name }}</h2>
     <p>{{ position.description }}</p>
-    <img width='100%' :src='img'/>
     <h3>{{ name }}</h3>
     <p>{{ description }}</p>
   </div>
@@ -71,10 +71,11 @@ export default {
     height: 0
     left: 0
     opacity: 0
+    overflow: hidden
     right: 0
-    text-align: center
-    top: 100%
-    transition: all .5s ease-out
+    text-align: left
+    top: 9999px
+    transition: top 0.5s ease-out, opacity 0.5s ease-in;
     width: 100%
 
     &.open
@@ -84,12 +85,17 @@ export default {
       padding: 40px 20px
       position: absolute
       top: 0
-      transition: all .5s ease-in
+      transition: top 0.5s ease-out, opacity 0.5s ease-in;
 
       img
-        max-width: 250px
+        float: left
+        margin-right: 10px
+        max-width: 200px
 
   .close
     cursor: pointer
     font-size: 50px
+    position: absolute
+    right: 1em
+    top: 1em
 </style>

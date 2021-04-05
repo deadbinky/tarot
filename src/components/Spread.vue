@@ -3,11 +3,12 @@
     :class='spreadType'
     >
     <Card
-      v-for='(card, index) in this.deck.slice(0, this.limit)'
+      v-for='(card, index) in this.deck.slice(this.split, this.endSplit)'
       :name='cards[card].name'
       :image='cards[card].image'
       :position='index'
-      :key='card' />
+      :cardkey='card'
+      :key='`${componentKey}-${index}`' />
       <Description />
    </div>
 </template>
@@ -28,19 +29,22 @@
      Description
    },
    created () {
-     const c = Object.keys(this.cards)
+    this.c = Object.keys(this.cards)
      eventBus.$on('fireChangeSpread', () => {
-       this.shuffle(c)
-     }),
-     this.shuffle(c)
+       this.shuffle(this.c)
+     })
+   },
+   mounted () {
+     this.shuffle(this.c)
    },
    data () {
      return {
+       c: [],
        deck: [],
        cards: cards,
        spreads: spreads,
-       descriptionImg: '',
-       descriptionName: ''
+       clickable: true,
+       componentKey: 0
      }
    },
    computed: {
@@ -52,16 +56,28 @@
       console.log(limit)
       return limit
     },
+    split () {
+      const max = 78 - this.limit
+      const split = Math.floor(Math.random() * max)
+      return split
+    },
+    endSplit () {
+      const endSplit = this.split + this.limit
+      return endSplit
+    },
     spread () {
       return this.spreads[this.spreadType]
     }
   },
   methods: {
-    shuffle (c) {
-      console.log('shuffle')
-      this.deck =  c.sort(function(){
+    shuffle () {
+      this.deck =  this.c.sort(function(){
         return 0.5 - Math.random()
       })
+      this.forceRerender()
+    },
+    forceRerender() {
+      this.componentKey += 1;
     }
   }
  }
@@ -70,26 +86,27 @@
 <style scoped lang='sass'>
   .spread
     align-items: center
-    display: flex
+    display: grid
+    height: 100vh
     justify-content: center
     margin: auto
+    overflow: hidden
+    max-width: 800px
     position: relative
+    width: 100vw
+
+    .card
+      margin: 5px auto
+
+    &.pastpresentfuture
+      grid-template-columns: repeat(3, 1fr);
 
     &.celticcross
-      display: grid
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
-      max-width: 800px
+      grid-template-columns: repeat(4, 1fr);
+      //grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
 
       .card
-        margin: 5px auto
-        opacity: .5
-
-        &.flipped + .card
-          opacity: 1
-          transition: opacity ease-in .5s
-
         &:nth-child(1)
-          opacity: 1
           grid-column-start: 2
           grid-column-end: 3
           grid-row-start: 2
