@@ -47,7 +47,7 @@ export default {
     reversed () {
       let reversed = false
       let d = Math.random();
-      if (d < 0.3) {
+      if (d < .3) {
         reversed = true
       }
       return reversed

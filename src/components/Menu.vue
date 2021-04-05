@@ -55,7 +55,7 @@ export default {
     max-width: 100%
     position: absolute
     width: 100vw
-    z-index: 5
+    z-index: 10
 
     .inner
       height: 0
@@ -88,7 +88,7 @@ export default {
 
       &:before
         content: '☰'
-        color: $brown
+        color: #fff
         font-size: 30px
 
     h2

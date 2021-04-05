@@ -105,8 +105,8 @@
       grid-template-columns: repeat(3, 1fr);
 
     &.celticcross
-      grid-template-columns: repeat(4, 1fr);
-
+      //grid-template-columns: repeat(4, 1fr);
+      grid-template: repeat(4, 1fr) / repeat(4, 1fr)
       .card
         width: 23vw
 
@@ -121,6 +121,8 @@
           top: 23vh
           transform: rotate(-90deg)
           z-index: 2
+          &.reversed
+            transform: rotate(90deg)
 
         &:nth-child(3)
           grid-column: 1/2

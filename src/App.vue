@@ -20,7 +20,8 @@ export default {
   @import 'assets/sass/_colours'
 
   html, body
-    height: 100%
+    min-height: 100vh
+    height: 100%!important
     width: 100%
 
   body
@@ -49,13 +50,5 @@ export default {
 </style>
 
 <style scoped lang='sass'>
-  #app
-    font-family: 'Comfortaa'
-    -webkit-font-smoothing: antialiased
-    -moz-osx-font-smoothing: grayscale
-    height: 100%
-    margin: 0
-    padding: 0
-    width: 100%
 
 </style>

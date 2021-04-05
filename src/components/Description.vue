@@ -94,22 +94,16 @@ export default {
     align-items: top
     background: $brown
     box-sizing: border-box
-    bottom: 0
     color: #fff
     display: grid
-    grid-template-rows: fit-content(40%)
-    height: 100vh
     left: 0
     margin: auto
-    max-width: 100%
     opacity: 0
-    overflow: hidden
     padding: 5vw
     position: absolute
     right: 0
     text-align: left
     top: 0
-    width: 100vw
     z-index: -1
     transition: opacity 0.5s ease-in, z-index 0s .6s
 
@@ -157,7 +151,6 @@ export default {
       grid-row: 3
       margin: auto
       max-width: 200px
-      overflow: hidden
       width: 80%
 
       &:before
@@ -187,7 +180,13 @@ export default {
   @media (min-width: 520px)
     .description
       align-items: center
-      grid-template-columns: repeat(3, 1fr)
+      border-radius: 30px
+      bottom: 0
+      grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+      height: 90vh
+      position: fixed
+      top: 0
+      width: 90vw
 
       header
         grid-column: 1/4
@@ -204,15 +203,14 @@ export default {
         padding-left: 2vw
 
       .close
+        grid-column: none
+        grid-row: none
         position: absolute
-        right: 10px
-        top: 0
+        right: 15px
+        top: 5px
 
-  @media (min-width: 640px)
-    .description
-      border-radius: 30px
-      height: 70vh
-      position: fixed
-      width: 80%
-
+    @media (min-width: 640px)
+      .description
+        height: 80vh
+        width: 80vw
 </style>
