@@ -1,7 +1,7 @@
 <template>
   <div class='description'
     :class='{open: open}'>
-    <img width='100%' :src='img'/>
+    <img :src='img'/>
     <div class='close'
       @click='close'>x</div>
     <h2>{{ position.name }}</h2>
@@ -68,29 +68,30 @@ export default {
     background: #000
     box-sizing: border-box
     color: #fff
-    height: 0
+    height: 100%
     left: 0
+    margin-left: auto
+    margin-right: auto
     opacity: 0
     overflow: hidden
+    padding: 40px 20px
+    position: absolute
     right: 0
     text-align: left
-    top: 9999px
-    transition: top 0.5s ease-out, opacity 0.5s ease-in;
-    width: 100%
+    top: 0
+    width: 80%
+    z-index: -9999
+    transition: opacity 0.5s ease-in, z-index 0s .6s
 
     &.open
-      bottom: 0
-      height: 100%
       opacity: 1
-      padding: 40px 20px
-      position: absolute
-      top: 0
-      transition: top 0.5s ease-out, opacity 0.5s ease-in;
+      z-index: 5
+      transition: opacity 0.5s ease-in
 
-      img
-        float: left
-        margin-right: 10px
-        max-width: 200px
+    img
+      float: left
+      margin-right: 10px
+      width: 175px
 
   .close
     cursor: pointer

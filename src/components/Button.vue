@@ -20,6 +20,7 @@ export default {
   methods: {
     changeSpread () {
       console.log('changing spread to', this.$vnode.key)
+      eventBus.$emit('fireCloseMenu')
       eventBus.$emit('fireCloseDescription')
       eventBus.$emit('fireChangeSpread')
       this.$store.commit('changeSpread', this.$vnode.key)
@@ -31,4 +32,6 @@ export default {
 <style scoped lang='sass'>
   .button
     cursor: pointer
+    font-size: 1.5em
+    margin-top: 5vh
 </style>

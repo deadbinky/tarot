@@ -1,39 +1,28 @@
 <template>
   <div class='home'>
-    <Button
-      v-for='(spread, index) in spreads'
-      :name='spread.name'
-      :key='index'
-      />
+    <NewReading />
     <Spread />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Button from '@/components/Button'
 import Spread from '@/components/Spread'
-import spreads from '@/assets/js/spreads'
+import NewReading from '@/components/NewReading'
 
 export default {
   name: 'Home',
   components: {
-    Button,
+    NewReading,
     Spread
-  },
-  data () {
-    return {
-      spreads: spreads
-    }
   }
 }
 </script>
 
 <style scoped lang='sass'>
   .home
-    height: 100%
-    overflow:hidden
+    height: 100vh
     position: relative
     text-align: center
-    width: 100%
+    width: 100vw
 </style>

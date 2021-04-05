@@ -53,11 +53,15 @@ export default {
     image: {
       type: String,
       required: true
-    },
-    position: {
-      type: Number,
-      required: true
-    }
+      },
+      position: {
+        type: Number,
+        required: true
+      },
+      cardkey: {
+        type: String,
+        required: true
+      }
   },
   methods: {
 
@@ -96,7 +100,7 @@ export default {
 
     openDescription () {
       const p = {
-        cardkey: this.$vnode.cardkey,
+        cardkey: this.cardkey,
         name: this.name,
         image: this.image,
         direction: this.direction,
@@ -110,11 +114,18 @@ export default {
 
 <style scoped lang='sass'>
   .card
-    height: 250px
     margin: auto
     opacity: .5
     perspective: 1000px
-    width: 150px
+    position: relative
+    width: 23vw
+
+    &:before
+    content: '?'
+    display: inline-block
+    padding-top: 150%
+    display: block
+
 
     &.click
       opacity: 1
@@ -127,7 +138,11 @@ export default {
 
     .inner
       height: 100%
-      position: relative
+      bottom: 0
+      left: 0
+      position: absolute
+      right: 0
+      top: 0
       transform-style: preserve-3d
       transition: none
       width: 100%
@@ -146,5 +161,10 @@ export default {
         transform: rotateY(180deg)
 
       .back
-        background: #000
+        background-color: #000
+        background-image: url(~@/assets/images/cards/Card_back.jpg)
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+
 </style>

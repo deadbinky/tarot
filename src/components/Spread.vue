@@ -89,9 +89,7 @@
     display: grid
     height: 100vh
     justify-content: center
-    margin: auto
-    overflow: hidden
-    max-width: 800px
+    margin: 1em auto 0
     position: relative
     width: 100vw
 
