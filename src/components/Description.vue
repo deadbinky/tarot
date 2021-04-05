@@ -7,7 +7,8 @@
       <h2>{{ position.name }}</h2>
       <p>{{ position.description }}</p>
     </header>
-    <div class='card'>
+    <div class='card'
+      :class='{ reversed: reversed }'>
       <img :src='img'/>
     </div>
     <div class='content'>
@@ -32,12 +33,14 @@ export default {
       img: '',
       description: '',
       position: {},
+      reversed: false,
       open: false,
       spreads: spreads
     }
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
+      this.open = true
       this.describeCard(p)
     })
     eventBus.$on('fireCloseDescription', () => {
@@ -50,17 +53,31 @@ export default {
   },
   methods: {
     describeCard (p) {
-      this.open = true
       const card = this.cards[p.cardkey]
       const spread = this.spreads[this.spreadType]
       const pos = spread.positions[p.position]
+      const dir = p.reversed
+      let direction = this.getDirection(dir)
+
       this.name = card.name
-      this.description = card.description[p.direction]
+      this.description = card.description[direction]
       this.position = {
         name: pos.name,
         description: pos.description
       }
+
       this.img = require('@/assets/images/cards/' + card.image)
+    },
+    getDirection (dir) {
+      console.log(dir)
+      this.reversed = false
+      let direction = 'upright'
+      if (dir) {
+        this.reversed = true
+        direction = 'reversed'
+      }
+      console.log(this.reversed,direction)
+      return direction
     },
     close () {
       this.open = false
@@ -146,6 +163,9 @@ export default {
       &:before
         content: ' '
         padding-top: 153.25%
+
+      &.reversed
+        transform: rotate(180deg)
 
       img
         border-radius: 10px

@@ -1,6 +1,7 @@
 <template>
   <div class='card'
     :class='{
+      reversed: reversed,
       flipped: flipped,
       click: click
     }'
@@ -27,8 +28,7 @@ export default {
       click: true,
       celticcross: false,
       activeCard: 0,
-      flipped: false,
-      direction: 'upright'
+      flipped: false
     }
   },
   mounted () {
@@ -43,6 +43,14 @@ export default {
     ...mapState(['spreadType']),
     img () {
       return require('@/assets/images/cards/' + this.image)
+    },
+    reversed () {
+      let reversed = false
+      let d = Math.random();
+      if (d < 0.3) {
+        reversed = true
+      }
+      return reversed
     }
   },
   props: {
@@ -64,7 +72,6 @@ export default {
       }
   },
   methods: {
-
     checkSpread () {
       this.celticcross = this.spreadType === 'celticcross'
 
@@ -103,7 +110,7 @@ export default {
         cardkey: this.cardkey,
         name: this.name,
         image: this.image,
-        direction: this.direction,
+        reversed: this.reversed,
         position: this.position
       }
       eventBus.$emit('fireDescribeCard', p)
@@ -125,8 +132,10 @@ export default {
 
     &.flipped .inner
       transform: rotateY(180deg)
-      transition: transform 0.8s 
+      transition: transform 0.8s
 
+    &.reversed
+      transform: rotate(180deg)
 
     .inner
       bottom: 0

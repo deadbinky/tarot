@@ -2,6 +2,7 @@
   <div class='menu' :class='{open: open}'>
     <div class='inner'>
       <div class='close' @click='toggleMenu'>X</div>
+      <h2>New Reading</h2>
       <Button
         v-for='(spread, index) in spreads'
         :name='spread.name'
@@ -90,6 +91,19 @@ export default {
         color: $brown
         font-size: 30px
 
+    h2
+      color: $lightpink
+      font-size: 2em
+      &:after
+        border-bottom: 1px solid $lightpink
+        content: ' '
+        display: block
+        margin: auto
+        opacity: 0
+        padding-top: 10px
+        width: 0
+        transition: all .5s $easeOutCirc
+
     &.open
       .inner
         height: 100vh
@@ -98,6 +112,11 @@ export default {
         &:before
           opacity: 1
           transition: opacity 2.5s $easeOutCirc .25s
+
+      h2:after
+        opacity: 1
+        width: 50%
+        transition: all .5s $easeOutCirc .75s
 
       .open-menu-button
         opacity: 0
