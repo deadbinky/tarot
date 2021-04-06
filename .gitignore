@@ -3,6 +3,7 @@ node_modules
 /dist
 
 bugs
+/src/assets/images/cards
 
 # local env files
 .env.local
