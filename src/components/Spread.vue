@@ -107,18 +107,20 @@
     &.celticcross
       height: auto
       grid-template: repeat(4, 1fr) / repeat(4, 1fr)
+      max-width: 600px
+      margin: auto
       .card
-        width: 20vw
+        width: 95%
 
         &:nth-child(1)
           grid-column: 2/3
           grid-row: 2/3
-          top: 15vh
+          top: 55%
 
         &:nth-child(2)
           grid-column: 2/3
           grid-row: 2/3
-          top: 23vh
+          top: 73%
           transform: rotate(-90deg)
           z-index: 2
           &.reversed
@@ -127,7 +129,7 @@
         &:nth-child(3)
           grid-column: 1/2
           grid-row: 2/3
-          top: 15vh
+          top: 55%
 
           &.flipped
             z-index: 3
@@ -135,7 +137,7 @@
         &:nth-child(4)
           grid-column: 3/4
           grid-row: 2/3
-          top: 15vh
+          top: 55%
 
           &.flipped
             z-index: 3
@@ -143,12 +145,12 @@
         &:nth-child(5)
           grid-column: 2/3
           grid-row: 1/2
-          top: 15vh
+          top: 55%
 
         &:nth-child(6)
           grid-column: 2/3
           grid-row: 3/4
-          top: 15vh
+          top: 55%
 
         &:nth-child(7)
           grid-column: 4/5
