@@ -9,7 +9,7 @@
     </header>
     <div class='card'
       :class='{ reversed: reversed }'>
-      <img :src='img'/>
+      <img :src='img' :alt='name'/>
     </div>
     <div class='content'>
       <h3>{{ name }}</h3>

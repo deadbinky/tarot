@@ -8,7 +8,7 @@
     @click='reveal'>
     <div class='inner'>
       <div class='front'>
-        <img width="100%" :src='img' />
+        <img width="100%" :src='holder' :data-src='img' :alt='this.name' />
       </div>
       <div class='back'>
       </div>
@@ -27,6 +27,7 @@ export default {
     return {
       click: true,
       celticcross: false,
+      holder: '',
       activeCard: 0,
       flipped: false
     }
@@ -61,15 +62,15 @@ export default {
     image: {
       type: String,
       required: true
-      },
-      position: {
-        type: Number,
-        required: true
-      },
-      cardkey: {
-        type: String,
-        required: true
-      }
+    },
+    position: {
+      type: Number,
+      required: true
+    },
+    cardkey: {
+      type: String,
+      required: true
+    }
   },
   methods: {
     checkSpread () {
@@ -89,6 +90,7 @@ export default {
         this.click = false
         return
       }
+      this.holder = this.img
     },
 
     reveal () {
