@@ -7,8 +7,7 @@
     }'
     @click='reveal'>
     <div class='inner'>
-      <div class='front'>
-        <img width="100%" :src='holder' :data-src='img' :alt='this.name' />
+      <div class='front' :style=holder>
       </div>
       <div class='back'>
       </div>
@@ -42,8 +41,11 @@ export default {
   },
   computed: {
     ...mapState(['spreadType']),
-    img () {
-      return require('@/assets/images/cards/' + this.image)
+    bg () {
+      const bg = require('@/assets/images/cards/' + this.image)
+      return {
+        'background-image': 'url(' + bg + ')'
+      }
     },
     reversed () {
       let reversed = false
@@ -78,7 +80,9 @@ export default {
 
       if (this.celticcross) {
         this.revealInOrder()
+        return
       }
+      this.holder = this.bg
     },
 
     revealInOrder () {
@@ -90,7 +94,7 @@ export default {
         this.click = false
         return
       }
-      this.holder = this.img
+      this.holder = this.bg
     },
 
     reveal () {
@@ -154,7 +158,6 @@ export default {
 
       .front,
       .back
-        border: 1px solid #ccc
         border-radius: 10px
         box-shadow: 0 0 10px RGB(0 0 0 / 15%)
         backface-visibility: hidden
@@ -164,7 +167,10 @@ export default {
         width: 100%
 
       .front
-        background: #fff
+        background-color: #fff
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
         transform: rotateY(180deg)
 
       .back
