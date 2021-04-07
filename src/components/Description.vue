@@ -175,6 +175,7 @@ export default {
     .content
       grid-column: 1
       grid-row: 4
+      margin-top: 20px
       width: 100%
 
   .close
@@ -191,6 +192,8 @@ export default {
       bottom: 0
       grid-template: repeat(4, 1fr) / repeat(3, 1fr)
       height: 90vh
+      max-height: 600px
+      max-width: 600px
       position: fixed
       top: 0
       width: 90vw
@@ -207,7 +210,9 @@ export default {
       .content
         grid-column: 2/4
         grid-row: 2
-        padding-left: 2vw
+        margin-top: 0
+        padding-left: 5%
+        width: 95%
 
       .close
         grid-column: none

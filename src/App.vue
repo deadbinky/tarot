@@ -20,7 +20,7 @@ export default {
   @import 'assets/sass/_colours'
 
   html, body
-    min-height: 100vh
+    min-height: 100%
     height: 100%!important
     width: 100%
 

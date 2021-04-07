@@ -81,14 +81,18 @@
  </script>
 
 <style scoped lang='sass'>
+  @import '../assets/sass/_measurements'
+
   .spread
     align-items: center
     display: grid
-    height: 100vh
+    height: $height100
+    min-height: $height100
     justify-content: center
     max-width: 100%
     padding-top: 1.15em
     position: relative
+    vertical-align: middle
     width: 100vw
 
     .card
@@ -109,8 +113,13 @@
       grid-template: repeat(4, 1fr) / repeat(4, 1fr)
       max-width: 600px
       margin: auto
+
       .card
         width: 95%
+
+        &.click:not(.flipped)
+          border: 2px solid #fff
+          border-radius: 10px
 
         &:nth-child(1)
           grid-column: 2/3
