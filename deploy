@@ -1,0 +1,4 @@
+#!/bin/sh
+
+npm run build
+rsync -avz --ignore-times --checksum --progress -e 'ssh -p2222' dist deadbinky@shittybum.com:~/web
