@@ -1,6 +1,6 @@
 <template>
   <div class='spread'
-    :class='spreadType'
+    :class='spreadClass'
     >
     <Card
       v-for='(card, index) in this.deck.slice(this.split, this.endSplit)'
@@ -53,6 +53,10 @@
       console.log(limit)
       return limit
     },
+    spreadClass () {
+      const spreadClass = this.spreads[this.spreadType].class
+      return spreadClass
+    },
     split () {
       const max = 78 - this.limit
       const split = Math.floor(Math.random() * max)
@@ -98,15 +102,64 @@
     .card
       margin: 5px auto
       max-width: 200px
-      width: 30vw
+      width: 55vw
 
       &:before
         content: ' '
         display: block
         padding-top: 166%
 
-    &.pastpresentfuture
+    &.threecard
       grid-template-columns: repeat(3, 1fr);
+
+      .card
+        width: 30vw
+
+    &.horseshoe
+      height: auto
+      grid-template: repeat(3, 1fr) / repeat(4, 1fr)
+      max-width: 600px
+      margin: auto
+
+      .card
+        width: 95%
+
+        &:nth-child(1)
+          grid-column: 1/2
+          grid-row: 1/2
+
+        &:nth-child(2)
+          grid-column: 1/2
+          grid-row: 1/2
+          left: 25%
+          top: 75%
+
+        &:nth-child(3)
+          grid-column: 1/2
+          grid-row: 2/3
+          left: 55%
+          top: 45%
+
+        &:nth-child(4)
+          grid-column: 2/3
+          grid-row: 3/4
+          left: 40%
+
+        &:nth-child(5)
+          grid-column: 3/4
+          grid-row: 2/3
+          left: 25%
+          top: 45%
+
+        &:nth-child(6)
+          grid-column: 3/4
+          grid-row: 1/2
+          left: 55%
+          top: 75%
+
+        &:nth-child(7)
+          grid-column: 4/5
+          grid-row: 1/2
 
     &.celticcross
       height: auto

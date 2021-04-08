@@ -4,15 +4,42 @@
     <div class='close'
       @click='close'>x</div>
     <header>
-      <h2>{{ position.name }}</h2>
-      <p>{{ position.description }}</p>
+      <h2 v-if='!this.seeallcards'>
+        {{ position.name }}
+      </h2>
+      <h2 v-else>
+        {{ name }}
+        <transition name='fade'>
+          <span v-if='this.reversed'>
+            (Reversed)
+          </span>
+        </transition>
+      </h2>
+      <p v-if='!this.seeallcards'>{{ position.description }}</p>
     </header>
     <div class='card'
       :class='{ reversed: reversed }'>
       <img :src='img' :alt='name'/>
     </div>
+    <div v-if='this.seeallcards'
+      class='seereversemeaning'
+      @click='reverseMeaning()'>
+      see
+      <span v-if='this.reversed'>
+        ↑ upright
+      </span>
+      <span v-else>
+        ↓ reverse
+      </span>
+      meaning</div>
     <div class='content'>
-      <h3>{{ name }}</h3>
+      <h3 v-if='!this.seeallcards'>
+        {{ name }}
+        <span v-if='this.reversed'
+        transition="fade">
+          (Reversed)
+        </span>
+      </h3>
       <p>{{ description }}</p>
     </div>
   </div>
@@ -28,6 +55,7 @@ export default {
   name: 'Description',
   data () {
     return {
+      card: {},
       cards: cards,
       name: '',
       img: '',
@@ -35,6 +63,7 @@ export default {
       position: {},
       reversed: false,
       open: false,
+      seeallcards: false,
       spreads: spreads
     }
   },
@@ -46,47 +75,52 @@ export default {
     eventBus.$on('fireCloseDescription', () => {
       this.close()
     })
-    console.log(this.spreadType, this.spreads[this.spreadType])
   },
   computed: {
     ...mapState(['spreadType'])
   },
   methods: {
     describeCard (p) {
-      const card = this.cards[p.cardkey]
+      this.seeallcards = this.spreadType === 'seeallcards'
+
+      const dir = p.reversed
+      const direction = this.getDirection(dir)
+      this.card = this.cards[p.cardkey]
+
+      this.name = this.card.name
+      this.description = this.card.description[direction]
+
+      this.img = require('@/assets/images/cards/' + this.card.image)
+
+      if (this.seeallcards) {
+        return
+      }
+
       const spread = this.spreads[this.spreadType]
       const pos = spread.positions[p.position]
-      const dir = p.reversed
-
-
-      this.name = card.name
-
-      let direction = this.getDirection(dir)
-
-      this.description = card.description[direction]
-
       this.position = {
         name: pos.name,
         description: pos.description
       }
-
-      this.img = require('@/assets/images/cards/' + card.image)
     },
     getDirection (dir) {
-      console.log(dir)
       this.reversed = false
       let direction = 'upright'
 
       if (dir) {
         this.reversed = true
         direction = 'reversed'
-        this.name += ' (Reversed)'
       }
-      console.log(this.reversed,direction)
       return direction
+    },
+    reverseMeaning () {
+      const dir = !this.reversed
+      const direction = this.getDirection(dir)
+      this.description = this.card.description[direction]
     },
     close () {
       this.open = false
+      this.reversed = false
     }
   }
 }
@@ -95,6 +129,7 @@ export default {
 <style scoped lang='sass'>
   @import '../assets/sass/_colours'
   @import '../assets/sass/_easing'
+  @import '../assets/sass/_decorations'
 
   .description
     align-items: top
@@ -102,9 +137,11 @@ export default {
     box-sizing: border-box
     color: #fff
     display: grid
+    height: 100vh
     left: 0
     margin: auto
     opacity: 0
+    overflow: hidden
     padding: 5vw
     position: absolute
     right: 0
@@ -119,14 +156,17 @@ export default {
       display: block
 
     &.open
+      height: auto
       opacity: 1
+      overflow: visible
       z-index: 6
       transition: opacity 0.5s ease-in
 
       header:after
-        opacity: 1
-        width: 50%
-        transition: all .5s $easeOutCirc .75s
+        @include little-border-expand(.75s)
+
+      .card
+        transition: transform .75s $easeInBack .25s
 
     header
       grid-area: header
@@ -138,14 +178,7 @@ export default {
       width: 100%
 
       &:after
-        border-bottom: 1px solid $lightbrown
-        content: ' '
-        display: block
-        margin: auto
-        opacity: 0
-        padding-top: 10px
-        width: 0
-        transition: all .5s $easeOutCirc
+        @include little-border-collapsed($lightbrown)
 
       h2
         color: $lightbrown
@@ -159,6 +192,7 @@ export default {
       margin: auto
       max-width: 200px
       width: 80%
+      transition: transform 0s ease-out 1s
 
       &:before
         content: ' '
@@ -184,6 +218,29 @@ export default {
     grid-column: 1
     grid-row: 1
     text-align: center
+
+  .seereversemeaning
+    cursor: pointer
+    font-size: .75em
+    text-align: center
+
+  .fade-enter, .fade-leave-to
+    opacity: 0
+
+  .fade-enter-to, .fade-leave
+    opacity: 1
+
+  .fade-enter-active, .fade-leave-active
+    transition: opacity .5s
+
+  .swap-enter, .swap-leave-to
+    top: 0
+
+  .swap-enter-to, .swap-leave
+    top: -50px
+
+  .swap-enter-active, .swap-leave-active
+    transition: top .5s
 
   @media (min-width: 520px)
     .description

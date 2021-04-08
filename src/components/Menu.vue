@@ -4,10 +4,19 @@
       <div class='content'>
         <div class='close' @click='toggleMenu'>x</div>
         <h2>New Reading</h2>
-        <Button
-          v-for='(spread, index) in spreads'
+        <Toggle
+          :name='useReversals'
+          title='Use Reversals'
+          />
+        <Button v-for='(spread, index) in spreads'
           :name='spread.name'
           :key='index'
+          />
+
+        <Button
+          class='seeallcards'
+          name='See All Cards'
+          key='seeallcards'
           />
         </div>
       </div>
@@ -18,19 +27,25 @@
 <script>
 // @ is an alias to /src
 import Button from '@/components/Button'
+import Toggle from '@/components/Toggle'
 import spreads from '@/assets/js/spreads'
 import eventBus from '@/assets/js/eventBus'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Menu',
   components: {
-    Button
+    Button,
+    Toggle
   },
   data () {
     return {
       open: false,
       spreads: spreads
     }
+  },
+  computed: {
+    ...mapState(['useReversals'])
   },
   created () {
     eventBus.$on('fireCloseMenu', () => {
@@ -42,7 +57,6 @@ export default {
   methods: {
     toggleMenu () {
       this.open = !this.open
-      console.log(this.open)
     }
   }
 }
@@ -51,6 +65,7 @@ export default {
 <style scoped lang='sass'>
   @import '../assets/sass/_colours'
   @import '../assets/sass/_easing'
+  @import '../assets/sass/_decorations'
 
   .menu
     color: #fff
@@ -103,17 +118,18 @@ export default {
 
     h2
       color: $lightpink
-      display: inline-block
       font-size: 2em
       &:after
-        border-bottom: 1px solid $lightpink
-        content: ' '
-        display: block
-        margin: auto
-        opacity: 0
-        padding-top: 10px
-        width: 0
-        transition: all .5s $easeOutCirc
+        @include little-border-collapsed($lightpink)
+        margin-left: 0
+        margin-top: 10px
+
+    .seeallcards
+      display: inline-block
+      &:before
+        @include little-border-collapsed($lightpink)
+        margin-bottom: 20px
+        margin-left: 0
 
     &.open
       .inner
@@ -128,10 +144,8 @@ export default {
         opacity: 1
         transition: opacity .25s ease-out 1.5s
 
-      h2:after
-        opacity: 1
-        width: 50%
-        transition: all .5s $easeOutCirc .75s
+      h2:after, .seeallcards:before
+        @include little-border-expand(2s)
 
       .open-menu-button
         opacity: 0

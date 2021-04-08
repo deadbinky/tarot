@@ -1,0 +1,15 @@
+@mixin little-border-collapsed($colour)
+  border-bottom: 1px solid $colour
+  content: ' '
+  display: block
+  margin: auto
+  opacity: 0
+  padding-top: 10px
+  width: 0
+  transition: all .5s $easeOutCirc
+
+@mixin little-border-expand($delay)
+  opacity: 1
+  max-width: 4em
+  width: 25vw
+  transition: all .5s $easeOutCirc $delay

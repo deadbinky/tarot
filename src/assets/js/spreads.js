@@ -1,5 +1,6 @@
 export default {
   single: {
+    class: 'single',
     name: 'Card Of The Day',
     limit: 1,
     positions: [
@@ -10,6 +11,7 @@ export default {
     ]
   },
   pastpresentfuture: {
+    class: 'threecard',
     name: 'Past Present Future',
     limit: 3,
     positions: [
@@ -27,7 +29,62 @@ export default {
       }
     ]
   },
+  mindbodyspririt: {
+    class: 'threecard',
+    name: 'Mind Body Spirit',
+    limit: 3,
+    positions: [
+      {
+        name: 'Mind',
+        description: 'What is your current emotional state? What is on your mind?'
+      },
+      {
+        name: 'Body',
+        description: 'What is the energy of how your body feels right now?'
+      },
+      {
+        name: 'Spirit',
+        description: 'What is the energy of your subconscious, which brings your mind and body together?'
+      }
+    ]
+  },
+  horseshoe: {
+    class: 'horseshoe',
+    name: 'Horseshoe',
+    limit: 7,
+    positions: [
+      {
+        name: 'Past',
+        description: 'What brought you to this moment?  What\'s recently behind you?'
+      },
+      {
+        name: 'Present',
+        description: 'What feelings and situations surround you now?'
+      },
+      {
+        name: 'Future',
+        description: 'Where are you going if nothing changes?'
+      },
+      {
+        name: 'Advice',
+        description: 'How can you help yourself in achieving your goal?'
+      },
+      {
+        name: 'Influences',
+        description: 'What are the forces surrounding you currently that might affect the outcome?'
+      },
+      {
+        name: 'Obstacles',
+        description: 'What is preventing you from achieving your goal?'
+      },
+      {
+        name: 'Outcome',
+        description: 'What is the likely outcome with the current energies at work?'
+      }
+    ]
+  },
   celticcross: {
+    class: 'celticcross',
     name: 'Celtic Cross',
     limit: 10,
     positions: [
@@ -69,7 +126,7 @@ export default {
       },
       {
         name: 'Outcome',
-        description: 'What is the likely outcome given the rest of the cards?  Is there another course of action suggested by the cards?'
+        description: 'What is the likely outcome given the current energies?'
       }
     ]
   }
