@@ -48,6 +48,33 @@ export default {
       }
     ]
   },
+  jobinterview: {
+    class: 'jobinterview',
+    name: 'Job Interview',
+    limit: 5,
+    positions: [
+      {
+        name: 'Strengths',
+        description: 'What do you really excel at?'
+      },
+      {
+        name: 'Weaknesses',
+        description: 'What areas can you work on before your interview? Or what weaknesses can you list in your interview with a positive spin?'
+      },
+      {
+        name: 'Advice 1',
+        description: 'What advice can this card and card #4 give you for a successful interview?'
+      },
+      {
+        name: 'Advice 2',
+        description: 'What advice can this card and card #3 give you for a successful interview?'
+      },
+      {
+        name: 'Outcome',
+        description: 'What are the forces surrounding you currently that might affect the outcome?'
+      }
+    ]
+  },
   horseshoe: {
     class: 'horseshoe',
     name: 'Horseshoe',

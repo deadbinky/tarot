@@ -123,6 +123,37 @@
       .card
         width: 30vw
 
+    &.jobinterview
+      height: auto
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr)
+      max-width: 600px
+      margin: auto
+
+      .card
+        width: 95%
+
+        &:nth-child(1)
+          grid-column: 1
+          grid-row: 1
+          left: 55%
+
+        &:nth-child(2)
+          grid-column: 2
+          grid-row: 1
+          left: 55%
+
+        &:nth-child(3)
+          grid-column: 1
+          grid-row: 2
+
+        &:nth-child(4)
+          grid-column: 2
+          grid-row: 2
+
+        &:nth-child(5)
+          grid-column: 3
+          grid-row: 2
+
     &.horseshoe
       height: auto
       grid-template: repeat(3, 1fr) / repeat(4, 1fr)
