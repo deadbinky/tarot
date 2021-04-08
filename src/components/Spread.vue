@@ -30,6 +30,9 @@
      eventBus.$on('fireChangeSpread', () => {
        this.shuffle(this.c)
      })
+     eventBus.$on('fireUseReversals', () => {
+       this.shuffle(this.c)
+     })
    },
    mounted () {
      this.shuffle(this.c)
@@ -94,7 +97,7 @@
     min-height: $height100
     justify-content: center
     max-width: 100%
-    padding-top: 1.15em
+    padding-top: $bodyPaddingTop
     position: relative
     vertical-align: middle
     width: 100vw
@@ -108,6 +111,11 @@
         content: ' '
         display: block
         padding-top: 166%
+
+    &.threecard, &.single
+      height: 500px
+      min-height: 500px
+      margin: auto
 
     &.threecard
       grid-template-columns: repeat(3, 1fr);

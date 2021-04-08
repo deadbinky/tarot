@@ -52,6 +52,7 @@ export default {
 
 <style scoped lang='sass'>
   .home
+    display: flex
     height: 100vh
     max-width: 100%
     position: relative

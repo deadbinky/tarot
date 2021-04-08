@@ -1,7 +1,9 @@
 <template>
-  <div class='spread'>
+  <div class='spread'
+    :class="{ 'description-open': descriptionOpen }">
     <Card
       v-for='(card, index) in this.c'
+      :id='card'
       :name='cards[card].name'
       :image='cards[card].image'
       :position='index'
@@ -13,6 +15,7 @@
  <script>
  import Card from '@/components/Card'
  import cards from '@/assets/js/cards'
+ import eventBus from '@/assets/js/eventBus'
 
  export default {
    name: 'SeeAllCards',
@@ -21,12 +24,39 @@
    },
    created () {
     this.c = Object.keys(this.cards)
-    console.log(this.c)
+    eventBus.$on('fireDescribeCard', (p) => {
+      this.toggleDescription(p.cardkey)
+    })
+    eventBus.$on('fireDismissDescription', () => {
+      this.toggleDescription()
+    })
    },
    data () {
      return {
        c: [],
-       cards: cards
+       cards: cards,
+       y: 0,
+       descriptionOpen: false,
+     }
+   },
+   methods: {
+     toggleDescription (k) {
+       this.descriptionOpen = !this.descriptionOpen
+       this.getPosition(k)
+     },
+
+     getPosition (k) {
+       if (window.innerWidth > 520 ) {
+         return
+       }
+       if (this.descriptionOpen) {
+         console.log('getting position', k)
+         this.y = window.scrollY
+       }
+       else {
+         console.log('setting position', this.y)
+         this.$nextTick(() => window.scrollTo(0, this.y))
+       }
      }
    }
  }
@@ -44,10 +74,10 @@
     justify-content: center
     margin: auto
     max-width: 600px
-    padding-top: 1.15em
+    padding-top: $bodyPaddingTop
     position: relative
     vertical-align: middle
-    width: 100vw
+    width: 95vw
 
     .card
       margin: 5px auto
@@ -59,47 +89,12 @@
         display: block
         padding-top: 166%
 
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4)
-        grid-row: 1/2
+  @media (max-width: 520px)
+    .spread.description-open
+      height: 0
+      opacity: 0
+      overflow: hidden
 
-      &:nth-child(5),
-      &:nth-child(6),
-      &:nth-child(7),
-      &:nth-child(8)
-        grid-row: 2/3
-
-      &:nth-child(9),
-      &:nth-child(10),
-      &:nth-child(11),
-      &:nth-child(12)
-        grid-row: 3/4
-
-      &:nth-child(13),
-      &:nth-child(14),
-      &:nth-child(15),
-      &:nth-child(16)
-        grid-row: 4/5
-
-      &:nth-child(17),
-      &:nth-child(18),
-      &:nth-child(19),
-      &:nth-child(20)
-        grid-row: 4/5
-
-
-      &:nth-child(4n + 1)
-        grid-column: 1/2
-
-      &:nth-child(4n + 2)
-        grid-column: 2/3
-
-      &:nth-child(4n + 3)
-        grid-column: 3/4
-
-      &:nth-child(4n + 4)
-        grid-column: 4/5
+      transition: opacity 0.5s ease-in, height 0s 1.5s
 
 </style>

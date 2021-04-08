@@ -1,5 +1,6 @@
 <template>
   <div class='card'
+    :id='id'
     :class='{
       reversed: reversed,
       flipped: flipped,
@@ -70,6 +71,10 @@ export default {
     image: {
       type: String,
       required: true
+    },
+    id: {
+      type: String,
+      required: false
     },
     position: {
       type: Number,

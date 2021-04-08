@@ -17,21 +17,23 @@
       </h2>
       <p v-if='!this.seeallcards'>{{ position.description }}</p>
     </header>
-    <div class='card'
-      :class='{ reversed: reversed }'>
-      <img :src='img' :alt='name'/>
+    <div class='card-container'>
+      <div class='card'
+        :class='{ reversed: reversed }'>
+        <img :src='img' :alt='name'/>
+      </div>
+      <div v-if='this.seeallcards'
+        class='seereversemeaning'
+        @click='reverseMeaning()'>
+        see
+        <span v-if='this.reversed'>
+          ↑ upright
+        </span>
+        <span v-else>
+          ↓ reverse
+        </span>
+        meaning</div>
     </div>
-    <div v-if='this.seeallcards'
-      class='seereversemeaning'
-      @click='reverseMeaning()'>
-      see
-      <span v-if='this.reversed'>
-        ↑ upright
-      </span>
-      <span v-else>
-        ↓ reverse
-      </span>
-      meaning</div>
     <div class='content'>
       <h3 v-if='!this.seeallcards'>
         {{ name }}
@@ -121,6 +123,7 @@ export default {
     close () {
       this.open = false
       this.reversed = false
+      eventBus.$emit('fireDismissDescription')
     }
   }
 }
@@ -186,12 +189,16 @@ export default {
       p
         font-style: italic
 
-    .card
+    .card-container
       grid-column: 1
       grid-row: 3
+
+    .card
       margin: auto
       max-width: 200px
-      width: 80%
+      position: relative
+      top: -5px
+      width: 75%
       transition: transform 0s ease-out 1s
 
       &:before
@@ -222,7 +229,9 @@ export default {
   .seereversemeaning
     cursor: pointer
     font-size: .75em
+    margin-top: 10px
     text-align: center
+    top: 100%
 
   .fade-enter, .fade-leave-to
     opacity: 0
@@ -232,15 +241,6 @@ export default {
 
   .fade-enter-active, .fade-leave-active
     transition: opacity .5s
-
-  .swap-enter, .swap-leave-to
-    top: 0
-
-  .swap-enter-to, .swap-leave
-    top: -50px
-
-  .swap-enter-active, .swap-leave-active
-    transition: top .5s
 
   @media (min-width: 520px)
     .description
@@ -259,9 +259,12 @@ export default {
         grid-column: 1/4
         grid-row: 1
 
-      .card
+      .card-container
         grid-column: 1/2
         grid-row: 2
+
+      .card
+        top: 0
         width: 100%
 
       .content
