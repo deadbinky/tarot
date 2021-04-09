@@ -53,7 +53,6 @@
       const s = this.spreads
       const t = this.spreadType
       const limit = s[t].limit
-      console.log(limit)
       return limit
     },
     spreadClass () {
@@ -125,6 +124,7 @@
 
     &.jobinterview
       height: auto
+      min-height: auto
       grid-template: repeat(2, 1fr) / repeat(3, 1fr)
       max-width: 600px
       margin: auto

@@ -145,7 +145,7 @@ export default {
     margin: auto
     opacity: 0
     overflow: hidden
-    padding: 5vw
+    padding: 30px
     position: absolute
     right: 0
     text-align: left

@@ -44,7 +44,8 @@ export default {
       if (this.spreadType === 'seeallcards') {
         this.showSpread = false
       }
-      console.log('home: show spread component:', this.showSpread)
+
+      console.log('hello, I hope you\'re enjoying my tarot app!') 
     }
   }
 }

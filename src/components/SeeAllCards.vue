@@ -24,8 +24,8 @@
    },
    created () {
     this.c = Object.keys(this.cards)
-    eventBus.$on('fireDescribeCard', (p) => {
-      this.toggleDescription(p.cardkey)
+    eventBus.$on('fireDescribeCard', () => {
+      this.toggleDescription()
     })
     eventBus.$on('fireDismissDescription', () => {
       this.toggleDescription()
@@ -40,21 +40,19 @@
      }
    },
    methods: {
-     toggleDescription (k) {
+     toggleDescription () {
        this.descriptionOpen = !this.descriptionOpen
-       this.getPosition(k)
+       this.getPosition()
      },
 
-     getPosition (k) {
+     getPosition () {
        if (window.innerWidth > 520 ) {
          return
        }
        if (this.descriptionOpen) {
-         console.log('getting position', k)
          this.y = window.scrollY
        }
        else {
-         console.log('setting position', this.y)
          this.$nextTick(() => window.scrollTo(0, this.y))
        }
      }

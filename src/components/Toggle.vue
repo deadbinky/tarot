@@ -31,7 +31,6 @@
     methods: {
       changeUseReversals () {
         const r = !this.useReversals
-        console.log('changing useReversals to', r)
         this.$store.commit('changeUseReversals', r)
         eventBus.$emit('fireUseReversals')
       }

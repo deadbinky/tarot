@@ -19,7 +19,6 @@ export default {
   },
   methods: {
     changeSpread () {
-      console.log('changing spread to', this.$vnode.key)
       this.$store.commit('changeSpread', this.$vnode.key)
       eventBus.$emit('fireCloseMenu')
       eventBus.$emit('fireCloseDescription')
