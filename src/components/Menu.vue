@@ -114,7 +114,7 @@ export default {
       &:before
         content: '☰'
         color: #fff
-        font-size: 30px
+        font-size: 55px
 
     h2
       color: $lightpink

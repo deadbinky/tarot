@@ -115,6 +115,8 @@
       height: 500px
       min-height: 500px
       margin: auto
+      padding-top: 0
+      max-width: 500px
 
     &.threecard
       grid-template-columns: repeat(3, 1fr);
