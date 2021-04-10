@@ -49,6 +49,7 @@
    },
    methods: {
      compileLifePath (date) {
+       this.cardArray = []
        this.date = this.formatDate(date)
        this.zodiacCard = this.getZodiacSign()
        this.getLifePathNumbers()
@@ -87,7 +88,7 @@
          const signEnd = new Date(se)
          const compareDate = new Date (cd)
 
-         if ( compareDate > signStart && compareDate < signEnd ) {
+         if ( compareDate >= signStart && compareDate <= signEnd ) {
            console.clear()
            console.log('your birthday is', this.month, '/', this.day, 'you are', v, 'your card is', sign.card)
            card = sign.card
@@ -100,7 +101,6 @@
      getLifePathNumbers () {
        let lpn = 0
        let lpn1 = 0
-       let lpn2 = 0
        const y1 = this.year.slice(0,2)
        const y2 = this.year.slice(2,4)
        const dateArr = [y1, y2, this.month, this.day]
@@ -109,20 +109,18 @@
          lpn += parseInt(x)
        }
 
-       lpn1 = this.getNumber(lpn, false)
-       this.lifePathCard1 = this.c[+lpn1]
-       this.cardArray.push(this.lifePathCard1)
-       console.log('your birth card1:', this.lifePathCard1)
-       lpn2 = this.getNumber(lpn1, true)
-       this.lifePathCard2 = this.c[+lpn2]
-       this.cardArray.push(this.lifePathCard2)
-       console.log('your birth card2:', this.lifePathCard2)
+       lpn1 = this.getCards(lpn, false, this.lifePathCard1)
+       this.getCards(lpn1, true, this.lifePathCard2)
+
        if (this.lifePathCard3) {
-         console.log('your birth card3:', this.lifePathCard3)
          this.cardArray.push(this.lifePathCard3)
        }
-
-//TODO: make exception for 19
+     },
+     getCards (n, extrapolate, card) {
+         const x = this.getNumber(n, extrapolate)
+         card = this.c[+x]
+         this.cardArray.push(card)
+         return x
      },
      getNumber (n, extrapolate) {
        const length = n.toString().length
@@ -179,7 +177,8 @@
   .spread
     align-items: center
     display: grid
-    grid-template: repeat(3, auto) / repeat(3, 1fr)
+    grid-template-rows: auto 1fr 1fr
+    grid-template-columns: repeat(3, 1fr)
     justify-content: center
     margin: auto
     padding-top: 0
@@ -213,13 +212,37 @@
       &:nth-of-type(5)
         grid-column: 2
         grid-row: 3
+</style>
+<style lang='sass'>
+  @import '../assets/sass/_colours'
 
   .vdp-datepicker
     grid-column: 2
     grid-row: 1
 
-    input
-        font-size: 3em
-        width: 100%
+    .vdp-datepicker__calendar .cell.selected
+      background: $mediumpink
+      color: #fff
+
+    .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover
+      border-color: $mediumpink
+
+  input[type="text"]
+    background-color: $orange
+    border: 0
+    border-radius: 30px
+    color: $mediumpink
+    font-family: 'Comfortaa'
+    font-size: 1.5em
+    font-weight: bold
+    padding: 5px
+    text-align: center
+    width: 160px
+
+    &:focus
+      border: 0
+      outline: none
+
+
 
 </style>
