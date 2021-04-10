@@ -1,6 +1,7 @@
 <template>
   <div class='button'
     :class='name'
+    :component='component'
     @click='changeSpread'>
     {{ name }}
   </div>
@@ -12,6 +13,10 @@ import eventBus from '@/assets/js/eventBus'
 export default {
   name: 'Button',
   props: {
+    component: {
+      type: String,
+      required: true
+    },
     name: {
       type: String,
       required: true
@@ -19,6 +24,7 @@ export default {
   },
   methods: {
     changeSpread () {
+      this.$store.commit('changeComponent', this.component)
       this.$store.commit('changeSpread', this.$vnode.key)
       eventBus.$emit('fireCloseMenu')
       eventBus.$emit('fireCloseDescription')
@@ -31,6 +37,6 @@ export default {
 <style scoped lang='sass'>
   .button
     cursor: pointer
-    font-size: 1.5em
-    margin-top: 5vh
+    font-size: 1em
+    margin-top: 2em
 </style>

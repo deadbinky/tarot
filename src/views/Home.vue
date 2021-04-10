@@ -1,8 +1,8 @@
 <template>
   <div class='home'>
     <Menu />
-    <Spread v-if='showSpread'/>
-    <SeeAllCards v-if='!showSpread'/>
+    <component v-if='component'
+      :is='component'/>
     <Description />
   </div>
 </template>
@@ -10,6 +10,7 @@
 <script>
 // @ is an alias to /src
 import Spread from '@/components/Spread'
+import LifePath from '@/components/LifePath'
 import SeeAllCards from '@/components/SeeAllCards'
 import Description from '@/components/Description'
 import Menu from '@/components/Menu'
@@ -21,12 +22,12 @@ export default {
   components: {
     Menu,
     Spread,
+    LifePath,
     SeeAllCards,
     Description
   },
   data () {
     return {
-      showSpread: true
     }
   },
   created () {
@@ -35,17 +36,11 @@ export default {
     })
   },
   computed: {
-   ...mapState(['spreadType'])
+   ...mapState(['spreadType', 'component'])
   },
   methods: {
     checkSpread () {
-      this.showSpread = true
 
-      if (this.spreadType === 'seeallcards') {
-        this.showSpread = false
-      }
-
-      console.log('hello, I hope you\'re enjoying my tarot app!') 
     }
   }
 }

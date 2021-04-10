@@ -27,7 +27,6 @@ export default {
     return {
       click: true,
       celticcross: false,
-      seeallcards: false,
       holder: '',
       activeCard: 0,
       flipped: false
@@ -42,7 +41,11 @@ export default {
     })
   },
   computed: {
-    ...mapState(['spreadType', 'useReversals']),
+    ...mapState([
+      'spreadType',
+      'component',
+      'useReversals'
+    ]),
     bg () {
       const bg = require('@/assets/images/cards/' + this.image)
       return {
@@ -52,7 +55,7 @@ export default {
     reversed () {
       let reversed = false
 
-      if (this.seeallcards || !this.useReversals) {
+      if ( !this.spread || !this.useReversals) {
         return reversed
       }
 
@@ -87,14 +90,16 @@ export default {
   },
   methods: {
     checkSpread () {
-      this.celticcross = this.spreadType === 'celticcross'
-      this.seeallcards = this.spreadType === 'seeallcards'
+      this.spread = this.component === 'Spread'
+      this.celticcross = this.spreadType === 'celticcross' && this.spread
+
+      console.log(this.spread)
 
       if (this.celticcross) {
         this.revealInOrder()
         return
       }
-      if (this.seeallcards) {
+      if (!this.spread) {
         this.flipped = true
       }
       this.holder = this.bg

@@ -9,14 +9,19 @@
           title='Use Reversals'
           />
         <Button v-for='(spread, index) in spreads'
+          component='Spread'
           :name='spread.name'
           :key='index'
           />
-
+        <Button
+          class='lifepath'
+          name='Life Path'
+          component='LifePath'
+          />
         <Button
           class='seeallcards'
           name='See All Cards'
-          key='seeallcards'
+          component='SeeAllCards'
           />
         </div>
       </div>

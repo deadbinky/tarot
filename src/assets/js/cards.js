@@ -143,7 +143,7 @@ export default {
       reversed: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
     }
   },
-  theMoon: {
+  themoon: {
     name: 'The Moon',
     image: '18_-_The_Moon.jpg',
     description: {
