@@ -4,7 +4,11 @@
       class='datepicker'
       format='MM dd yyyy'
       @selected='compileLifePath'
-      ></Datepicker>
+      >
+      <div slot="afterDateInput" class="calendar-header">
+        Enter Your Birthday
+      </div>
+    </Datepicker>
     <Card
       v-for='(card, index) in this.cardArray'
       :name='cards[card].name'
@@ -227,20 +231,31 @@
     .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover
       border-color: $mediumpink
 
+  .calendar-header
+    background: $mediumpink
+    border-radius: 30px 30px 0 0
+    color: #fff
+    font-size: .5em
+    padding: 5px
+    position: absolute
+    text-align: center
+    text-transform: uppercase
+    top: -2em
+    width: 160px
+
   input[type="text"]
     background-color: $orange
-    border: 0
-    border-radius: 30px
+    border: 2px solid $mediumpink
+    border-radius: 0 0 30px 30px
     color: $mediumpink
     font-family: 'Comfortaa'
     font-size: 1.5em
     font-weight: bold
-    padding: 5px
+    padding: 10px 5px 5px 5px
     text-align: center
     width: 160px
 
     &:focus
-      border: 0
       outline: none
 
 

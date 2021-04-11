@@ -17,6 +17,7 @@
           class='lifepath'
           name='Life Path'
           component='LifePath'
+          key='lifepath'
           />
         <Button
           class='seeallcards'
