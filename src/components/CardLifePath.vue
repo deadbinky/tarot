@@ -1,12 +1,12 @@
 <template>
   <div class='card'
     :id='id'
+    :cardArray='cardArray'
     :class='{
-      reversed: reversed,
       flipped: flipped,
       click: click
     }'
-    @click='reveal'>
+    @click='openDescription'>
     <div class='inner'>
       <div class='front' :style=holder>
       </div>
@@ -33,37 +33,15 @@ export default {
     }
   },
   mounted () {
-    this.checkSpread()
-
-    eventBus.$on('fireNextCard', () => {
-      this.activeCard++
-      this.revealInOrder()
-    })
+    this.flipCards()
   },
   computed: {
-    ...mapState([
-      'spreadType',
-      'component',
-      'useReversals'
-    ]),
+    ...mapState([ 'component' ]),
     bg () {
       const bg = require('@/assets/images/cards/' + this.image)
       return {
         'background-image': 'url(' + bg + ')'
       }
-    },
-    reversed () {
-      let reversed = false
-
-      if ( !this.spread || !this.useReversals) {
-        return reversed
-      }
-
-      let d = Math.random();
-      if (d < .3) {
-        reversed = true
-      }
-      return reversed
     }
   },
   props: {
@@ -79,9 +57,9 @@ export default {
       type: String,
       required: false
     },
-    position: {
-      type: Number,
-      required: false
+    cardArray: {
+      type: Array,
+      required: true
     },
     cardkey: {
       type: String,
@@ -89,58 +67,13 @@ export default {
     }
   },
   methods: {
-    checkSpread () {
-      this.spread = this.component === 'Spread'
-      this.celticcross = this.spreadType === 'celticcross' && this.spread
-
-      console.log(this.spread)
-
-      if (this.celticcross) {
-        this.revealInOrder()
-        return
-      }
-      if (!this.spread) {
-        this.flipped = true
-      }
+    flipCards () {
+      this.flipped = true
       this.holder = this.bg
     },
-
-    revealInOrder () {
-      const active = this.position <= this.activeCard
-
-      this.click = true
-
-      if (this.celticcross && !active) {
-        this.click = false
-        return
-      }
-      this.holder = this.bg
-    },
-
-    reveal () {
-      if (!this.click) {
-        return
-      }
-      if (!this.flipped) {
-        this.flipped = true
-        if (this.celticcross) {
-          eventBus.$emit('fireNextCard')
-        }
-        return
-      }
-      this.openDescription()
-    },
-
     openDescription () {
-      const p = {
-        cardkey: this.cardkey,
-        name: this.name,
-        image: this.image,
-        reversed: this.reversed,
-        position: this.position
-      }
-
-      eventBus.$emit('fireDescribeCard', p)
+      console.log(this.cardArray)
+      eventBus.$emit('fireDescribeLifePath', this.cardArray)
     }
   }
 }

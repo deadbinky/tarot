@@ -6,13 +6,19 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     component: 'LifePath',
+    description: 'DescriptionLifePath',
     spreadType: 'celticcross',
     useReversals: true
   },
   mutations: {
     changeComponent (state, component) {
       state.component = component
-      console.log(state.component)
+      if (component === 'LifePath') {
+        state.description = 'DescriptionLifePath'
+        return
+      }
+      state.description = 'Description'
+      console.log(state.component, state.description)
     },
     changeSpread (state, spreadType) {
       state.spreadType = spreadType

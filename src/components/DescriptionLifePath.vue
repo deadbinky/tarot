@@ -4,53 +4,37 @@
     <div class='close'
       @click='close'>x</div>
     <header>
-      <h2 v-if='!this.seeallcards'>
-        {{ position.name }}
+      <h2>
+        Life Path and Zodiac Cards
       </h2>
-      <h2 v-else>
-        {{ name }}
-        <transition name='fade'>
-          <span v-if='this.reversed'>
-            (Reversed)
-          </span>
-        </transition>
-      </h2>
-      <p v-if='!this.seeallcards'>{{ position.description }}</p>
     </header>
     <div class='card-container'>
-      <div class='card'
-        :class='{ reversed: reversed }'>
-        <img :src='img' :alt='name'/>
+      <!--<div class='card'>
+        <img :src='img1' :alt='name1'/>
       </div>
-      <div v-if='this.seeallcards'
-        class='seereversemeaning'
-        @click='reverseMeaning()'>
-        see
-        <span v-if='this.reversed'>
-          ↑ upright
-        </span>
-        <span v-else>
-          ↓ reverse
-        </span>
-        meaning</div>
+      <div class='card'>
+        <img :src='img2' :alt='name2'/>
+      </div>
+      <div class='card'>
+        <img :src='img3' :alt='name3'/>
+      </div>
     </div>
     <div class='content'>
-      <h3 v-if='!this.seeallcards'>
-        {{ name }}
-        <span v-if='this.reversed'
-        transition="fade">
-          (Reversed)
-        </span>
+      <h3>
+        Zodiac: {{ name1 }}
       </h3>
-      <p>{{ description }}</p>
+      <p>{{ description1 }}</p>
+      <h3>
+        LifePath: {{lifePathName }}
+      </h3>
+      <p>{{ descriptionLifePath }}</p>
+    -->
     </div>
   </div>
 </template>
 
 <script>
 import eventBus from '@/assets/js/eventBus'
-import cards from '@/assets/js/cards'
-import spreads from '@/assets/js/spreads'
 import { mapState } from 'vuex'
 
 export default {
@@ -58,19 +42,14 @@ export default {
   data () {
     return {
       card: {},
-      cards: cards,
       name: '',
       img: '',
       description: '',
-      position: {},
-      reversed: false,
       open: false,
-      seeallcards: false,
-      spreads: spreads
     }
   },
   created () {
-    eventBus.$on('fireDescribeCard', (p) => {
+    eventBus.$on('fireDescribeLifePath', (p) => {
       this.open = true
       this.describeCard(p)
     })
@@ -83,46 +62,14 @@ export default {
   },
   methods: {
     describeCard (p) {
-      this.seeallcards = this.component === 'SeeAllCards'
+      console.log(p)
+      //get three card images
+      //get zodiac card description
+      //get combined card descriptions
 
-      const dir = p.reversed
-      const direction = this.getDirection(dir)
-      this.card = this.cards[p.cardkey]
-
-      this.name = this.card.name
-      this.description = this.card.description[direction]
-
-      this.img = require('@/assets/images/cards/' + this.card.image)
-
-      if (this.seeallcards) {
-        return
-      }
-
-      const spread = this.spreads[this.spreadType]
-      const pos = spread.positions[p.position]
-      this.position = {
-        name: pos.name,
-        description: pos.description
-      }
-    },
-    getDirection (dir) {
-      this.reversed = false
-      let direction = 'upright'
-
-      if (dir) {
-        this.reversed = true
-        direction = 'reversed'
-      }
-      return direction
-    },
-    reverseMeaning () {
-      const dir = !this.reversed
-      const direction = this.getDirection(dir)
-      this.description = this.card.description[direction]
     },
     close () {
       this.open = false
-      this.reversed = false
       eventBus.$emit('fireDismissDescription')
     }
   }
@@ -225,22 +172,6 @@ export default {
     grid-column: 1
     grid-row: 1
     text-align: center
-
-  .seereversemeaning
-    cursor: pointer
-    font-size: .75em
-    margin-top: 10px
-    text-align: center
-    top: 100%
-
-  .fade-enter, .fade-leave-to
-    opacity: 0
-
-  .fade-enter-to, .fade-leave
-    opacity: 1
-
-  .fade-enter-active, .fade-leave-active
-    transition: opacity .5s
 
   @media (min-width: 520px)
     .description

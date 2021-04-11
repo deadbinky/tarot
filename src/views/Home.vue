@@ -3,7 +3,8 @@
     <Menu />
     <component v-if='component'
       :is='component'/>
-    <Description />
+    <component v-if='description'
+      :is='description'/>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Spread from '@/components/Spread'
 import LifePath from '@/components/LifePath'
 import SeeAllCards from '@/components/SeeAllCards'
 import Description from '@/components/Description'
+import DescriptionLifePath from '@/components/DescriptionLifePath'
 import Menu from '@/components/Menu'
 import eventBus from '@/assets/js/eventBus'
 import { mapState } from 'vuex'
@@ -24,7 +26,8 @@ export default {
     Spread,
     LifePath,
     SeeAllCards,
-    Description
+    Description,
+    DescriptionLifePath
   },
   data () {
     return {
@@ -36,7 +39,11 @@ export default {
     })
   },
   computed: {
-   ...mapState(['spreadType', 'component'])
+   ...mapState([
+     'spreadType',
+     'component',
+     'description'
+   ])
   },
   methods: {
     checkSpread () {

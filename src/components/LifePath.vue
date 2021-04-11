@@ -13,6 +13,7 @@
       v-for='(card, index) in this.cardArray'
       :name='cards[card].name'
       :image='cards[card].image'
+      :cardArray='cardArray'
       :position='index'
       :cardkey='card'
       :key='card' />
@@ -20,7 +21,7 @@
 </template>
 
  <script>
- import Card from '@/components/Card'
+ import Card from '@/components/CardLifePath'
  import cards from '@/assets/js/cards'
  import zodiac from '@/assets/js/zodiac'
  import Datepicker from 'vuejs-datepicker';
@@ -93,7 +94,6 @@
          const compareDate = new Date (cd)
 
          if ( compareDate >= signStart && compareDate <= signEnd ) {
-           console.clear()
            console.log('your birthday is', this.month, '/', this.day, 'you are', v, 'your card is', sign.card)
            card = sign.card
            break
