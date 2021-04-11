@@ -9,31 +9,36 @@
       </h2>
     </header>
     <div class='card-container'>
-      <!--<div class='card'>
-        <img :src='img1' :alt='name1'/>
+      <div class='card'>
+        <img :src='imgs[0]'/>
       </div>
       <div class='card'>
-        <img :src='img2' :alt='name2'/>
+        <img :src='imgs[1]'/>
       </div>
       <div class='card'>
-        <img :src='img3' :alt='name3'/>
+        <img :src='imgs[2]'/>
+      </div>
+      <div class='card' v-if='imgs[3]'>
+        <img :src='imgs[3]'/>
       </div>
     </div>
-    <div class='content'>
+  <div class='content'>
       <h3>
-        Zodiac: {{ name1 }}
+        Zodiac: {{ zodiacName }}
       </h3>
-      <p>{{ description1 }}</p>
+        <p>{{ zodiacDescription }}</p>
       <h3>
-        LifePath: {{lifePathName }}
+        LifePath: {{ lifePathName }}
       </h3>
-      <p>{{ descriptionLifePath }}</p>
-    -->
+      <p>{{ lifePathDescription }}</p>
+
     </div>
   </div>
 </template>
 
 <script>
+import cards from '@/assets/js/cards'
+import lifepath from '@/assets/js/lifepath'
 import eventBus from '@/assets/js/eventBus'
 import { mapState } from 'vuex'
 
@@ -42,9 +47,13 @@ export default {
   data () {
     return {
       card: {},
-      name: '',
-      img: '',
-      description: '',
+      cards: cards,
+      imgs: [],
+      lifepath: lifepath,
+      lifePathName: '',
+      zodiacDescription: '',
+      lifePathDescription: '',
+      zodiacName: '',
       open: false,
     }
   },
@@ -62,11 +71,45 @@ export default {
   },
   methods: {
     describeCard (p) {
-      console.log(p)
-      //get three card images
-      //get zodiac card description
-      //get combined card descriptions
+      const q = p.slice()
+      this.getCards(q)
+      const z = q.shift()
+      this.getZodiac(z)
+      this.getLifePath(q)
+    },
+    getCards (p) {
+      p.forEach((z, i) => {
+          if (!z) {
+            return
+          }
 
+          const url = this.cards[z].image
+          this.imgs[i] = require('@/assets/images/cards/' + url)
+      })
+    },
+    getLifePath (p) {
+      console.log(p)
+      let key
+      const lps = Object.keys(this.lifepath)
+      lps.some((x) => {
+        const v = [
+          this.lifepath[x].card1,
+          this.lifepath[x].card2
+        ]
+        const filter = v.filter(value => p.includes(value))
+
+        if (filter.length > 0) {
+          key = x
+          return key
+        }
+      })
+      this.lifePathName = this.lifepath[key].title
+      this.lifePathDescription = this.lifepath[key].description
+    },
+    getZodiac (p) {
+      const z = this.cards[p].name
+      this.zodiacName = z
+      this.zodiacDescription = this.cards[p].description.zodiac
     },
     close () {
       this.open = false
@@ -86,7 +129,8 @@ export default {
     background: $brown
     box-sizing: border-box
     color: #fff
-    display: grid
+    display: flex
+    flex-direction: column
     height: 100vh
     left: 0
     margin: auto
@@ -119,10 +163,8 @@ export default {
         transition: transform .75s $easeInBack .25s
 
     header
-      grid-area: header
-      grid-column: 1
-      grid-row: 2
       margin-bottom: 10px
+      order: 1
       padding-bottom: 10px
       text-align: center
       width: 100%
@@ -137,8 +179,10 @@ export default {
         font-style: italic
 
     .card-container
-      grid-column: 1
-      grid-row: 3
+      display: grid
+      grid-template: repeat(2, 1fr) / repeat(3, 1fr)
+      order: 2
+      max-width: 300px
 
     .card
       margin: auto
@@ -152,8 +196,21 @@ export default {
         content: ' '
         padding-top: 153.25%
 
-      &.reversed
-        transform: rotate(180deg)
+      &:nth-child(1)
+        grid-column: 2
+        grid-row: 1
+
+      &:nth-child(2)
+        grid-column: 1
+        grid-row: 2
+
+      &:nth-child(3)
+        grid-column: 3
+        grid-row: 2
+
+      &:nth-child(4)
+        grid-column: 2
+        grid-row: 2
 
       img
         border-radius: 10px
@@ -161,9 +218,8 @@ export default {
         width: 100%
 
     .content
-      grid-column: 1
-      grid-row: 4
       margin-top: 20px
+      order: 3
       width: 100%
 
   .close
@@ -178,29 +234,19 @@ export default {
       align-items: center
       border-radius: 30px
       bottom: 0
-      grid-template: repeat(4, 1fr) / repeat(3, 1fr)
+      display: flex
+      flex-direction: column
       height: 90vh
-      max-height: 600px
       max-width: 600px
       position: fixed
       top: 0
       width: 90vw
-
-      header
-        grid-column: 1/4
-        grid-row: 1
-
-      .card-container
-        grid-column: 1/2
-        grid-row: 2
 
       .card
         top: 0
         width: 100%
 
       .content
-        grid-column: 2/4
-        grid-row: 2
         margin-top: 0
         padding-left: 5%
         width: 95%
