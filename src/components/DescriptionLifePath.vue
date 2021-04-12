@@ -193,7 +193,7 @@ export default {
 
     .card
       margin: 0 10px
-      max-width: 200px
+      max-width: 100px
       position: relative
       top: -5px
       width: 50%

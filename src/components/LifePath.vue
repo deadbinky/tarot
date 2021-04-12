@@ -187,7 +187,6 @@
     grid-template-columns: repeat(2, 1fr)
     justify-content: center
     margin: auto
-    padding-top: $bodyPaddingTop
     max-width: 500px
     position: relative
     vertical-align: middle
@@ -230,11 +229,27 @@
     margin: auto
 
     .vdp-datepicker__calendar .cell.selected
-      background: $mediumpink
+      background: $orange
+      border-radius: 50px
       color: #fff
 
+    .vdp-datepicker__calendar
+      background: $mediumpink
+      border: 3px solid $orange
+      border-radius: 20px
+      color: #fff
+      left: -45px
+      width: 250px
+
+    .vdp-datepicker__calendar .cell.selected:hover
+      background: $brown;
+
     .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover
-      border-color: $mediumpink
+      border: 1px solid $brown;
+
+
+    .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover
+      border-color: $orange
 
   .calendar-header
     background: $mediumpink
