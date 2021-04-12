@@ -72,7 +72,6 @@ export default {
       this.holder = this.bg
     },
     openDescription () {
-      console.log(this.cardArray)
       eventBus.$emit('fireDescribeLifePath', this.cardArray)
     }
   }

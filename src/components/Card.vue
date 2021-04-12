@@ -56,7 +56,6 @@ export default {
     reversed () {
       let reversed = false
 
-      console.log(this.spread, this.useReversals)
       if ( !this.spread || !this.useReversals) {
         return reversed
       }
@@ -66,7 +65,6 @@ export default {
         reversed = true
       }
 
-      console.log('reversed:', reversed)
       return reversed
     }
   },
@@ -96,8 +94,6 @@ export default {
     checkSpread () {
       this.spread = this.component === 'Spread'
       this.celticcross = this.spreadType === 'celticcross' && this.spread
-
-      console.log(this.spread)
 
       if (this.celticcross) {
         this.revealInOrder()
