@@ -19,7 +19,6 @@ export default new Vuex.Store({
         return
       }
       state.description = 'Description'
-      console.log(state.component, state.description)
     },
     changeSpread (state, spreadType) {
       state.spreadType = spreadType
