@@ -195,7 +195,7 @@
 
     .card
       margin: 5px auto
-      max-width: 200px
+      max-width: 100px
       width: 95%
 
       &:before
@@ -218,9 +218,8 @@
 
       &:nth-of-type(5)
         grid-column: 1/3
-        grid-row: 3
+        grid-row: 4
         width: 47.5%
-
 </style>
 <style lang='sass'>
   @import '../assets/sass/_colours'

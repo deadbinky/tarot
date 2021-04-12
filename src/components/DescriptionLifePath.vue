@@ -57,16 +57,6 @@ export default {
       open: false,
     }
   },
-  head: {
-    script: [
-      {
-        type: 'text/javascript',
-        src: '/leader-line.min.js',
-        async: true,
-        body: true
-      }
-    ]
-  },
   created () {
     eventBus.$on('fireDescribeLifePath', (p) => {
       this.open = true
