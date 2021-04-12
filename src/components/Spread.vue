@@ -119,7 +119,7 @@
       max-width: 500px
 
     &.threecard
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr)
 
       .card
         width: 30vw

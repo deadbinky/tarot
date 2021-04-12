@@ -7,6 +7,7 @@ export default new Vuex.Store({
   state: {
     component: 'LifePath',
     description: 'DescriptionLifePath',
+    zodiacSign: '',
     spreadType: 'celticcross',
     useReversals: true
   },
@@ -25,7 +26,10 @@ export default new Vuex.Store({
     },
     changeUseReversals (state, useReversals) {
       state.useReversals = useReversals
-    }
+    },
+    changeSign (state, zodiacSign) {
+      state.zodiacSign = zodiacSign
+    },
   },
   actions: {
   },

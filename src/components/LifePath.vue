@@ -40,6 +40,7 @@
        lifePathCard2: '',
        lifePathCard3: '',
        cardArray: [],
+       yourSign: '',
        month: 0,
        day: 0,
        year: 0,
@@ -88,13 +89,14 @@
          const se = sign.end + y2
          const cd = this.month + '/' + this.day + yy
 
-         //console.log(ss, se)
          const signStart = new Date(ss)
          const signEnd = new Date(se)
          const compareDate = new Date (cd)
 
          if ( compareDate >= signStart && compareDate <= signEnd ) {
            console.log('your birthday is', this.month, '/', this.day, 'you are', v, 'your card is', sign.card)
+
+           this.$store.commit('changeSign', v)
            card = sign.card
            break
          }

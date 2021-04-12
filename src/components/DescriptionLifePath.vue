@@ -5,33 +5,33 @@
       @click='close'>x</div>
     <header>
       <h2>
-        Life Path and Zodiac Cards
+        Zodiac and Life Path Cards
       </h2>
     </header>
     <div class='card-container'>
-      <div class='card'>
+      <div class='card' id='zodiac-card'>
         <img :src='imgs[0]'/>
       </div>
-      <div class='card'>
+      <div class='card' id='lifepath-card1'>
         <img :src='imgs[1]'/>
       </div>
-      <div class='card'>
+      <div class='card' id='lifepath-card2'>
         <img :src='imgs[2]'/>
       </div>
-      <div class='card' v-if='imgs[3]'>
+      <div class='card' v-if='imgs[3]' id='lifepath-card3'>
         <img :src='imgs[3]'/>
       </div>
     </div>
-  <div class='content'>
-      <h3>
-        Zodiac: {{ zodiacName }}
+    <div class='content'>
+      <h3 id='h3-zodiac'>
+        {{ zodiacSign }} & {{ zodiacName }}
       </h3>
         <p>{{ zodiacDescription }}</p>
-      <h3>
-        LifePath: {{ lifePathName }}
+
+      <h3 id='h3-lifepath'>
+        {{ lifePathName }}
       </h3>
       <p>{{ lifePathDescription }}</p>
-
     </div>
   </div>
 </template>
@@ -57,6 +57,16 @@ export default {
       open: false,
     }
   },
+  head: {
+    script: [
+      {
+        type: 'text/javascript',
+        src: '/leader-line.min.js',
+        async: true,
+        body: true
+      }
+    ]
+  },
   created () {
     eventBus.$on('fireDescribeLifePath', (p) => {
       this.open = true
@@ -67,7 +77,7 @@ export default {
     })
   },
   computed: {
-    ...mapState(['spreadType','component'])
+    ...mapState(['zodiacSign'])
   },
   methods: {
     describeCard (p) {
@@ -91,6 +101,10 @@ export default {
       console.log(p)
       let key
       const lps = Object.keys(this.lifepath)
+
+      //get p length
+      //make v the same length - maybe just check for one that has 3 somehow
+
       lps.some((x) => {
         const v = [
           this.lifepath[x].card1,
@@ -105,11 +119,24 @@ export default {
       })
       this.lifePathName = this.lifepath[key].title
       this.lifePathDescription = this.lifepath[key].description
+      //this.setLine('card-container', 'h3-lifepath', '#ec978e','right', 'right')
     },
     getZodiac (p) {
       const z = this.cards[p].name
       this.zodiacName = z
       this.zodiacDescription = this.cards[p].description.zodiac
+      //this.setLine('zodiac-card', 'h3-zodiac', '#ffc67a', 'left', 'left')
+    },
+    setLine (id1, id2, color, d1, d2) {
+      const start = document.getElementById(id1)
+      const end = document.getElementById(id2)
+      this.$nextTick(function () {
+        new window.LeaderLine(start, end, {
+          color: color,
+          startSocket: d1,
+          endSocket: d2
+        })
+      })
     },
     close () {
       this.open = false
@@ -129,8 +156,6 @@ export default {
     background: $brown
     box-sizing: border-box
     color: #fff
-    display: flex
-    flex-direction: column
     height: 100vh
     left: 0
     margin: auto
@@ -143,11 +168,6 @@ export default {
     top: 0
     z-index: -1
     transition: opacity 0.5s ease-in, z-index 0s .6s
-
-    &:after
-      content: ' '
-      clear: both
-      display: block
 
     &.open
       height: auto
@@ -164,7 +184,6 @@ export default {
 
     header
       margin-bottom: 10px
-      order: 1
       padding-bottom: 10px
       text-align: center
       width: 100%
@@ -179,48 +198,62 @@ export default {
         font-style: italic
 
     .card-container
-      display: grid
-      grid-template: repeat(2, 1fr) / repeat(3, 1fr)
-      order: 2
-      max-width: 300px
+      display: flex
+      flex-direction: row
 
     .card
-      margin: auto
+      margin: 0 5px
       max-width: 200px
       position: relative
       top: -5px
-      width: 75%
+      width: 50%
       transition: transform 0s ease-out 1s
 
       &:before
         content: ' '
         padding-top: 153.25%
 
-      &:nth-child(1)
-        grid-column: 2
-        grid-row: 1
+      &:nth-child(1) img
+        border: 3px solid $orange
 
-      &:nth-child(2)
-        grid-column: 1
-        grid-row: 2
-
-      &:nth-child(3)
-        grid-column: 3
-        grid-row: 2
-
-      &:nth-child(4)
-        grid-column: 2
-        grid-row: 2
+      &:nth-child(n+2) img
+        border: 3px solid $mediumpink
 
       img
         border-radius: 10px
         height: 100%
         width: 100%
 
-    .content
-      margin-top: 20px
-      order: 3
+    h3
+      border-radius: 20px 20px 0 0
+      box-sizing: border-box
+      margin-bottom: 0
+      margin-top: 1.5em
+      padding: 10px
+      text-align: center
+      text-transform: capitalize
       width: 100%
+
+      &:nth-of-type(1)
+        background-color: $orange
+        color: #fff
+
+        + p
+          border-color: $orange
+
+      &:nth-of-type(2)
+        background-color: $mediumpink
+        color: #fff
+
+        + p
+          border-color: $mediumpink
+
+    p
+      border-radius: 0 0 20px 20px
+      border-style: solid
+      border-width: 3px
+      margin-top: 0
+      padding: 15px
 
   .close
     cursor: pointer
@@ -244,12 +277,10 @@ export default {
 
       .card
         top: 0
-        width: 100%
 
       .content
         margin-top: 0
-        padding-left: 5%
-        width: 95%
+        width: 100%
 
       .close
         grid-column: none
@@ -263,4 +294,8 @@ export default {
         height: 80vh
         min-height: auto
         width: 80vw
+</style>
+<style lang='sass'>
+  .leader-line
+    z-index: 9999
 </style>
