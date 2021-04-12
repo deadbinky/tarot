@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    component: 'LifePath',
-    description: 'DescriptionLifePath',
+    component: 'Spread',
+    description: 'Description',
     zodiacSign: '',
     spreadType: 'celticcross',
     useReversals: true

@@ -37,10 +37,19 @@
     <div class='content'>
       <h3 v-if='!this.seeallcards'>
         {{ name }}
-        <span v-if='this.reversed'
-        transition="fade">
-          (Reversed)
-        </span>
+        <transition name='fade'>
+          <span v-if='this.reversed'>
+            (Reversed)
+          </span>
+        </transition>
+      </h3>
+      <h3 v-else>
+        <transition name='fade'>
+          <span v-if='this.reversed'>
+            Reversed
+          </span>
+        </transition>
+        Meaning
       </h3>
       <p>{{ description }}</p>
     </div>
@@ -209,6 +218,7 @@ export default {
         transform: rotate(180deg)
 
       img
+        border: 3px solid $lightbrown
         border-radius: 10px
         height: 100%
         width: 100%
@@ -216,8 +226,26 @@ export default {
     .content
       grid-column: 1
       grid-row: 4
-      margin-top: 20px
       width: 100%
+
+      h3
+        background-color: $lightbrown
+        border-radius: 20px 20px 0 0
+        box-sizing: border-box
+        color: #fff
+        margin-bottom: 0
+        margin-top: 1.5em
+        padding: 10px
+        text-align: center
+        width: 100%
+
+      p
+        border-color: $lightbrown
+        border-radius: 0 0 20px 20px
+        border-style: solid
+        border-width: 3px
+        margin-top: 0
+        padding: 15px
 
   .close
     cursor: pointer
