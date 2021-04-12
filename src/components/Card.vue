@@ -29,6 +29,7 @@ export default {
       celticcross: false,
       holder: '',
       activeCard: 0,
+      spread: true,
       flipped: false
     }
   },
@@ -55,6 +56,7 @@ export default {
     reversed () {
       let reversed = false
 
+      console.log(this.spread, this.useReversals)
       if ( !this.spread || !this.useReversals) {
         return reversed
       }
@@ -63,6 +65,8 @@ export default {
       if (d < .3) {
         reversed = true
       }
+
+      console.log('reversed:', reversed)
       return reversed
     }
   },
