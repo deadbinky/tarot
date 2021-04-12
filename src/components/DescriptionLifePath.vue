@@ -192,7 +192,7 @@ export default {
       flex-direction: row
 
     .card
-      margin: 0 5px
+      margin: 0 10px
       max-width: 200px
       position: relative
       top: -5px
