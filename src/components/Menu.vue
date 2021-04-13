@@ -103,7 +103,7 @@ export default {
         top: 0
         width: 100%
         z-index: -1
-        transition: opacity .25s $easeOutCirc
+        transition: opacity .35s $easeOutCirc
 
       .content
         opacity: 0
@@ -140,18 +140,18 @@ export default {
     &.open
       .inner
         width: 100vw
-        transition: width 1s $easeOutCirc .25s
+        transition: width .35s $easeInCirc .25s
 
         &:before
           opacity: 1
-          transition: opacity 1.5s $easeOutCirc .25s
+          transition: opacity .55s $easeOutCirc .35s
 
       .content
         opacity: 1
-        transition: opacity .25s ease-out 1.5s
+        transition: opacity .25s ease-out .55s
 
       h2:after, .seeallcards:before
-        @include little-border-expand(2s)
+        @include little-border-expand(1s)
 
       .open-menu-button
         opacity: 0

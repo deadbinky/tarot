@@ -95,11 +95,10 @@
     height: $height100
     min-height: $height100
     justify-content: center
-    max-width: 100%
-    padding-top: $bodyPaddingTop
+    padding: 10px
     position: relative
     vertical-align: middle
-    width: 100vw
+    width: 100%
 
     .card
       margin: 5px auto

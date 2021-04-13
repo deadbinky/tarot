@@ -88,7 +88,6 @@ export default {
       })
     },
     getLifePath (p) {
-      console.log(p)
       let key
       const lps = Object.keys(this.lifepath)
 
@@ -156,6 +155,7 @@ export default {
     right: 0
     text-align: left
     top: 0
+    width: 100%
     z-index: -1
     transition: opacity 0.5s ease-in, z-index 0s .6s
 

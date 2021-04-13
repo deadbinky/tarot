@@ -38,5 +38,5 @@ export default {
   .button
     cursor: pointer
     font-size: 1em
-    margin-top: 2em
+    margin-top: 1em
 </style>
