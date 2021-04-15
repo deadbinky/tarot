@@ -239,15 +239,36 @@
       left: -45px
       width: 250px
 
+    .vdp-datepicker__calendar .month, .vdp-datepicker__calendar .year
+    width: 33%
+    text-transform: uppercase
+
+    .vdp-datepicker__calendar .month
+      font-size: 0.7em
+
+    .vdp-datepicker__calendar .year
+      font-size: 1em
+
+    .vdp-datepicker__calendar header .next:after
+      border-left: 10px solid $brown
+
+    .vdp-datepicker__calendar header .prev:after
+      border-right: 10px solid $brown
+
+    .vdp-datepicker__calendar header .prev:not(.disabled):hover, .vdp-datepicker__calendar header .next:not(.disabled):hover, .vdp-datepicker__calendar header .up:not(.disabled):hover
+      background: $orange
+      border-radius: 20px
+
     .vdp-datepicker__calendar .cell.selected:hover
-      background: $brown;
+      background: $brown
 
     .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover
-      border: 1px solid $brown;
+      border: 1px solid $brown
 
 
     .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).day:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).month:hover, .vdp-datepicker__calendar .cell:not(.blank):not(.disabled).year:hover
       border-color: $orange
+      border-radius: 50px
 
   .calendar-header
     background: $mediumpink
