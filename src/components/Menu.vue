@@ -63,6 +63,9 @@ export default {
   methods: {
     toggleMenu () {
       this.open = !this.open
+      if (this.open) {
+        eventBus.$emit('fireCloseDescription')
+      }
     }
   }
 }

@@ -8,12 +8,18 @@
         {{ position.name }}
       </h2>
       <h2 v-else>
+        <div class='prev' @click='nextCard("prev")'>
+          &lt;
+        </div>
         {{ name }}
         <transition name='fade'>
           <span v-if='this.reversed'>
             (Reversed)
           </span>
         </transition>
+        <div class='next' @click='nextCard()'>
+          &gt;
+        </div>
       </h2>
       <p v-if='!this.seeallcards'>{{ position.description }}</p>
     </header>
@@ -51,7 +57,15 @@
         </transition>
         Meaning
       </h3>
-      <p>{{ description }}</p>
+      <p>
+        <span class='keywords'>
+          <span v-for='(keyword, index) in this.keywords'
+            :key='index'>
+            {{ keyword }}
+          </span>
+        </span>
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>
@@ -66,16 +80,19 @@ export default {
   name: 'Description',
   data () {
     return {
-      card: {},
-      cards: cards,
-      name: '',
       img: '',
-      description: '',
+      key: '',
+      keys: [],
+      name: '',
+      card: {},
+      open: false,
+      cards: cards,
+      spreads: spreads,
+      keywords: [],
       position: {},
       reversed: false,
-      open: false,
-      seeallcards: false,
-      spreads: spreads
+      description: '',
+      seeallcards: false
     }
   },
   created () {
@@ -91,24 +108,48 @@ export default {
     ...mapState(['spreadType','component'])
   },
   methods: {
+    nextCard (dir) {
+      let index = this.keys.indexOf(this.key)
+
+      dir === 'prev' ? index-- : index++
+
+      const cardkey = this.keys[index]
+      const name = this.cards[cardkey].name
+      const image = this.cards[cardkey].image
+
+      const p = {
+        cardkey: cardkey,
+        name: name,
+        image: image,
+        reversed: this.reversed
+      }
+
+      this.describeCard(p)
+    },
     describeCard (p) {
       this.seeallcards = this.component === 'SeeAllCards'
 
+      const c = this.cards[p.cardkey]
       const dir = p.reversed
       const direction = this.getDirection(dir)
-      this.card = this.cards[p.cardkey]
+      const description = c.description[direction]
+      this.key = p.cardkey
+      this.card = c
 
-      this.name = this.card.name
-      this.description = this.card.description[direction]
+      this.name = c.name
+      this.description = description.text
+      this.keywords = description.keywords
 
       this.img = require('@/assets/images/cards/' + this.card.image)
 
       if (this.seeallcards) {
+        this.keys = Object.keys(this.cards)
         return
       }
 
       const spread = this.spreads[this.spreadType]
       const pos = spread.positions[p.position]
+
       this.position = {
         name: pos.name,
         description: pos.description
@@ -127,7 +168,10 @@ export default {
     reverseMeaning () {
       const dir = !this.reversed
       const direction = this.getDirection(dir)
-      this.description = this.card.description[direction]
+      const c = this.card
+      const description = c.description[direction]
+      this.keywords = description.keywords
+      this.description = description.text
     },
     close () {
       this.open = false
@@ -180,12 +224,28 @@ export default {
       .card
         transition: transform .75s $easeInBack .25s
 
+    .next, .prev
+      color: white
+      cursor: pointer
+      font-size: 50px
+      height: 50px
+      position: absolute
+      top: 0
+      width: 50px
+
+    .prev
+      left: -10px
+
+    .next
+      right: -10px
+
     header
       grid-area: header
       grid-column: 1
       grid-row: 2
       margin-bottom: 10px
       padding-bottom: 10px
+      position: relative
       text-align: center
       width: 100%
 
@@ -234,8 +294,8 @@ export default {
         box-sizing: border-box
         color: #fff
         margin-bottom: 0
-        margin-top: 1.5em
-        padding: 10px
+        margin-top: 0
+        padding: 10px 10px 5px 10px
         text-align: center
         width: 100%
 
@@ -246,6 +306,24 @@ export default {
         border-width: 3px
         margin-top: 0
         padding: 15px
+
+      .keywords
+        display: block
+        text-align: center
+        margin-bottom: 10px
+
+        span
+          background: $mediumpink
+          border-radius: 20px
+          display: inline-block
+          font-size: .75em
+          font-weight: bold
+          margin-bottom: 5px
+          padding: 5px 15px
+          text-transform: uppercase
+
+          & + span
+            margin-left: 5px
 
   .close
     cursor: pointer
@@ -272,12 +350,9 @@ export default {
 
   @media (min-width: 520px)
     .description
-      align-items: center
       border-radius: 30px
       bottom: 0
       grid-template: repeat(4, 1fr) / repeat(3, 1fr)
-      height: 90vh
-      max-height: 600px
       max-width: 600px
       position: fixed
       top: 0
@@ -286,6 +361,7 @@ export default {
       header
         grid-column: 1/4
         grid-row: 1
+        margin-top: 20px
 
       .card-container
         grid-column: 1/2
@@ -306,8 +382,10 @@ export default {
         grid-column: none
         grid-row: none
         position: absolute
-        right: 15px
-        top: 5px
+        left: 0
+        margin: auto
+        right: 0
+        top: 0
 
     @media (min-width: 640px)
       .description

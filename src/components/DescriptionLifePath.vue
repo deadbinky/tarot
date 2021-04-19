@@ -175,6 +175,7 @@ export default {
     header
       margin-bottom: 10px
       padding-bottom: 10px
+      position: relative
       text-align: center
       width: 100%
 
@@ -259,11 +260,13 @@ export default {
       bottom: 0
       display: flex
       flex-direction: column
-      height: 90vh
       max-width: 600px
       position: fixed
       top: 0
       width: 90vw
+
+      header
+        margin-top: 20px
 
       .card
         top: 0
@@ -276,8 +279,10 @@ export default {
         grid-column: none
         grid-row: none
         position: absolute
-        right: 15px
-        top: 5px
+        left: 0
+        margin: auto
+        right: 0
+        top: 0
 
     @media (min-width: 640px)
       .description
