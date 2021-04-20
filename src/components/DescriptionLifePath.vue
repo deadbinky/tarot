@@ -108,13 +108,13 @@ export default {
       })
       this.lifePathName = this.lifepath[key].title
       this.lifePathDescription = this.lifepath[key].description
-      //this.setLine('card-container', 'h3-lifepath', '#ec978e','right', 'right')
     },
     getZodiac (p) {
       const z = this.cards[p].name
       this.zodiacName = z
-      this.zodiacDescription = this.cards[p].description.zodiac
-      //this.setLine('zodiac-card', 'h3-zodiac', '#ffc67a', 'left', 'left')
+      this.zodiacDescription =
+      this.cards[p].description.upright.text
+      //this.cards[p].description.zodiac
     },
     setLine (id1, id2, color, d1, d2) {
       const start = document.getElementById(id1)

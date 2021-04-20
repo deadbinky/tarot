@@ -28,44 +28,47 @@ export default {
     }
   },
   thehighpriestess: {
-    name: 'The High Priestess',
+    title: 'High Priestess',
+    name: 'The %TITLE%',
     image: '2_-_The_High_Priestess.jpg',
     description: {
       upright:  {
         keywords: ['intuition', 'mystery', 'secrets'],
-        text: 'The High Priestess is the first of the cards in the major arcana that hints at deeper knowledge.  They are the keeper of mysteries and secrets.  They urge you to look inside yourself and get in tune with your intuition, empathy, and your psychic self.'
+        text: 'The %TITLE% is the first of the cards in the major arcana that hints at deeper knowledge.  They are the keeper of mysteries and secrets.  They urge you to look inside yourself and get in tune with your intuition, empathy, and your psychic self.'
       },
       reversed:  {
         keywords: ['lack of intuition', 'hidden truths', 'repression'],
-        text: 'When the High Priestess appears reversed, they can be indicating that truths are being kept from you, or that you are keeping the truth from someone else.  They can also indicate that you are ignoring a nagging gut feeling that has been trying to steer you in a situation, or repressing feelings that really need to be dealt with'
+        text: 'When the %TITLE% appears reversed, they can be indicating that truths are being kept from you, or that you are keeping the truth from someone else.  They can also indicate that you are ignoring a nagging gut feeling that has been trying to steer you in a situation, or repressing feelings that really need to be dealt with'
       }
     }
   },
   theempress: {
-    name: 'The Empress',
+    title: 'Empress',
+    name: 'The %TITLE%',
     image: '3_-_The_Empress.jpg',
     description: {
       upright: {
         keywords: ['nurturing', 'creation', 'compassion'],
-        text: 'The Empress is the nurturing caregiver of the deck.  They are the person who will birth new creations into reality, whether those creations are ideas, opportunities, fur babies, or human babies.  The Empress can turn up whenever something new is going to take form in your life.'
+        text: 'The %TITLE% is the nurturing caregiver of the deck.  They are the person who will birth new creations into reality, whether those creations are ideas, opportunities, fur babies, or human babies.  The %TITLE% can turn up whenever something new is going to take form in your life.'
       },
       reversed:  {
         keywords: ['smothering', 'self-neglect', 'blocked creativity'],
-        text: 'In reverse, the Empress can suggest the negative sides of nurturing: placing everyone else\'s needs above your own, or, smothering others with your need to care for them or guide them.  The reversed Empress can also speak to a difficulty bearing something to full term, such as a project or idea, or even sometimes a pregnancy'
+        text: 'In reverse, the %TITLE% can suggest the negative sides of nurturing: placing everyone else\'s needs above your own, or, smothering others with your need to care for them or guide them.  The reversed %TITLE% can also speak to a difficulty bearing something to full term, such as a project or idea, or even sometimes a pregnancy'
       }
     }
   },
   theemperor: {
-    name: 'The Emperor',
+    title: 'Emperor',
+    name: 'The %TITLE%',
     image: '4_-_The_Emperor.jpg',
     description: {
       upright: {
         keywords: ['control', 'rules', 'leadership'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'the %TITLE% is the authoritarian rule-maker of the deck.  the %TITLE% is to the point, a little bossy, and has the power to shape the future and control all the outcomes and variables in a situation to ensure success.  the %TITLE% believes in duty and honour above all else and a correct path to follow.  When the %TITLE% shows up in a reading, you can take it as a sign to harness their leadership energy in a situation'
       },
       reversed:  {
         keywords: ['overbearing', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
       zodiac: 'Aries like to lead and be in control.  They are represented here by the Emperor, the ruling parental figure of the tarot deck.'
     }
@@ -80,7 +83,7 @@ export default {
       },
       reversed:  {
         keywords: ['societal repression', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
       zodiac: 'Taurus'
     }
@@ -91,11 +94,11 @@ export default {
     description: {
       upright: {
         keywords: ['partnership', 'harmony', 'duality'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'The Lovers can represent duality and harmony.  This card celebrates love in all forms,  choosing to focus on the story of the Owl and the Pussy-Cat, two beings who find solace and love despite innumerable differences.  When this card appears, it can be a message of finding inner harmony, making a difficult choice, or of the intimate and tight bond between you and your partner.'
       },
       reversed:  {
-        keywords: ['disharmony', 'unconnected', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['disharmony', 'unconnected', 'separation'],
+        text: ''
       },
       zodiac: 'Gemini'
     }
@@ -105,12 +108,12 @@ export default {
     image: '7_-_The_Chariot.jpg',
     description: {
       upright: {
-        keywords: ['victory', 'certainty', 'journey'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['victory', 'certainty', 'journey', 'control'],
+        text: 'The Chariot can represent that you are about to embark on a journey, whether that\'s physically travelling somewhere or moving out on your own, or even just starting something new in your life.  If this card appears while you are questioning if you should do something, this card cries out that you will be victorious.'
       },
       reversed:  {
-        keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['stalling out', 'uncertainty', 'disorder'],
+        text: ''
       },
       zodiac: 'Cancer'
     }
@@ -120,12 +123,12 @@ export default {
     image: '8_-_Strength.jpg',
     description: {
       upright: {
-        keywords: ['fortitude', 'courage', 'self-assurance'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['fortitude', 'courage', 'confidence'],
+        text: 'Strength can refer to having self-confidence, courage, or even the inner strength to shut down the voices in your head.  When the Strength card appears, you need to harness your lion spirit and believe in yourself, or call on your deep reserves of fortitude to get you through a difficult situation.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
       zodiac: 'Leos are forces of nature.'
     }
@@ -136,11 +139,11 @@ export default {
     description: {
       upright: {
         keywords: ['self-reflection', 'solitude', 'contemplation'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'The Hermit climbs out of their day to day life, high above the world to take stock.  In a period of contemplation, the Hermit looks for what things, habits, or relationships are working and what is no longer serving them.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
       zodiac: 'Virgo'
     }
@@ -151,11 +154,11 @@ export default {
     description: {
       upright: {
         keywords: ['twists of fate', 'chance', 'good luck'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'The Wheel of Fortune is always spinning from good to bad and back again.  Whichever way the wheel catches you, you can be sure that it will spin back the other way again.  Like Death, the Wheel of Fortune turns for everyone, and no one is exempt from twists of fate, good or bad.  Right now, fortune smiles upon you and your current outluck is filled with good luck.  Revel in the good times, because they don\'t last forever.'
       },
       reversed:  {
         keywords: ['bad luck', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: 'Bad Luck may pervade this situation right now, but the wheel is always turning and soon it will favour you again.'
       }
     }
   },
@@ -164,27 +167,28 @@ export default {
     image: '11_-_Justice.jpg',
     description: {
       upright: {
-        keywords: ['karma', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['karma', 'equity', 'truth'],
+        text: '"You get what you give" is the lesson that the Justice card offers.  The squid in this card has huge eyes that can pierce the darkness and see the truth of the matter before them.  They are watching and weighing the actions and deeds around them.  When this card appears, it signals either that you will be judged for actions you have taken, or that karma will relieve you from actions that have wronged you'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
       zodiac: 'Libra'
     }
   },
-  thehangedman: {
-    name: 'The Hanged Man',
+  thehangedmoth: {
+    title: 'Hanged Moth',
+    name: 'The %TITLE%',
     image: '12_-_The_Hanged_Man.jpg',
     description: {
       upright: {
-        keywords: ['self-sacrifice', 'change of perspective', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['self-sacrifice', 'change of perspective', 'enlightenment'],
+        text: 'The %TITLE% caught in the spider web is hanging there by choice.  Usually one to fly about and see the world passing by as a blur, the moth chooses to stop and hang upside down.  From this perspective, the moth can see that the world really isn\'t made of blurs, but instead its made of trees and flowers and other creatures.  This change of perspective leads to an epiphany about how the world works and their place in it.'
       },
       reversed:  {
         keywords: ['stuck', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -193,12 +197,12 @@ export default {
     image: '13_-_Death.jpg',
     description: {
       upright: {
-        keywords: ['ending', 'transformation', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['ending', 'transformation', 'change'],
+        text: 'Death comes for us all in the end, but also several times in the course of our lives.  Death is not always physical.  It can also represent the end of one situation and the beginning of a new one.  In this card we can see a body being devoured by mushrooms, transforming from a singular individual into part of the largest organism on the planet, mycellium.  This card can indicate the ending of something such as a situation, habit, or relationship, and the beginning of something new.  It can also mean that something in your life is undergoing transformation.'
       },
       reversed:  {
-        keywords: ['avoiding change', 'reluctance to move on', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['avoiding change', 'reluctance to move on', 'stagnation'],
+        text: ''
       },
       zodiac: 'Scorpio'
     }
@@ -208,12 +212,12 @@ export default {
     image: '14_-_Temperance.jpg',
     description: {
       upright: {
-        keywords: ['balance', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['balance', 'compromise', 'moderation'],
+        text: 'The Temperance card is about moderation and balance.  Temperance urges us to not fall into the traps of going too hard in one direction, but rather to make sure that we are equal in the effort we give to all parts of our lives.'
       },
       reversed:  {
         keywords: ['unbalanced', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
       zodiac: 'Sagittarius'
     }
@@ -223,12 +227,12 @@ export default {
     image: '15_-_The_Devil.jpg',
     description: {
       upright: {
-        keywords: ['addiction', 'temptation', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['addiction', 'temptation', 'seduction'],
+        text: 'We are our own Devil, that is the message of the Devil card.  We can place chains around our own necks and trap ourselves, causing utter destruction in our lives if we aren\'t careful.  The Devil can represent both temptations and addictions, or even a tendency to overdo something, such as focusing solely on work while neglecting your family life.  When this card shows up, take a good look at where you might be giving in to things that are harmful for you.'
       },
       reversed:  {
-        keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['sobriety', 'freedom', 'recovery'],
+        text: ''
       },
       zodiac: 'Capricorn'
     }
@@ -238,12 +242,12 @@ export default {
     image: '16_-_The_Tower.jpg',
     description: {
       upright: {
-        keywords: ['destruction', 'big shakeup', 'new beginnings'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['destruction', 'foundational shift', 'new beginnings'],
+        text: 'The Tower is the card that no one wants in their reading, because it warns of a seismic shift in  your foundations.  Something key to your life is crashing down and taking you with it.  But the positive message of this card, is that whatever has fallen down, it is something that wasn\'t stable enough to last anyway.  Learn what you can from this experience and, when the dust settles, build something new with a more solid foundation.'
       },
       reversed:  {
-        keywords: ['moving on from disaster', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['moving on from disaster', 'resisting upheaval', ''],
+        text: ''
       }
     }
   },
@@ -253,13 +257,13 @@ export default {
     description: {
       upright: {
         keywords: ['hope', 'renewal', 'goals'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'The Star is a card about hope and renewal and new beginnings.  In many ways, the Star card has the hope, optimism, and exuberance of the Fool, and balances it with the lessons learned in the cards that precede this one.  In this card, we see two foxes balancing each other and celebrating their new beginning under a huge shining star, reminding us that the future is what we make it and we should celebrate it with every fibre of our being.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
-      zodiac: 'Aquarius'
+      zodiac: 'Always the progressive, Aquarius prefers to keep their eye on the future and the good of the group rather than individual needs.  These qualities are reflected in the Star card, which is about balancing, rebirth, hopes and goals'
     }
   },
   themoon: {
@@ -268,13 +272,13 @@ export default {
     description: {
       upright: {
         keywords: ['illusion', 'dreams', 'feelings'],
-        text: 'The Moon card can represent that things may be different than they appear. Either you could be lying to yourself, or simply be wearing rose coloured glasses about a situation.  This card can also point to unresolved baggage from the past clouding your current perception with fear. Do a check in with yourself and make sure that everything feels right in your gut.'
+        text: 'The Moon card can represent that things may be different than they appear. Either you could be lying to yourself, or simply be wearing rose coloured glasses about a situation.  This card shows two salamanders dancing around a fire to ward away the evil spirits they feel are surrounding them, pointing to unresolved baggage from their pasts clouding their current perception with fear. Do a check in with yourself and make sure that everything feels right in your gut.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       },
-      zodiac: 'Pisces is the sign most connected to their own creativity, dreams, and intuition.  The Moon card emphasizes Pisces compassion and deep imagination, but can also warn of becoming lost in your own fantasies'
+      zodiac: 'Pisces is the sign most connected to their own creativity, dreams, and intuition.  The Moon card emphasizes Pisces compassion and deep imagination, but can also warn of becoming lost in your own fantasies and being disappointed with reality'
     }
   },
   theSun: {
@@ -282,26 +286,26 @@ export default {
     image: '19_-_The_Sun.jpg',
     description: {
       upright: {
-        keywords: ['happiness', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['happiness', 'success', 'enlightenment'],
+        text: 'The Sun is one of the happiest cards in the tarot deck.  When you see this card, it means everything is coming up Milhouse, or whatever your name happens to be.  The Sun can indicate a mental breakthrough of leveling up of some kind, or just to take some time to bask in the sun like a contented frog.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
-  judgment: {
-    name: 'Judgment',
+  judgement: {
+    name: 'Judgement',
     image: '20_-_Judgement.jpg',
     description: {
       upright: {
-        keywords: ['reckoning', 'weighing worth', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['reckoning', 'weighing worth', 'resurrection'],
+        text: 'Judgement is the card that goes Book of Revelation on your personal life.  It\'s about taking stock and figuring out what is worthy of staying a part of your life, your environment, even your personality.  This card, can also refer to a chapter of your life being over, and beginning anew, or being resurrected.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -311,11 +315,11 @@ export default {
     description: {
       upright: {
         keywords: ['completion', 'end of a chapter', 'leveling up'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'You did it!  You arrived.   You completed this chapter and you have levelled up.  The Universe sees you, it\'s smiling and saying YES, YOU ARE FABULOUS.  The World signifies that we are in a really wonderful position where our goals have been met, we are ready to start something new building on everything we have learned thus far.'
       },
       reversed:  {
-        keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['unfinished plans', 'incompleteness', 'stagnation'],
+        text: ''
       }
     }
   },
@@ -325,11 +329,11 @@ export default {
     description: {
       upright: {
         keywords: ['new adventure', 'new idea', 'creative opportunity'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -339,11 +343,11 @@ export default {
     description: {
       upright: {
         keywords: ['decision', 'new path', 'choice'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'The Two of Wands can symbolize the urge to make plans or to make a decision to start something new.  In this card, we see a rabbit holding the planet Jupiter, representing expansion,  and looking beyond to the next thing, as if deciding if it is worth starting over.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -353,11 +357,11 @@ export default {
     description: {
       upright: {
         keywords: ['expansion', 'exploration', 'planning'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['lack of planning', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -367,11 +371,11 @@ export default {
     description: {
       upright: {
         keywords: ['celebration', 'structure', 'home'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -381,11 +385,11 @@ export default {
     description: {
       upright: {
         keywords: ['conflict', 'courage to compete', 'sparring'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['avoiding conflict', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -394,12 +398,12 @@ export default {
     image: '6_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['victory', 'recognition', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['victory', 'recognition', 'triumph'],
+        text: 'The Six of Wands heralds the arrival of victory.  You are reaping the rewards of hard work, and now being recognized publicly for the absolute success you are.  This recognition could come in the form of an award, an explosion of followers on social media, or perhaps even your work was published in some way.'
       },
       reversed:  {
-        keywords: ['lack of recognition', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['lack of recognition', 'overlooked', 'doubt'],
+        text: 'In reverse, the Six of Wands denotes a failure to be acknowledged for your hard work.  This could be because you fell short of your own expectations, or maybe you are feeling like the world at large isn\'t ready for what you are bringing to the stage yet.  Take a step back and see where you want to grow your abilities and try again.'
       }
     }
   },
@@ -408,12 +412,12 @@ export default {
     image: '7_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['overcoming challenges', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['overcoming challenges', 'security', 'preservation'],
+        text: 'The Seven of Wands is largely about taking the energy of success from the Six of Wands and wanting to protect it.  You worked hard for your success and this space that you now occupy and you are unwilling to give it up.  Be firm and be obstinant.  Defend your space.'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -423,11 +427,11 @@ export default {
     description: {
       upright: {
         keywords: ['fast moving', 'travel', 'quick movement'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -436,12 +440,12 @@ export default {
     image: '9_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['almost there', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['persistance', 'tenacity', 'weariness'],
+        text: 'When this card shows up, it is gently reminding us that the last 10% is always the hardest of any project.  You may be feeling beaten by everything you\'ve had to endure to arrive at this point, but push past that feeling, you are almost there and the success and completion of tomorrow will far outweigh the weariness of today'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -450,68 +454,72 @@ export default {
     image: '10_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['overburdened', 'delegate', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['overburdened', 'need to delegate', 'struggling'],
+        text: 'When the Ten of Wands appears in a reading, it\'s time to assess how you are feeling about a situation or creative endeavour.  Are you overburdened by all the work that is involved?  Has your passion turned into an albatross around your neck?  Don\'t be afraid to delegate some of your responsibilities to friends or co-workers who can help so that you can focus on the most important responsibilities you face'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   wandspage: {
-    name: 'Page of Wands',
+    title: 'Page',
+    name: '%TITLE% of Wands',
     image: 'Page_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['exploration', 'new project', 'excitement'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   wandsknight: {
-    name: 'Knight of Wands',
+    title: 'Knight',
+    name: '%TITLE% of Wands',
     image: 'Knight_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['adventure', 'action', 'enthusiasm'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   wandsqueen: {
-    name: 'Queen of Wands',
+    title: 'Queen',
+    name: '%TITLE% of Wands',
     image: 'Queen_Of_Wands.jpg',
     description: {
       upright: {
         keywords: ['determination', 'overcoming', 'nurturing adventure'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   wandsking: {
-    name: 'King of Wands',
+    title: 'King',
+    name: '%TITLE% of Wands',
     image: 'King_Of_Wands.jpg',
     description: {
       upright: {
-        keywords: ['leadership', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['leadership', 'gut feelings', 'bravery'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -520,12 +528,12 @@ export default {
     image: 'Ace_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['new feelings', 'new relationship', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['new feelings', 'new relationship', 'new creativity'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -534,12 +542,12 @@ export default {
     image: '2_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['harmony', 'communication', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['harmony', 'communication', 'duality'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -548,12 +556,12 @@ export default {
     image: '3_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['community', 'friendship', 'party'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['community', 'friendship', 'socializing'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -562,12 +570,12 @@ export default {
     image: '4_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['missed opportunity', 'apathy', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['missed opportunity', 'apathy', 'boredom'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -577,11 +585,11 @@ export default {
     description: {
       upright: {
         keywords: ['loss', 'sadness', 'disappointment'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: 'Fives represent instability or wobbling in our journey.  When combined with the emotions of the cups cards, we are dealing with a loss of someone or something.  The grief and sadness of this card urges us to take some time to care for ourselves through this difficult time and make sure that we can grieve productively'
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -591,11 +599,11 @@ export default {
     description: {
       upright: {
         keywords: ['happy memories', 'childhood', 'nostalgia'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -605,11 +613,11 @@ export default {
     description: {
       upright: {
         keywords: ['options', 'opportunities', 'temptation'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -618,12 +626,12 @@ export default {
     image: '8_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['moving on', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['moving on', 'liberation', 'surrender'],
+        text: ''
       },
       reversed:  {
-        keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['holding on', 'avoidance', 'stagnation'],
+        text: ''
       }
     }
   },
@@ -633,11 +641,11 @@ export default {
     description: {
       upright: {
         keywords: ['luxury', 'wealth', 'happy life'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -646,68 +654,72 @@ export default {
     image: '10_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['happy home', '', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['happy home', 'family life', 'contentment'],
+        text: ''
       },
       reversed:  {
-        keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        keywords: ['unhappy home', 'loneliness', 'discontentment'],
+        text: ''
       }
     }
   },
   cupspage: {
-    name: 'Page of Cups',
+    title: 'Page',
+    name: '%TITLE% of Cups',
     image: 'Page_Of_Cups.jpg',
     description: {
       upright: {
         keywords: ['happy surprise', 'intuition', 'empath'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   cupsknight: {
-    name: 'Knight of Cups',
+    title: 'Knight',
+    name: '%TITLE% of Cups',
     image: 'Knight_Of_Cups.jpg',
     description: {
       upright: {
         keywords: ['messenger', 'adventure', 'romance'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   cupsqueen: {
-    name: 'Queen of Cups',
+    title: 'Queen',
+    name: '%TITLE% of Cups',
     image: 'Queen_Of_Cups.jpg',
     description: {
       upright: {
         keywords: ['nurturing feelings', 'calm', 'comfort'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   cupsking: {
-    name: 'King of Cups',
+    title: 'King',
+    name: '%TITLE% of Cups',
     image: 'King_Of_Cups.jpg',
     description: {
       upright: {
-        keywords: ['control of feelings', 'balance', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['control of feelings', 'balance', 'diplomatic'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -716,12 +728,12 @@ export default {
     image: 'Ace_Of_Swords.jpg',
     description: {
       upright: {
-        keywords: ['sharp mindedness', 'new mentality', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['sharp mindedness', 'mental breakthrough', 'new ideas'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -731,11 +743,11 @@ export default {
     description: {
       upright: {
         keywords: ['difficult choices', 'closed off', 'willfully blind'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -745,11 +757,11 @@ export default {
     description: {
       upright: {
         keywords: ['heartbreak', 'guilt', 'betrayal'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['recovery', 'moving on', 'heart mended'],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -759,11 +771,11 @@ export default {
     description: {
       upright: {
         keywords: ['rest', 'contemplation', 'taking a break'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['unrest', 'overwrought', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -773,11 +785,11 @@ export default {
     description: {
       upright: {
         keywords: ['unchecked ambition', 'gaslighting', 'conflict'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -787,11 +799,11 @@ export default {
     description: {
       upright: {
         keywords: ['moving on', 'transition', 'healing'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['inability to move on', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -801,11 +813,11 @@ export default {
     description: {
       upright: {
         keywords: ['sneakiness', 'theft', 'dishonesty'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['turning over a new leaf', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -814,12 +826,12 @@ export default {
     image: '8_Of_Swords.jpg',
     description: {
       upright: {
-        keywords: ['self-entrapment', 'wallowing in fear', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['self-entrapment', 'wallowing in fear', 'bondage'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -829,11 +841,11 @@ export default {
     description: {
       upright: {
         keywords: ['anxiety', 'sleepless nights', 'restless'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -842,68 +854,72 @@ export default {
     image: '10_Of_Swords.jpg',
     description: {
       upright: {
-        keywords: ['failure', 'backstabbing', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['failure', 'backstabbing', 'betrayal'],
+        text: ''
       },
       reversed:  {
         keywords: ['release from fear', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   swordspage: {
-    name: 'Page of Swords',
+    title: 'Page',
+    name: '%TITLE% of Swords',
     image: 'Page_Of_Swords.jpg',
     description: {
       upright: {
         keywords: ['restless curiosity', 'mental energy', 'new ideas'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   swordsknight: {
-    name: 'Knight of Swords',
+    title: 'Knight',
+    name: '%TITLE% of Swords',
     image: 'Knight_Of_Swords.jpg',
     description: {
       upright: {
         keywords: ['chaotic energy', 'ambition', 'fast decisions'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   swordsqueen: {
-    name: 'Queen of Swords',
+    title: 'Queen',
+    name: '%TITLE% of Swords',
     image: 'Queen_Of_Swords.jpg',
     description: {
       upright: {
         keywords: ['nurturing ideas', 'clear minded', 'clinical'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   swordsking: {
-    name: 'King of Swords',
+    title: 'King',
+    name: '%TITLE% of Swords',
     image: 'King_Of_Swords.jpg',
     description: {
       upright: {
         keywords: ['logical', 'mental control', 'decisive'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -913,11 +929,11 @@ export default {
     description: {
       upright: {
         keywords: ['new opportunity', 'new job', 'new money'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -927,11 +943,11 @@ export default {
     description: {
       upright: {
         keywords: ['balance', 'harmony', 'time management'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['imbalance', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -941,11 +957,11 @@ export default {
     description: {
       upright: {
         keywords: ['mastery', 'contracts', 'apprenticeship'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -955,11 +971,11 @@ export default {
     description: {
       upright: {
         keywords: ['investment', 'security', 'scarcity'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['miserly', 'empty pockets', 'skinflint'],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -969,11 +985,11 @@ export default {
     description: {
       upright: {
         keywords: ['isolation', 'poverty', 'need'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -982,12 +998,12 @@ export default {
     image: '6_Of_Pentacles.jpg',
     description: {
       upright: {
-        keywords: ['generosity', 'sharing wealth', 'helping'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['generosity', 'sharing', 'helping'],
+        text: ''
       },
       reversed:  {
         keywords: ['needing help', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -996,12 +1012,12 @@ export default {
     image: '7_Of_Pentacles.jpg',
     description: {
       upright: {
-        keywords: ['assessment of work', 'considering harvest', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['assessment', 'harvest', 'results'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -1011,11 +1027,11 @@ export default {
     description: {
       upright: {
         keywords: ['hustling', 'working hard', 'apprenticeship'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -1025,11 +1041,11 @@ export default {
     description: {
       upright: {
         keywords: ['luxury', 'happiness', 'earned wealth'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
@@ -1039,66 +1055,71 @@ export default {
     description: {
       upright: {
         keywords: ['inheritance', 'legacy', 'family reunion'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   pentaclespage: {
-    name: 'Page of Pentacles',
+    title: 'Page',
+    name: '%TITLE% of Pentacles',
     image: 'Page_Of_Pentacles.jpg',
     description: {
       upright: {
-        keywords: ['new apprenticeship', 'student', ''],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['new job', 'student', 'apprentice'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   pentaclesknight: {
-    name: 'Knight of Pentacles',
+    title: 'Knight',
+    name: '%TITLE% of Pentacles',
     image: 'Knight_Of_Pentacles.jpg',
     description: {
       upright: {
         keywords: ['hard work', 'routine', 'efficient'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   pentaclesqueen: {
-    name: 'Queen of Pentacles',
+    title: 'Queen',
+    name: '%TITLE% of Pentacles',
     image: 'Queen_Of_Pentacles.jpg',
     description: {
       upright: {
-        keywords: ['mom', 'creature comforts', 'caring'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'
+        keywords: ['nurturing energy', 'creature comforts', 'caring', 'problem solver'],
+        text: ''
       },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   },
   pentaclesking: {
-    name: 'King of Pentacles',
+    title: 'King',
+    name: '%TITLE% of Pentacles',
     image: 'King_Of_Pentacles.jpg',
     description: {
       upright: {
         keywords: ['engineer', 'shared abundance', 'miracle worker'],
-        text: 'Paroxysm of global death emerged into consciousness with pretty stories for which there\'s little good evidence a billion trillion courage of our questions network of wormholes. Another world Cambrian explosion a mote of dust suspended in a sunbeam tingling of the spine the sky calls to us are creatures of the cosmos? How far away courage of our questions Cambrian explosion another world white dwarf two ghostly white figures in coveralls and helmets are softly dancing and billions upon billions upon billions upon billions upon billions upon billions upon billions.'},
+        text: ''
+      },
       reversed:  {
         keywords: ['', '', ''],
-        text: 'snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib nopu snoillib dna gnicnad yltfos era stemleh dna sllarevoc ni serugif etihw yltsohg owt frawd etihw dlrow rehtona noisolpxe nairbmaC snoitseuq ruo fo egaruoc yawa raf woH ?somsoc eht fo serutaerc era su ot sllac yks eht enips eht fo gnilgnit maebnus a ni dednepsus tsud fo etom a noisolpxe nairbmaC dlrow rehtonA .selohmrow fo krowten snoitseuq ruo fo egaruoc noillirt noillib a ecnedive doog elttil s\'ereht hcihw rof seirots ytterp htiw ssensuoicsnoc otni degreme htaed labolg fo msyxoraP'
+        text: ''
       }
     }
   }

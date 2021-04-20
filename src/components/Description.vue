@@ -132,13 +132,13 @@ export default {
       const c = this.cards[p.cardkey]
       const dir = p.reversed
       const direction = this.getDirection(dir)
-      const description = c.description[direction]
+      const desc = c.description[direction]
       this.key = p.cardkey
       this.card = c
 
-      this.name = c.name
-      this.description = description.text
-      this.keywords = description.keywords
+      this.name = this.replace(c.title, c.name)
+      this.description = this.replace(c.title, desc.text)
+      this.keywords = desc.keywords
 
       this.img = require('@/assets/images/cards/' + this.card.image)
 
@@ -169,9 +169,12 @@ export default {
       const dir = !this.reversed
       const direction = this.getDirection(dir)
       const c = this.card
-      const description = c.description[direction]
-      this.keywords = description.keywords
-      this.description = description.text
+      const desc = c.description[direction]
+      this.keywords = desc.keywords
+      this.description = this.replace(c.title, desc.text)
+    },
+    replace (title, element) {
+      return element.replace(/%TITLE%/g, title)
     },
     close () {
       this.open = false
