@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     component: 'Spread',
-    description: 'Description',
+    description: 'DescriptionCard',
     zodiacSign: '',
     spreadType: 'celticcross',
     useReversals: true
@@ -14,11 +14,20 @@ export default new Vuex.Store({
   mutations: {
     changeComponent (state, component) {
       state.component = component
-      if (component === 'LifePath') {
-        state.description = 'DescriptionLifePath'
-        return
+
+      let d
+      switch (component) {
+        case 'LifePath':
+          d = 'DescriptionLifePath'
+          break
+        case 'SeeAllCards':
+          d = 'DescriptionSeeAllCards'
+          break
+        default:
+          d = 'DescriptionCard'
       }
-      state.description = 'Description'
+      console.log(d)
+      state.description = d
     },
     changeSpread (state, spreadType) {
       state.spreadType = spreadType

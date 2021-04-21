@@ -4,87 +4,181 @@
     <div class='close'
       @click='close'>x</div>
     <header>
-      <slot name='header'></slot>
+      <h2 v-if='!this.seeallcards'>
+        {{ position.name }}
+      </h2>
+      <h2 v-else>
+        <div class='prev' @click='nextCard("prev")'>
+          &lt;
+        </div>
+        {{ name }}
+        <transition name='fade'>
+          <span v-if='this.reversed'>
+            (Reversed)
+          </span>
+        </transition>
+        <div class='next' @click='nextCard()'>
+          &gt;
+        </div>
+      </h2>
+      <p v-if='!this.seeallcards'>{{ position.description }}</p>
     </header>
     <div class='card-container'>
-        <slot name='card'></slot>
+      <div class='card'
+        :class='{ reversed: reversed }'>
+        <img :src='img' :alt='name'/>
+      </div>
+      <div v-if='this.seeallcards'
+        class='seereversemeaning'
+        @click='reverseMeaning()'>
+        see
+        <span v-if='this.reversed'>
+          ↑ upright
+        </span>
+        <span v-else>
+          ↓ reverse
+        </span>
+        meaning</div>
     </div>
     <div class='content'>
-        <slot name='content-header'></slot>
-        <slot name='content'>
-          <p>
-            <span class='keywords'>
-              <span v-for='(keyword, index) in this.keywords'
-                :key='index'>
-                {{ keyword }}
-              </span>
-            </span>
-            {{ cardDescription }}
-          </p>
-        </slot>
+      <h3 v-if='!this.seeallcards'>
+        {{ name }}
+        <transition name='fade'>
+          <span v-if='this.reversed'>
+            (Reversed)
+          </span>
+        </transition>
+      </h3>
+      <h3 v-else>
+        <transition name='fade'>
+          <span v-if='this.reversed'>
+            Reversed
+          </span>
+        </transition>
+        Meaning
+      </h3>
+      <p>
+        <span class='keywords'>
+          <span v-for='(keyword, index) in this.keywords'
+            :key='index'>
+            {{ keyword }}
+          </span>
+        </span>
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import utility from '@/assets/js/utilityFunctions'
 import eventBus from '@/assets/js/eventBus'
 import cards from '@/assets/js/cards'
+import spreads from '@/assets/js/spreads'
 import { mapState } from 'vuex'
 
 export default {
   name: 'Description',
   data () {
     return {
+      img: '',
+      key: '',
+      keys: [],
+      name: '',
+      card: {},
       open: false,
       cards: cards,
+      spreads: spreads,
       keywords: [],
-      cardDescription: ''
+      position: {},
+      reversed: false,
+      description: '',
+      seeallcards: false
     }
-  },
-  computed: {
-    ...mapState(['description'])
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
       this.open = true
       this.describeCard(p)
     })
-    eventBus.$on('fireReverseMeaning', (r) => {
-      this.reverseMeaning(r)
-    })
     eventBus.$on('fireCloseDescription', () => {
       this.close()
     })
   },
+  computed: {
+    ...mapState(['spreadType','component'])
+  },
   methods: {
-    describeCard (p) {
-      if (this.description === 'DescriptionLifePath') {
-        return
+    nextCard (dir) {
+      let index = this.keys.indexOf(this.key)
+
+      dir === 'prev' ? index-- : index++
+
+      const cardkey = this.keys[index]
+      const name = this.cards[cardkey].name
+      const image = this.cards[cardkey].image
+
+      const p = {
+        cardkey: cardkey,
+        name: name,
+        image: image,
+        reversed: this.reversed
       }
+
+      this.describeCard(p)
+    },
+    describeCard (p) {
+      this.seeallcards = this.component === 'SeeAllCards'
 
       const c = this.cards[p.cardkey]
       const dir = p.reversed
-      const d = utility.getDirection(dir)
-      const direction = d.direction
-
+      const direction = this.getDirection(dir)
       const desc = c.description[direction]
+      this.key = p.cardkey
       this.card = c
 
-      this.cardDescription = utility.replace(/%TITLE%/g, c.title, desc.text)
+      this.name = this.replace(c.title, c.name)
+      this.description = this.replace(c.title, desc.text)
       this.keywords = desc.keywords
-    },
-    reverseMeaning (r) {
-      const d = utility.getDirection(r)
-      const direction = d.direction
 
+      this.img = require('@/assets/images/cards/' + this.card.image)
+
+      if (this.seeallcards) {
+        this.keys = Object.keys(this.cards)
+        return
+      }
+
+      const spread = this.spreads[this.spreadType]
+      const pos = spread.positions[p.position]
+
+      this.position = {
+        name: pos.name,
+        description: pos.description
+      }
+    },
+    getDirection (dir) {
+      this.reversed = false
+      let direction = 'upright'
+
+      if (dir) {
+        this.reversed = true
+        direction = 'reversed'
+      }
+      return direction
+    },
+    reverseMeaning () {
+      const dir = !this.reversed
+      const direction = this.getDirection(dir)
       const c = this.card
       const desc = c.description[direction]
       this.keywords = desc.keywords
-      this.cardDescription = utility.replace(/%TITLE%/g, c.title, desc.text)
+      this.description = this.replace(c.title, desc.text)
+    },
+    replace (title, element) {
+      return element.replace(/%TITLE%/g, title)
     },
     close () {
       this.open = false
+      this.reversed = false
       eventBus.$emit('fireDismissDescription')
     }
   }
@@ -102,6 +196,7 @@ export default {
     box-sizing: border-box
     color: #fff
     display: grid
+    height: 100vh
     left: 0
     margin: auto
     opacity: 0
@@ -118,18 +213,6 @@ export default {
       content: ' '
       clear: both
       display: block
-
-    .card-container
-      display: flex
-      flex-direction: row
-      justify-content: center
-      margin-bottom: 20px
-      margin-top: 20px
-      width: 100%
-
-    &.seeallcards
-      .card-container
-        flex-direction: column
 
     &.open
       height: auto
@@ -150,7 +233,7 @@ export default {
       font-size: 50px
       height: 50px
       position: absolute
-      top: -50px
+      top: 0
       width: 50px
 
     .prev
@@ -181,11 +264,9 @@ export default {
     .card-container
       grid-column: 1
       grid-row: 3
-      text-align: center
 
     .card
-      margin-left: auto
-      margin-right: auto
+      margin: auto
       max-width: 200px
       position: relative
       top: -5px
@@ -279,9 +360,6 @@ export default {
       position: fixed
       top: 0
       width: 90vw
-
-      .next, .prev
-        top: 0
 
       header
         grid-column: 1/4

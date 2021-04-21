@@ -13,8 +13,9 @@
 import Spread from '@/components/Spread'
 import LifePath from '@/components/LifePath'
 import SeeAllCards from '@/components/SeeAllCards'
-import Description from '@/components/Description'
+import DescriptionCard from '@/components/DescriptionCard'
 import DescriptionLifePath from '@/components/DescriptionLifePath'
+import DescriptionSeeAllCards from '@/components/DescriptionSeeAllCards'
 import Menu from '@/components/Menu'
 import eventBus from '@/assets/js/eventBus'
 import { mapState } from 'vuex'
@@ -26,8 +27,9 @@ export default {
     Spread,
     LifePath,
     SeeAllCards,
-    Description,
-    DescriptionLifePath
+    DescriptionCard,
+    DescriptionLifePath,
+    DescriptionSeeAllCards
   },
   data () {
     return {

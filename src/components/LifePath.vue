@@ -240,6 +240,7 @@
       width: 250px
 
     .vdp-datepicker__calendar .month, .vdp-datepicker__calendar .year
+    min-width: 160px
     width: 33%
     text-transform: uppercase
 

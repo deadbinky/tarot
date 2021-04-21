@@ -1,14 +1,9 @@
 <template>
-  <div class='description'
-    :class='{open: open}'>
-    <div class='close'
-      @click='close'>x</div>
-    <header>
-      <h2>
-        Zodiac and Life Path Cards
-      </h2>
-    </header>
-    <div class='card-container'>
+  <Description>
+    <template v-slot:header>
+      <h2>Zodiac and Life Path Cards</h2>
+    </template>
+    <template v-slot:card>
       <div class='card' id='zodiac-card'>
         <img :src='imgs[0]'/>
       </div>
@@ -21,29 +16,31 @@
       <div class='card' v-if='imgs[3]' id='lifepath-card3'>
         <img :src='imgs[3]'/>
       </div>
-    </div>
-    <div class='content'>
-      <h3 id='h3-zodiac'>
+    </template>
+    <template v-slot:content>
+      <h3>
         {{ zodiacSign }} & {{ zodiacName }}
       </h3>
         <p>{{ zodiacDescription }}</p>
 
-      <h3 id='h3-lifepath'>
+      <h3>
         {{ lifePathName }}
       </h3>
       <p>{{ lifePathDescription }}</p>
-    </div>
-  </div>
+    </template>
+  </Description>
 </template>
 
 <script>
+import Description from '@/components/Description'
 import cards from '@/assets/js/cards'
 import lifepath from '@/assets/js/lifepath'
 import eventBus from '@/assets/js/eventBus'
+import utility from '@/assets/js/utilityFunctions'
 import { mapState } from 'vuex'
 
 export default {
-  name: 'Description',
+  name: 'DescriptionLifePath',
   data () {
     return {
       card: {},
@@ -53,23 +50,27 @@ export default {
       lifePathName: '',
       zodiacDescription: '',
       lifePathDescription: '',
-      zodiacName: '',
-      open: false,
+      zodiacName: ''
     }
   },
   created () {
-    eventBus.$on('fireDescribeLifePath', (p) => {
-      this.open = true
-      this.describeCard(p)
+    eventBus.$on('fireDescribeCard', (p) => {
+      this.checkComponent(p)
     })
-    eventBus.$on('fireCloseDescription', () => {
-      this.close()
-    })
+  },
+  components: {
+    Description
   },
   computed: {
-    ...mapState(['zodiacSign'])
+    ...mapState(['description', 'zodiacSign'])
   },
   methods: {
+    checkComponent (p) {
+      if (this.description !== 'DescriptionLifePath') {
+        return
+      }
+      this.describeCard(p)
+    },
     describeCard (p) {
       const q = p.slice()
       this.getCards(q)
@@ -78,6 +79,7 @@ export default {
       this.getLifePath(q)
     },
     getCards (p) {
+      console.log(p)
       p.forEach((z, i) => {
           if (!z) {
             return
@@ -90,9 +92,6 @@ export default {
     getLifePath (p) {
       let key
       const lps = Object.keys(this.lifepath)
-
-      //get p length
-      //make v the same length - maybe just check for one that has 3 somehow
 
       lps.some((x) => {
         const v = [
@@ -110,26 +109,12 @@ export default {
       this.lifePathDescription = this.lifepath[key].description
     },
     getZodiac (p) {
-      const z = this.cards[p].name
-      this.zodiacName = z
-      this.zodiacDescription =
-      this.cards[p].description.upright.text
+      const z =  this.cards[p].name
+      const title = this.cards[p].title
+      this.zodiacName = utility.replace(/%TITLE%/g, title, z)
+      this.zodiacDescription = utility.replace(/%TITLE%/g, title,
+      this.cards[p].description.upright.text)
       //this.cards[p].description.zodiac
-    },
-    setLine (id1, id2, color, d1, d2) {
-      const start = document.getElementById(id1)
-      const end = document.getElementById(id2)
-      this.$nextTick(function () {
-        new window.LeaderLine(start, end, {
-          color: color,
-          startSocket: d1,
-          endSocket: d2
-        })
-      })
-    },
-    close () {
-      this.open = false
-      eventBus.$emit('fireDismissDescription')
     }
   }
 }
@@ -141,68 +126,26 @@ export default {
   @import '../assets/sass/_decorations'
 
   .description
-    align-items: top
-    background: $brown
-    box-sizing: border-box
-    color: #fff
-    height: 100vh
-    left: 0
-    margin: auto
-    opacity: 0
-    overflow: hidden
-    padding: 30px
-    position: absolute
-    right: 0
-    text-align: left
-    top: 0
-    width: 100%
-    z-index: -1
-    transition: opacity 0.5s ease-in, z-index 0s .6s
+    align-items: center
+    display: flex
+    flex-direction: column
 
-    &.open
-      height: auto
-      opacity: 1
-      overflow: visible
-      z-index: 6
-      transition: opacity 0.5s ease-in
-
-      header:after
-        @include little-border-expand(.75s)
-
-      .card
-        transition: transform .75s $easeInBack .25s
-
-    header
-      margin-bottom: 10px
-      padding-bottom: 10px
-      position: relative
-      text-align: center
-      width: 100%
-
-      &:after
-        @include little-border-collapsed($lightbrown)
-
-      h2
-        color: $lightbrown
-
-      p
-        font-style: italic
-
-    .card-container
-      display: flex
-      flex-direction: row
+    .content
+      margin-top: 20px
 
     .card
       margin: 0 10px
       max-width: 100px
-      position: relative
-      top: -5px
       width: 50%
-      transition: transform 0s ease-out 1s
 
-      &:before
-        content: ' '
-        padding-top: 153.25%
+      &:nth-child(1)
+        order: 1
+
+      &:nth-child(2)
+        order: 2
+
+      &:nth-child(3)
+        order: 3
 
       &:nth-child(1) img
         border: 3px solid $orange
@@ -210,20 +153,9 @@ export default {
       &:nth-child(n+2) img
         border: 3px solid $mediumpink
 
-      img
-        border-radius: 10px
-        height: 100%
-        width: 100%
-
-    h3
-      border-radius: 20px 20px 0 0
-      box-sizing: border-box
-      margin-bottom: 0
-      margin-top: 1.5em
-      padding: 10px
-      text-align: center
+    .content h3
+      margin-top: 20px
       text-transform: capitalize
-      width: 100%
 
       &:nth-of-type(1)
         background-color: $orange
@@ -238,59 +170,13 @@ export default {
 
         + p
           border-color: $mediumpink
+</style>
+<style lang='sass'>
 
-    p
-      border-radius: 0 0 20px 20px
-      border-style: solid
-      border-width: 3px
-      margin-top: 0
-      padding: 15px
-
-  .close
-    cursor: pointer
-    font-size: 50px
-    grid-column: 1
-    grid-row: 1
-    text-align: center
 
   @media (min-width: 520px)
     .description
-      align-items: center
-      border-radius: 30px
-      bottom: 0
-      display: flex
-      flex-direction: column
-      max-width: 600px
-      position: fixed
-      top: 0
-      width: 90vw
-
-      header
-        margin-top: 20px
-
-      .card
-        top: 0
-
-      .content
+      .card-container
+        margin-bottom: 0
         margin-top: 0
-        width: 100%
-
-      .close
-        grid-column: none
-        grid-row: none
-        position: absolute
-        left: 0
-        margin: auto
-        right: 0
-        top: 0
-
-    @media (min-width: 640px)
-      .description
-        height: 80vh
-        min-height: auto
-        width: 80vw
-</style>
-<style lang='sass'>
-  .leader-line
-    z-index: 9999
 </style>

@@ -72,7 +72,7 @@ export default {
       this.holder = this.bg
     },
     openDescription () {
-      eventBus.$emit('fireDescribeLifePath', this.cardArray)
+      eventBus.$emit('fireDescribeCard', this.cardArray)
     }
   }
 }
