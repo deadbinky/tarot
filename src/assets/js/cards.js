@@ -94,11 +94,11 @@ export default {
     description: {
       upright: {
         keywords: ['partnership', 'harmony', 'duality'],
-        text: 'The Lovers can represent duality and harmony.  This card celebrates love in all forms,  choosing to focus on the story of the Owl and the Pussy-Cat, two beings who find solace and love despite innumerable differences.  When this card appears, it can be a message of finding inner harmony, making a difficult choice, or of the intimate and tight bond between you and your partner.'
+        text: 'The Lovers can represent duality and harmony and this card celebrates love in all forms.  When this card appears, it can be a message of finding inner harmony, making a difficult choice, or of the intimate and tight bond between you and your partner.'
       },
       reversed:  {
         keywords: ['disharmony', 'unconnected', 'separation'],
-        text: ''
+        text: 'In reverse, the Lovers can signal turmoil in a relationship, romantic or otherwise.  When upright, this card celbrates union, but in reverse it signifies a wall has grown between two people.  It can also signify a disconnection in your own self.  You may be at odds with yourself over a situation, or turn of events.'
       },
       zodiac: 'Gemini'
     }
@@ -1012,12 +1012,12 @@ export default {
     image: '7_Of_Pentacles.jpg',
     description: {
       upright: {
-        keywords: ['assessment', 'harvest', 'results'],
-        text: ''
+        keywords: ['progress', 'harvest', 'results'],
+        text: 'It is so exciting when you look at something that you have worked hard on and it is just what you imagined, or maybe even better.  Take a moment to revel in your growth and progess and then get back to it.  Your hard work is paying off!'
       },
       reversed:  {
-        keywords: ['', '', ''],
-        text: ''
+        keywords: ['disappointment', 'inadequate results', 'falling short'],
+        text: 'Nothing is worse than taking a step back from something you have worked hard on only to find the pieces are not fitting together as you hoped.  Sometimes it can be helpful to leave your project alone for a day or two and approach it with fresh eyes.  Try to decide whether this project just wants to become its own thing, whether you need to work on some areas of it to bring it back into focus, or whether you need to just drop it all together.'
       }
     }
   },

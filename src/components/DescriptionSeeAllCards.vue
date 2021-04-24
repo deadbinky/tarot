@@ -1,5 +1,5 @@
 <template>
-  <Description class='seeallcards'>
+  <Description id='description-seeallcards'>
     <template v-slot:header>
       <h2>
         <div class='prev'
@@ -52,8 +52,6 @@ import Description from '@/components/Description'
 import eventBus from '@/assets/js/eventBus'
 import cards from '@/assets/js/cards'
 import utility from '@/assets/js/utilityFunctions'
-import { mapState } from 'vuex'
-
 
 export default {
   name: 'DescriptionSeeAllCards',
@@ -70,22 +68,15 @@ export default {
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
-      this.checkComponent(p)
+      if (this.$route.name === 'AllCards') {
+        this.describeCard(p)
+      }
     })
   },
   components: {
     Description
   },
-  computed: {
-    ...mapState(['description'])
-  },
   methods: {
-    checkComponent (p) {
-      if (this.description !== 'DescriptionSeeAllCards') {
-        return
-      }
-      this.describeCard(p)
-    },
     nextCard (dir) {
       let index = this.keys.indexOf(this.key)
 
@@ -124,9 +115,10 @@ export default {
 }
 </script>
 
-<style scoped lang='sass'>
-  .description
-    .card-container
-      display: flex
-      flex-direction: column
+<style lang='sass'>
+  .description#description-seeallcards
+      .card-container
+        display: flex
+        flex-direction: column
+
 </style>

@@ -1,18 +1,21 @@
 <template>
   <div id="app">
-    <Home/>
+    <Menu />
+    <transition name='fade'>
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
 <script>
-import Home from './views/Home.vue'
+  import Menu from '@/components/Menu'
 
-export default {
-  name: 'App',
-  components: {
-    Home
+  export default {
+    name: 'App',
+    components: {
+      Menu
+    }
   }
-}
 </script>
 
 <style lang='sass'>
@@ -54,5 +57,10 @@ export default {
 </style>
 
 <style scoped lang='sass'>
+  .fade-enter-active, .fade-leave-active
+    transition: opacity .5s;
+
+  .fade-enter, .fade-leave-to
+    opacity: 0;
 
 </style>

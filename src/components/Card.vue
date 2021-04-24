@@ -44,7 +44,6 @@ export default {
   computed: {
     ...mapState([
       'spreadType',
-      'component',
       'useReversals'
     ]),
     bg () {
@@ -92,10 +91,12 @@ export default {
   },
   methods: {
     checkSpread () {
-      this.spread = this.component === 'Spread'
-      this.celticcross = this.spreadType === 'celticcross' && this.spread
+      this.celticcross = this.spreadType === 'celticcross'
+      this.spread = this.$route.name !== 'AllCards'
 
-      if (this.celticcross) {
+      console.log(this.spread)
+
+      if (this.celticcross && this.spread) {
         this.revealInOrder()
         return
       }
@@ -139,7 +140,7 @@ export default {
         reversed: this.reversed,
         position: this.position
       }
-
+      console.log(p)
       eventBus.$emit('fireDescribeCard', p)
     }
   }

@@ -1,56 +1,20 @@
 <template>
   <div class='home'>
-    <Menu />
-    <component v-if='component'
-      :is='component'/>
-    <component v-if='description'
-      :is='description'/>
+    <ReadingSpread/>
+    <DescriptionCard/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Spread from '@/components/Spread'
-import LifePath from '@/components/LifePath'
-import SeeAllCards from '@/components/SeeAllCards'
+import ReadingSpread from '@/components/ReadingSpread'
 import DescriptionCard from '@/components/DescriptionCard'
-import DescriptionLifePath from '@/components/DescriptionLifePath'
-import DescriptionSeeAllCards from '@/components/DescriptionSeeAllCards'
-import Menu from '@/components/Menu'
-import eventBus from '@/assets/js/eventBus'
-import { mapState } from 'vuex'
 
 export default {
   name: 'Home',
   components: {
-    Menu,
-    Spread,
-    LifePath,
-    SeeAllCards,
-    DescriptionCard,
-    DescriptionLifePath,
-    DescriptionSeeAllCards
-  },
-  data () {
-    return {
-    }
-  },
-  created () {
-    eventBus.$on('fireChangeSpread', () => {
-      this.checkSpread()
-    })
-  },
-  computed: {
-   ...mapState([
-     'spreadType',
-     'component',
-     'description'
-   ])
-  },
-  methods: {
-    checkSpread () {
-
-    }
+    ReadingSpread,
+    DescriptionCard
   }
 }
 </script>

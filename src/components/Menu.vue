@@ -13,17 +13,12 @@
           :name='spread.name'
           :key='index'
           />
-        <Button
-          class='lifepath'
-          name='Life Path'
-          component='LifePath'
-          key='lifepath'
-          />
-        <Button
-          class='seeallcards'
-          name='See All Cards'
-          component='SeeAllCards'
-          />
+        <a href='/#/LifePath'
+          class='lifepath button'
+          @click='toggleMenu'>Life Path</a>
+        <a href='/#/AllCards'
+          class='seeallcards button'
+          @click='toggleMenu'>See All Cards</a>
         </div>
       </div>
       <div class='open-menu-button' @click='toggleMenu'></div>
@@ -159,6 +154,14 @@ export default {
       .open-menu-button
         opacity: 0
         transition: all .25s ease-in
+
+    .button
+      color: #fff
+      cursor: pointer
+      display: block
+      font-size: 1em
+      margin-top: 1em
+      text-decoration: none
 
     .close
       cursor: pointer

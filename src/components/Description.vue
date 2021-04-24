@@ -59,7 +59,7 @@ export default {
   },
   methods: {
     describeCard (p) {
-      if (this.description === 'DescriptionLifePath') {
+      if (this.$route.name === 'LifePath') {
         return
       }
 

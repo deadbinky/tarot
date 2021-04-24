@@ -24,7 +24,9 @@ export default {
   },
   methods: {
     changeSpread () {
-      this.$store.commit('changeComponent', this.component)
+      if (this.$route.name !== 'Spread') {
+        this.$router.push('/')
+      }
       this.$store.commit('changeSpread', this.$vnode.key)
       eventBus.$emit('fireCloseMenu')
       eventBus.$emit('fireCloseDescription')

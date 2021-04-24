@@ -71,7 +71,6 @@
     min-height: $height100
     justify-content: center
     margin: auto
-    max-width: 600px
     padding-top: $bodyPaddingTop
     position: relative
     vertical-align: middle

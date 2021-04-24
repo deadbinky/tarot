@@ -55,22 +55,18 @@ export default {
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
-      this.checkComponent(p)
+      if (this.$route.name === 'LifePath') {
+        this.describeCard(p)
+      }
     })
   },
   components: {
     Description
   },
   computed: {
-    ...mapState(['description', 'zodiacSign'])
+    ...mapState(['zodiacSign'])
   },
   methods: {
-    checkComponent (p) {
-      if (this.description !== 'DescriptionLifePath') {
-        return
-      }
-      this.describeCard(p)
-    },
     describeCard (p) {
       const q = p.slice()
       this.getCards(q)

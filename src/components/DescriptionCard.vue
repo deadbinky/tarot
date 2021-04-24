@@ -47,20 +47,17 @@ export default {
     Description
   },
   computed: {
-    ...mapState(['spreadType', 'description'])
+    ...mapState(['spreadType'])
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
-      this.checkComponent(p)
+      console.log(this.$route.name)
+      if (this.$route.name === 'Spread') {
+        this.describeCard(p)
+      }
     })
   },
   methods: {
-    checkComponent (p) {
-      if (this.description !== 'DescriptionCard') {
-        return
-      }
-      this.describeCard(p)
-    },
     describeCard (p) {
       const c = this.cards[p.cardkey]
       this.reversed = p.reversed
