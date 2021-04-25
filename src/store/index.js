@@ -8,37 +8,40 @@ export default new Vuex.Store({
     reading: {},
     readingID: '',
     zodiacSign: '',
+    savedReadings: {},
     spreadType: 'celticcross',
     useReversals: true
   },
   mutations: {
+    changeSign (state, zodiacSign) {
+      state.zodiacSign = zodiacSign
+    },
     changeSpread (state, spreadType) {
       state.spreadType = spreadType
     },
     changeUseReversals (state, useReversals) {
       state.useReversals = useReversals
     },
-    changeSign (state, zodiacSign) {
-      state.zodiacSign = zodiacSign
-    },
     createReading (state, id) {
       const spread = state.spreadType
       state.readingID = id
-      console.log(spread, state.reading)
-      state.reading[spread] = {}
-      state.reading[spread].cards = {}
-      console.log('HOLUP',state.reading)
+      state.reading.spread = spread
+      state.reading.cards = {}
+    },
+    getSavedReadings (state) {
+      console.log('hi savedReadings here')
+      const r = localStorage.getItem('savedReadings')
+      state.savedReadings = JSON.parse(r)
+      console.log('savedReadings', state.savedReadings)
     },
     updateReadingDate (state, date) {
-      const spread = state.spreadType
-      state.reading[spread].date = date
+      state.reading.date = date
     },
     updateReading (state, a) {
-      const spread = state.spreadType
       const position = a[0]
-      state.reading[spread].cards[position] = {}
-      state.reading[spread].cards[position].cardkey = a[1]
-      state.reading[spread].cards[position].reversed = a[2]
+      state.reading.cards[position] = {}
+      state.reading.cards[position].cardkey = a[1]
+      state.reading.cards[position].reversed = a[2]
     }
   },
   actions: {
@@ -74,10 +77,7 @@ export default new Vuex.Store({
       const save = JSON.stringify(r)
 
       localStorage.setItem('savedReadings', save)
-
-      console.log('store save reading', JSON.parse(localStorage.getItem('savedReadings')))
-
-      console.log(context.state.reading)
+      this.commit('getSavedReadings')
     }
   },
   modules: {

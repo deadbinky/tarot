@@ -91,19 +91,21 @@ export default {
   },
   methods: {
     checkSpread () {
+      const allcards = this.$route.name === 'AllCards'
       this.celticcross = this.spreadType === 'celticcross'
-      this.spread = this.$route.name !== 'AllCards'
+      this.spread = this.$route.name === 'Spread'
 
+      if (this.spread) {
+        this.updateReading()
+      }
       if (this.celticcross && this.spread) {
         this.revealInOrder()
         return
       }
-      if (!this.spread) {
+      if (allcards) {
         this.flipped = true
       }
-      if (this.$route.name === 'Spread') {
-        this.updateReading()
-      }
+
       this.holder = this.bg
     },
 
@@ -146,7 +148,6 @@ export default {
 
     updateReading () {
       const a = [this.position, this.cardkey, this.reversed]
-      console.log(this.spreadType, a)
       this.$store.commit('updateReading', a)
     }
   }

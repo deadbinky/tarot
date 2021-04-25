@@ -11,6 +11,7 @@
 <script>
 // @ is an alias to /src
 import Button from '@/components/Button'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Menu',
@@ -18,11 +19,10 @@ export default {
     Button
   },
   computed: {
-    savedReadings () {
-      const sr = JSON.parse(localStorage.getItem('savedReadings'))
-      console.log(sr)
-      return sr
-    }
+    ...mapState(['savedReadings'])
+  },
+  mounted () {
+    console.log('from menu', this.savedReadings)
   },
   methods: {
 

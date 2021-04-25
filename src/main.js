@@ -9,6 +9,7 @@ Vue.config.productionTip = false
 
 new Vue({
   store,
+  beforeCreate() { this.$store.commit('getSavedReadings');},
   router,
   render: h => h(App)
 }).$mount('#app')

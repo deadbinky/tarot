@@ -23,7 +23,6 @@ export default {
     const s = d.getSeconds()
 
     a.push(h, m, s)
-    console.log(a)
 
     return a
   }
