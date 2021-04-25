@@ -1,7 +1,7 @@
 <template>
   <div class='button'
+    :saved='saved'
     :class='name'
-    :component='component'
     @click='changeSpread'>
     {{ name }}
   </div>
@@ -13,13 +13,13 @@ import eventBus from '@/assets/js/eventBus'
 export default {
   name: 'Button',
   props: {
-    component: {
-      type: String,
-      required: true
-    },
     name: {
       type: String,
       required: true
+    },
+    saved: {
+      type: Boolean,
+      required: false
     }
   },
   methods: {
@@ -27,9 +27,14 @@ export default {
       if (this.$route.name !== 'Spread') {
         this.$router.push('/')
       }
-      this.$store.commit('changeSpread', this.$vnode.key)
       eventBus.$emit('fireCloseMenu')
       eventBus.$emit('fireCloseDescription')
+
+      if (this.saved) {
+        //do other shit
+        return
+      }
+      this.$store.commit('changeSpread', this.$vnode.key)
       eventBus.$emit('fireChangeSpread')
     }
   }

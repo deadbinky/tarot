@@ -1,16 +1,29 @@
-*save readings
-*router - fix all the broken stuff
+*display saved readings somehow
+*load saved readings
+
 *make cards fit in height/width
 *reverse keywords for all cards
 *lifepath description too long for page
+*save readings with name and description
+
+*pattern analysis
+
+SETTINGS
+*move reversals here
+*change altar cloth
+*change cardback
+*localstorage save reversals setting and altar/cardbacks
 
 
 *other cards with similar keywords??
 *upright card meanings
 *reverse card meanings
+*zodiac card meanings
+
 *make menu better
+*description modal animation better
+
 *lazy loading on see all cards
 *pwa
-*zodiac card meanings
 *mobile 3card/1card spreads are not vertically aligned - height too tall
 *description - update info on card click instead of on open

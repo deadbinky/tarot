@@ -51,7 +51,6 @@ export default {
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
-      console.log(this.$route.name)
       if (this.$route.name === 'Spread') {
         this.describeCard(p)
       }

@@ -24,6 +24,7 @@
  import Card from '@/components/CardLifePath'
  import cards from '@/assets/js/cards'
  import zodiac from '@/assets/js/zodiac'
+ import utility from '@/assets/js/utilityFunctions'
  import Datepicker from 'vuejs-datepicker';
 
  export default {
@@ -56,17 +57,12 @@
    methods: {
      compileLifePath (date) {
        this.cardArray = []
-       this.date = this.formatDate(date)
+       this.date = utility.formatDate(date)
+       this.month = this.date[0]
+       this.day = this.date[1]
+       this.year = this.date[2]
        this.zodiacCard = this.getZodiacSign()
        this.getLifePathNumbers()
-     },
-     formatDate (date) {
-       const d = new Date(date)
-       const f = new Intl.DateTimeFormat('en').format(d)
-       const a = f.split('/')
-       this.month = a[0]
-       this.day = a[1]
-       this.year = a[2]
      },
      getZodiacSign () {
        let card = ''

@@ -132,7 +132,6 @@ export default {
         flex-direction: column
 
     &.open
-      height: auto
       opacity: 1
       overflow: visible
       z-index: 6
@@ -314,7 +313,5 @@ export default {
 
     @media (min-width: 640px)
       .description
-        height: 80vh
-        min-height: auto
         width: 80vw
 </style>

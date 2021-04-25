@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/Home'
+import Spread from '@/views/Spread'
 import LifePath from '@/views/LifePath'
 import AllCards from '@/views/AllCards'
 
@@ -11,7 +11,7 @@ export default new Router({
     {
       path: '/',
       name: 'Spread',
-      component: Home
+      component: Spread
     },
     {
       path: '/allcards',

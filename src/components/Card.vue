@@ -94,14 +94,15 @@ export default {
       this.celticcross = this.spreadType === 'celticcross'
       this.spread = this.$route.name !== 'AllCards'
 
-      console.log(this.spread)
-
       if (this.celticcross && this.spread) {
         this.revealInOrder()
         return
       }
       if (!this.spread) {
         this.flipped = true
+      }
+      if (this.$route.name === 'Spread') {
+        this.updateReading()
       }
       this.holder = this.bg
     },
@@ -140,8 +141,13 @@ export default {
         reversed: this.reversed,
         position: this.position
       }
-      console.log(p)
       eventBus.$emit('fireDescribeCard', p)
+    },
+
+    updateReading () {
+      const a = [this.position, this.cardkey, this.reversed]
+      console.log(this.spreadType, a)
+      this.$store.commit('updateReading', a)
     }
   }
 }

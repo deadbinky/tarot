@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    component: 'Spread',
+    reading: {},
+    readingID: '',
     zodiacSign: '',
     spreadType: 'celticcross',
     useReversals: true
@@ -20,8 +21,59 @@ export default new Vuex.Store({
     changeSign (state, zodiacSign) {
       state.zodiacSign = zodiacSign
     },
+    createReading (state, id) {
+      const spread = state.spreadType
+      state.readingID = id
+      console.log(spread, state.reading)
+      state.reading[spread] = {}
+      state.reading[spread].cards = {}
+      console.log('HOLUP',state.reading)
+    },
+    updateReadingDate (state, date) {
+      const spread = state.spreadType
+      state.reading[spread].date = date
+    },
+    updateReading (state, a) {
+      const spread = state.spreadType
+      const position = a[0]
+      state.reading[spread].cards[position] = {}
+      state.reading[spread].cards[position].cardkey = a[1]
+      state.reading[spread].cards[position].reversed = a[2]
+    }
   },
   actions: {
+    removeReading (context) {
+      const sr = localStorage.getItem('savedReadings')
+      const id = context.state.readingID
+
+      delete sr[id]
+
+      const save = JSON.stringify(sr)
+      localStorage.setItem('savedReadings', save)
+    },
+    saveReading (context) {
+      const id = context.state.readingID
+      const spread = context.state.spreadType
+
+      let r = {}
+
+      const sr = localStorage.getItem('savedReadings')
+
+      if (sr && sr.length > 0) {
+        r = JSON.parse(sr)
+      }
+
+console.log(r)
+      r[id] = context.state.reading
+
+      const save = JSON.stringify(r)
+
+      localStorage.setItem('savedReadings', save)
+
+      console.log('store save reading', JSON.parse(localStorage.getItem('savedReadings')))
+      delete context.state.reading[spread]
+      console.log(context.state.reading)
+    }
   },
   modules: {
   }

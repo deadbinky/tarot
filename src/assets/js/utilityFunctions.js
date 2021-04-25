@@ -12,5 +12,19 @@ export default {
   },
   replace (pattern, title, element) {
     return element.replace(pattern, title)
+  },
+  formatDate (date) {
+    const d = new Date(date)
+    const f = new Intl.DateTimeFormat('en').format(d)
+    const a = f.split('/')
+
+    const h = d.getHours()
+    const m = d.getMinutes()
+    const s = d.getSeconds()
+
+    a.push(h, m, s)
+    console.log(a)
+
+    return a
   }
 }

@@ -1,58 +1,45 @@
 <template>
-  <div class='menu' :class='{open: open}'>
-    <div class='inner'>
-      <div class='content'>
-        <div class='close' @click='toggleMenu'>x</div>
-        <MenuNewReadings />
-        <MenuSavedReadings />
-        <MenuSettings />
-      </div>
-    </div>
-      <div class='open-menu-button' @click='toggleMenu'></div>
-    </div>
+  <div class='menu-new-readings'>
+    <h2>New Reading</h2>
+    <Button v-for='(spread, index) in spreads'
+      :name='spread.name'
+      :key='index'
+      />
+    <a href='/#/LifePath'
+      class='lifepath button'
+      @click='toggleMenu'>Life Path</a>
+    <a href='/#/AllCards'
+      class='seeallcards button'
+      @click='toggleMenu'>See All Cards</a>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import MenuNewReadings from '@/components/MenuNewReadings'
-import MenuSavedReadings from '@/components/MenuSavedReadings'
-import MenuSettings from '@/components/MenuSettings'
+import Button from '@/components/Button'
+import spreads from '@/assets/js/spreads'
 import eventBus from '@/assets/js/eventBus'
 
 export default {
   name: 'Menu',
   components: {
-    MenuSettings,
-    MenuSavedReadings,
-    MenuNewReadings
+    Button
   },
   data () {
     return {
-      open: false
+      spreads: spreads
     }
-  },
-  created () {
-    eventBus.$on('fireCloseMenu', () => {
-      if (this.open) {
-        this.toggleMenu()
-      }
-    })
   },
   methods: {
     toggleMenu () {
-      this.open = !this.open
-      if (this.open) {
-        eventBus.$emit('fireCloseDescription')
-      }
+      eventBus.$emit('fireCloseMenu')
     }
   }
 }
 </script>
 
 <style scoped lang='sass'>
-  @import '../assets/sass/_colours'
-  @import '../assets/sass/_easing'
-  @import '../assets/sass/_decorations'
+  @import '../assets/sass/menu'
 
   .menu
     color: #fff
@@ -103,14 +90,6 @@ export default {
         color: #fff
         font-size: 55px
 
-    h2
-      color: $lightpink
-      font-size: 2em
-      &:after
-        @include little-border-collapsed($lightpink)
-        margin-left: 0
-        margin-top: 10px
-
     .seeallcards
       display: inline-block
       &:before
@@ -131,7 +110,7 @@ export default {
         opacity: 1
         transition: opacity .25s ease-out .55s
 
-      h2:after, .seeallcards:before
+      .seeallcards:before
         @include little-border-expand(1s)
 
       .open-menu-button

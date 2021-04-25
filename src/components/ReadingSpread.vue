@@ -3,7 +3,7 @@
     :class='spreadClass'
     >
     <Card
-      v-for='(card, index) in this.deck.slice(this.split, this.endSplit)'
+      v-for='(card, index) in this.d'
       :name='cards[card].name'
       :image='cards[card].image'
       :position='index'
@@ -40,6 +40,7 @@
    data () {
      return {
        c: [],
+       d: [],
        deck: [],
        cards: cards,
        spreads: spreads,
@@ -77,6 +78,7 @@
       this.deck =  this.c.sort(function(){
         return 0.5 - Math.random()
       })
+      this.d = this.deck.slice(this.split, this.endSplit)
       this.forceRerender()
     },
     forceRerender() {
@@ -121,6 +123,7 @@
       grid-template-columns: repeat(3, 1fr)
 
       .card
+        margin: 0 5px
         width: 30vw
 
     &.jobinterview

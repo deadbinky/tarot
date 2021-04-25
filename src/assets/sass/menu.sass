@@ -1,0 +1,18 @@
+@import '_colours'
+@import '_easing'
+@import '_decorations'
+
+.menu
+  .inner
+    h2
+      color: $lightpink
+      font-size: 2em
+      &:after
+        @include little-border-collapsed($lightpink)
+        margin-left: 0
+        margin-top: 10px
+
+  &.open
+    .inner
+      h2:after
+        @include little-border-expand(1s)
