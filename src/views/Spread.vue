@@ -35,12 +35,15 @@ export default {
       this.saved = false
       this.createReadingID()
     })
+
+    this.createReadingID()
   },
   methods: {
     createReadingID () {
       const date = Date()
       const d = utility.formatDate(date)
       const id = d.join('-')
+      this.$store.dispatch('clearReading')
       this.$store.commit('createReading', id)
       this.$store.commit('updateReadingDate', date)
     },

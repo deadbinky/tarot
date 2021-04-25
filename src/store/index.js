@@ -42,6 +42,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    clearReading (context) {
+      for (const prop of Object.getOwnPropertyNames(context.state.reading)) {
+        delete context.state.reading[prop]
+      }
+    },
+
     removeReading (context) {
       const sr = localStorage.getItem('savedReadings')
       const id = context.state.readingID
@@ -51,9 +57,9 @@ export default new Vuex.Store({
       const save = JSON.stringify(sr)
       localStorage.setItem('savedReadings', save)
     },
+
     saveReading (context) {
       const id = context.state.readingID
-      const spread = context.state.spreadType
 
       let r = {}
 
@@ -63,7 +69,6 @@ export default new Vuex.Store({
         r = JSON.parse(sr)
       }
 
-console.log(r)
       r[id] = context.state.reading
 
       const save = JSON.stringify(r)
@@ -71,7 +76,7 @@ console.log(r)
       localStorage.setItem('savedReadings', save)
 
       console.log('store save reading', JSON.parse(localStorage.getItem('savedReadings')))
-      delete context.state.reading[spread]
+
       console.log(context.state.reading)
     }
   },
