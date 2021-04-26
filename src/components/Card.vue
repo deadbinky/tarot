@@ -1,14 +1,9 @@
 <template>
   <div class='card'
     :id='id'
-    :class='{
-      reversed: reversed,
-      flipped: flipped,
-      click: click
-    }'
-    @click='reveal'>
+    @click='$emit("clickAction")'>
     <div class='inner'>
-      <div class='front' :style=holder>
+      <div class='front' :style='bg'>
       </div>
       <div class='back'>
       </div>
@@ -17,157 +12,17 @@
 </template>
 
 <script>
-
 import eventBus from '@/assets/js/eventBus'
-import { mapState } from 'vuex'
+import CardMixins from '@/components/CardMixins'
 
 export default {
   name: 'Card',
-  data () {
-    return {
-      click: true,
-      celticcross: false,
-      holder: '',
-      activeCard: 0,
-      spread: true,
-      flipped: false
-    }
-  },
-  mounted () {
-    this.checkSpread()
-
-    eventBus.$on('fireNextCard', () => {
-      this.activeCard++
-      this.revealInOrder()
-    })
-  },
-  computed: {
-    ...mapState([
-      'spreadType',
-      'useReversals'
-    ]),
-    bg () {
-      const bg = require('@/assets/images/cards/' + this.image)
-      return {
-        'background-image': 'url(' + bg + ')'
-      }
-    },
-    reversed () {
-      let reversed = this.savedReverse
-
-      if ( this.saved ) {
-        return reversed
-      }
-
-      if ( !this.spread || !this.useReversals ) {
-        return reversed
-      }
-
-      let d = Math.random()
-      if (d < .3) {
-        reversed = true
-      }
-
-      return reversed
-    }
-  },
-  props: {
-    name: {
-      type: String,
-      required: true
-    },
-    image: {
-      type: String,
-      required: true
-    },
-    id: {
-      type: String,
-      required: false
-    },
-    position: {
-      type: Number,
-      required: false
-    },
-    saved: {
-      type: Boolean,
-      required: false
-    },
-    savedReverse: {
-      type: Boolean,
-      required: false
-    },
-    cardkey: {
-      type: String,
-      required: true
-    }
-  },
-  methods: {
-    checkSpread () {
-      const saved = this.$props.saved
-      const allcards = this.$route.name === 'AllCards'
-      this.celticcross = this.spreadType === 'celticcross'
-      this.spread = this.$route.name === 'Spread'
-
-      console.log(saved)
-
-      if ( this.spread && !saved ) {
-        this.updateReading()
-      }
-
-      if ( this.celticcross && this.spread && !saved ) {
-        this.revealInOrder()
-        return
-      }
-
-      if ( allcards || saved ) {
-        this.flipped = true
-      }
-
-      this.holder = this.bg
-    },
-
-    revealInOrder () {
-      const active = this.position <= this.activeCard
-
-      this.click = true
-
-      if (this.celticcross && !active) {
-        this.click = false
-        return
-      }
-      this.holder = this.bg
-    },
-
-    reveal () {
-      if (!this.click) {
-        return
-      }
-      if (!this.flipped) {
-        this.flipped = true
-
-        if (this.celticcross) {
-          eventBus.$emit('fireNextCard')
-        }
-        return
-      }
+  mixins: [ CardMixins ],
+  created () {
+    eventBus.$on('fireOpenDescription', () => {
+      console.log('fireOpenDescription')
       this.openDescription()
-    },
-
-    openDescription () {
-      const p = {
-        cardkey: this.cardkey,
-        name: this.name,
-        image: this.image,
-        reversed: this.reversed,
-        position: this.position
-      }
-      eventBus.$emit('fireDescribeCard', p)
-    },
-
-    updateReading () {
-      const a = [this.position, this.cardkey, this.reversed]
-      this.$store.commit('updateReading', a)
-    }
+    })
   }
 }
 </script>
@@ -225,5 +80,4 @@ export default {
         background-position: center center
         background-repeat: no-repeat
         background-size: cover
-
 </style>

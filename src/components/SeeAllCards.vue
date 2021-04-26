@@ -6,14 +6,13 @@
       :id='card'
       :name='cards[card].name'
       :image='cards[card].image'
-      :position='index'
       :cardkey='card'
       :key='index' />
    </div>
 </template>
 
  <script>
- import Card from '@/components/Card'
+ import Card from '@/components/CardAllCards'
  import cards from '@/assets/js/cards'
  import eventBus from '@/assets/js/eventBus'
 

@@ -1,7 +1,10 @@
 *delete reading
 *delete and then resave reading
 
-*incorporate reversals somehow
+
+need to force rerender on cards
+*useReversals broken
+*if you open a saved reading and then do a new reading of the same spread, all the cards are flipped
 
 *make cards fit in height/width
 *reverse keywords for all cards

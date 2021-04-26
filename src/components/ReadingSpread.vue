@@ -8,7 +8,7 @@
       :image='cards[card].image'
       :position='index'
       :saved='saved'
-      :reversed='savedReverse[index]'
+      :savedReverse='sr[index]'
       :cardkey='card'
       :key='`${componentKey}-${index}`' />
 
@@ -16,7 +16,7 @@
 </template>
 
  <script>
- import Card from '@/components/Card'
+ import Card from '@/components/CardSpread'
  import cards from '@/assets/js/cards'
  import spreads from '@/assets/js/spreads'
  import eventBus from '@/assets/js/eventBus'
@@ -44,11 +44,11 @@
      return {
        c: [],
        d: [],
+       sr: [],
        deck: [],
        cards: cards,
        saved: false,
        savedRead: {},
-       savedReverse: [],
        spreads: spreads,
        clickable: true,
        componentKey: 0
@@ -100,17 +100,18 @@
       this.saved = p.saved
 
       this.d = []
-      this.savedReverse = []
+      this.sr = []
       this.savedRead = this.savedReadings[p.name]
       console.log('line 102', this.savedRead)
 
       for (const prop of Object.keys(this.savedRead.cards)) {
-        this.d.push(this.savedRead.cards[prop].cardkey)
-        this.savedReverse.push(this.savedRead.cards[prop].reversed)
+        const x = this.savedRead.cards
+        this.d[prop] = x[prop].cardkey
+        this.sr[prop] = x[prop].reversed
       }
 
       console.log('line97:', this.savedRead.cards)
-      console.log('line97b:', this.savedReverse)
+      console.log('line97b:', this.sr)
       this.forceRerender()
     }
   }
