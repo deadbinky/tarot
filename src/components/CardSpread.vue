@@ -48,9 +48,10 @@ export default {
       'useReversals'
     ]),
     reversed () {
-      let reversed = this.savedReverse
+      let reversed = false
 
       if ( this.saved ) {
+        reversed = this.savedReverse
         return reversed
       }
 
@@ -85,8 +86,6 @@ export default {
       const saved = this.$props.saved
 
       this.cross = this.spreadType === 'celticcross'
-
-      console.log(saved)
 
       if ( saved ) {
         this.flipped = true

@@ -56,24 +56,9 @@
    },
    computed: {
     ...mapState(['spreadType', 'savedReadings']),
-    limit () {
-      const s = this.spreads
-      const t = this.spreadType
-      const limit = s[t].limit
-      return limit
-    },
     spreadClass () {
       const spreadClass = this.spreads[this.spreadType].class
       return spreadClass
-    },
-    split () {
-      const max = 78 - this.limit
-      const split = Math.floor(Math.random() * max)
-      return split
-    },
-    endSplit () {
-      const endSplit = this.split + this.limit
-      return endSplit
     },
     spread () {
       return this.spreads[this.spreadType]
@@ -81,28 +66,72 @@
   },
   methods: {
     shuffle () {
-      this.deck =  this.c.sort(function(){
-        return 0.5 - Math.random()
-      })
-      this.d = this.deck.slice(this.split, this.endSplit)
+      this.resetReading()
+
+      const x = this.randomizeArray(this.c)
+      this.deck = this.randomizeArray(x)
+
+      const l = this.setLimit()
+      const s = this.getSplit(l)
+      const e = this.getEndSplit(s, l)
+
+      this.d = this.deck.slice(s, e)
+
+      console.log(this.d)
       this.forceRerender()
     },
 
+    resetReading () {
+      this.saved = false
+      this.sr = []
+      this.d = []
+      this.savedRead = {}
+      this.clickable = true
+    },
+
+    randomizeArray (array) {
+      return array.sort(function(){
+        return 0.5 - Math.random()
+      })
+    },
+
     forceRerender() {
+      console.log('force rerender')
       this.componentKey += 1;
     },
 
+    setLimit () {
+      const s = this.spreads
+      const t = this.spreadType
+      return s[t].limit
+    },
+
+    getSplit (limit) {
+      const max = 78 - limit
+      const split = Math.floor(Math.random() * max)
+      console.log(split)
+      return split
+    },
+
+    getEndSplit (split, limit) {
+      const endSplit = split + limit
+      console.log(endSplit)
+      return endSplit
+    },
+
     readSavedReading (p) {
+      this.saved = false
+
       if (!p.saved) {
         this.shuffle(this.c)
         return
       }
+
       this.saved = p.saved
 
       this.d = []
       this.sr = []
       this.savedRead = this.savedReadings[p.name]
-      console.log('line 102', this.savedRead)
 
       for (const prop of Object.keys(this.savedRead.cards)) {
         const x = this.savedRead.cards
@@ -110,8 +139,6 @@
         this.sr[prop] = x[prop].reversed
       }
 
-      console.log('line97:', this.savedRead.cards)
-      console.log('line97b:', this.sr)
       this.forceRerender()
     }
   }
@@ -147,7 +174,7 @@
       min-height: 500px
       margin: auto
       padding-top: 0
-      max-width: 500px
+      max-width: 700px
 
     &.threecard
       grid-template-columns: repeat(3, 1fr)

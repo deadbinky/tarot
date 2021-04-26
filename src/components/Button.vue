@@ -39,6 +39,10 @@ export default {
         name: this.name
       }
 
+      if ( this.saved ) {
+        this.$store.commit('openReading', p.name)
+      }
+
       this.$store.commit('changeSpread', this.spreadKey)
       eventBus.$emit('fireChangeSpread', p)
     }

@@ -29,6 +29,10 @@ export default new Vuex.Store({
       state.reading.spread = spread
       state.reading.cards = {}
     },
+    openReading (state, id) {
+      state.readingID = id
+      console.log('open reading', id)
+    },
     getSavedReadings (state) {
       const r = localStorage.getItem('savedReadings')
       state.savedReadings = JSON.parse(r)
@@ -52,13 +56,14 @@ export default new Vuex.Store({
     },
 
     removeReading (context) {
-      const sr = localStorage.getItem('savedReadings')
+      const sr = JSON.parse(localStorage.getItem('savedReadings'))
       const id = context.state.readingID
 
       delete sr[id]
 
       const save = JSON.stringify(sr)
       localStorage.setItem('savedReadings', save)
+      this.commit('getSavedReadings')
     },
 
     saveReading (context) {
