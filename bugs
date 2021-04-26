@@ -1,5 +1,7 @@
-*display saved readings somehow
-*load saved readings
+*delete reading
+*delete and then resave reading
+
+*incorporate reversals somehow
 
 *make cards fit in height/width
 *reverse keywords for all cards
@@ -9,7 +11,6 @@
 *pattern analysis
 
 SETTINGS
-*move reversals here
 *change altar cloth
 *change cardback
 *localstorage save reversals setting and altar/cardbacks

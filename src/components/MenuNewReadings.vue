@@ -3,6 +3,7 @@
     <h2>New Reading</h2>
     <Button v-for='(spread, index) in spreads'
       :name='spread.name'
+      :spreadKey='index'
       :key='index'
       />
     <a href='/#/LifePath'

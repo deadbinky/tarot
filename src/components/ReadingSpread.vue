@@ -7,8 +7,11 @@
       :name='cards[card].name'
       :image='cards[card].image'
       :position='index'
+      :saved='saved'
+      :reversed='savedReverse[index]'
       :cardkey='card'
       :key='`${componentKey}-${index}`' />
+
    </div>
 </template>
 
@@ -27,8 +30,8 @@
    },
    created () {
     this.c = Object.keys(this.cards)
-     eventBus.$on('fireChangeSpread', () => {
-       this.shuffle(this.c)
+     eventBus.$on('fireChangeSpread', (p) => {
+       this.readSavedReading(p)
      })
      eventBus.$on('fireUseReversals', () => {
        this.shuffle(this.c)
@@ -43,13 +46,16 @@
        d: [],
        deck: [],
        cards: cards,
+       saved: false,
+       savedRead: {},
+       savedReverse: [],
        spreads: spreads,
        clickable: true,
        componentKey: 0
      }
    },
    computed: {
-    ...mapState(['spreadType']),
+    ...mapState(['spreadType', 'savedReadings']),
     limit () {
       const s = this.spreads
       const t = this.spreadType
@@ -81,8 +87,31 @@
       this.d = this.deck.slice(this.split, this.endSplit)
       this.forceRerender()
     },
+
     forceRerender() {
       this.componentKey += 1;
+    },
+
+    readSavedReading (p) {
+      if (!p.saved) {
+        this.shuffle(this.c)
+        return
+      }
+      this.saved = p.saved
+
+      this.d = []
+      this.savedReverse = []
+      this.savedRead = this.savedReadings[p.name]
+      console.log('line 102', this.savedRead)
+
+      for (const prop of Object.keys(this.savedRead.cards)) {
+        this.d.push(this.savedRead.cards[prop].cardkey)
+        this.savedReverse.push(this.savedRead.cards[prop].reversed)
+      }
+
+      console.log('line97:', this.savedRead.cards)
+      console.log('line97b:', this.savedReverse)
+      this.forceRerender()
     }
   }
  }

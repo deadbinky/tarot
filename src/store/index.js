@@ -17,6 +17,7 @@ export default new Vuex.Store({
       state.zodiacSign = zodiacSign
     },
     changeSpread (state, spreadType) {
+      console.log('change spread')
       state.spreadType = spreadType
     },
     changeUseReversals (state, useReversals) {
@@ -29,7 +30,6 @@ export default new Vuex.Store({
       state.reading.cards = {}
     },
     getSavedReadings (state) {
-      console.log('hi savedReadings here')
       const r = localStorage.getItem('savedReadings')
       state.savedReadings = JSON.parse(r)
       console.log('savedReadings', state.savedReadings)

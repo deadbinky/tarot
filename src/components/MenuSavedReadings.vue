@@ -4,6 +4,7 @@
     <Button v-for='(read, index) in savedReadings'
       :saved=true
       :name='index'
+      :spreadKey='read.spread'
       :key='index'
       />
   </div>
@@ -20,9 +21,6 @@ export default {
   },
   computed: {
     ...mapState(['savedReadings'])
-  },
-  mounted () {
-    console.log('from menu', this.savedReadings)
   },
   methods: {
 

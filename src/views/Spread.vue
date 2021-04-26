@@ -31,9 +31,8 @@ export default {
     ...mapState(['spreadType'])
   },
   created () {
-    eventBus.$on('fireChangeSpread', () => {
-      this.saved = false
-      this.createReadingID()
+    eventBus.$on('fireChangeSpread', (p) => {
+      this.readSavedReading(p)
     })
 
     this.createReadingID()
@@ -48,9 +47,19 @@ export default {
       this.$store.commit('updateReadingDate', date)
     },
 
+    readSavedReading (p) {
+      if (!p.saved) {
+        this.saved = false
+        this.createReadingID()
+      }
+      else {
+        this.saved = true
+        console.log('read saved reading')
+      }
+    },
+
     removeReading () {
       console.log('removeReading')
-
       this.$store.dispatch('removeReading')
     },
 

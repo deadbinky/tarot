@@ -20,6 +20,10 @@ export default {
     saved: {
       type: Boolean,
       required: false
+    },
+    spreadKey: {
+      type: String,
+      required: true
     }
   },
   methods: {
@@ -30,12 +34,13 @@ export default {
       eventBus.$emit('fireCloseMenu')
       eventBus.$emit('fireCloseDescription')
 
-      if (this.saved) {
-        //do other shit
-        return
+      const p = {
+        saved: this.saved,
+        name: this.name
       }
-      this.$store.commit('changeSpread', this.$vnode.key)
-      eventBus.$emit('fireChangeSpread')
+
+      this.$store.commit('changeSpread', this.spreadKey)
+      eventBus.$emit('fireChangeSpread', p)
     }
   }
 }

@@ -53,13 +53,17 @@ export default {
       }
     },
     reversed () {
-      let reversed = false
+      let reversed = this.savedReverse
 
-      if ( !this.spread || !this.useReversals) {
+      if ( this.saved ) {
         return reversed
       }
 
-      let d = Math.random();
+      if ( !this.spread || !this.useReversals ) {
+        return reversed
+      }
+
+      let d = Math.random()
       if (d < .3) {
         reversed = true
       }
@@ -84,6 +88,14 @@ export default {
       type: Number,
       required: false
     },
+    saved: {
+      type: Boolean,
+      required: false
+    },
+    savedReverse: {
+      type: Boolean,
+      required: false
+    },
     cardkey: {
       type: String,
       required: true
@@ -91,18 +103,23 @@ export default {
   },
   methods: {
     checkSpread () {
+      const saved = this.$props.saved
       const allcards = this.$route.name === 'AllCards'
       this.celticcross = this.spreadType === 'celticcross'
       this.spread = this.$route.name === 'Spread'
 
-      if (this.spread) {
+      console.log(saved)
+
+      if ( this.spread && !saved ) {
         this.updateReading()
       }
-      if (this.celticcross && this.spread) {
+
+      if ( this.celticcross && this.spread && !saved ) {
         this.revealInOrder()
         return
       }
-      if (allcards) {
+
+      if ( allcards || saved ) {
         this.flipped = true
       }
 
@@ -127,6 +144,7 @@ export default {
       }
       if (!this.flipped) {
         this.flipped = true
+
         if (this.celticcross) {
           eventBus.$emit('fireNextCard')
         }
