@@ -102,21 +102,6 @@ export default {
       opacity: 0
       padding: 60px 24px
 
-    h2
-      color: $lightpink
-      font-size: 2em
-      &:after
-        @include little-border-collapsed($lightpink)
-        margin-left: 0
-        margin-top: 10px
-
-    .seeallcards
-      display: inline-block
-      &:before
-        @include little-border-collapsed($lightpink)
-        margin-bottom: 20px
-        margin-left: 0
-
     &.open
       left: 0
       transition: left .35s $easeInCirc .25s
@@ -131,14 +116,6 @@ export default {
 
       h2:after, .seeallcards:before
         @include little-border-expand(1s)
-
-    .button
-      color: #fff
-      cursor: pointer
-      display: block
-      font-size: 1em
-      margin-top: 1em
-      text-decoration: none
 
     .menu-options
       align-items: top
@@ -166,9 +143,5 @@ export default {
         & + .menu-button
           margin-left: 10px
 
-
-  @media (min-width: 640px)
-    .menu
-      z-index: 10
 
 </style>

@@ -23,5 +23,4 @@ export default {
 </script>
 <style scoped lang='sass'>
   @import '../assets/sass/menu'
-
 </style>
