@@ -1,17 +1,19 @@
-*delete reading
-*delete and then resave reading
+
+*save readings with name and description
+
+*show date, name, spread type
+
+*confirm before delete
+
+*weird content jump when last celtic card flipped
+*weird content jump when changing from life path to regular spreads
 
 *get lifepath cards to use card component
-
-
-need to force rerender on cards
-*useReversals broken on saved readings - needs to reset the flipped cards and this.saved
-
 
 *make cards fit in height/width
 *reverse keywords for all cards
 *lifepath description too long for page
-*save readings with name and description
+
 
 *pattern analysis
 
@@ -26,6 +28,7 @@ SETTINGS
 *reverse card meanings
 *zodiac card meanings
 
+*make something so you can make custom spreads
 *make menu better
 *description modal animation better
 

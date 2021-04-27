@@ -152,7 +152,6 @@
     align-items: center
     display: grid
     height: $height100
-    min-height: $height100
     justify-content: center
     padding: 10px
     position: relative
@@ -160,28 +159,23 @@
     width: 100%
 
     .card
-      margin: 5px auto
+      margin: auto
       max-width: 200px
-      width: 55vw
+      width: 100%
 
       &:before
         content: ' '
         display: block
         padding-top: 166%
 
-    &.threecard, &.single
-      height: 500px
-      min-height: 500px
-      margin: auto
-      padding-top: 0
-      max-width: 700px
+    &.single
+      grid-template-columns: repeat(1, 1fr)
 
     &.threecard
       grid-template-columns: repeat(3, 1fr)
 
       .card
-        margin: 0 5px
-        width: 30vw
+        width: 95%
 
     &.jobinterview
       height: auto
@@ -191,6 +185,7 @@
       margin: auto
 
       .card
+        margin-bottom: 5px
         width: 95%
 
         &:nth-child(1)

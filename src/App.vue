@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <MenuButton />
     <Menu />
     <transition name='fade'>
       <router-view></router-view>
@@ -9,11 +10,13 @@
 
 <script>
   import Menu from '@/components/Menu'
+  import MenuButton from '@/components/MenuButton'
 
   export default {
     name: 'App',
     components: {
-      Menu
+      Menu,
+      MenuButton
     }
   }
 </script>

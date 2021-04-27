@@ -125,6 +125,16 @@ export default {
       if (this.cross) {
         eventBus.$emit('fireNextCard')
       }
+      this.checkEndReading()
+    },
+
+    checkEndReading () {
+      const c = document.querySelectorAll('.spread .card').length
+      const f = document.querySelectorAll('.spread .flipped').length + 1
+
+      if (c === f) {
+        eventBus.$emit('fireEndReading')
+      }
     },
 
     updateReading () {

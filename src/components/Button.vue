@@ -1,9 +1,8 @@
 <template>
   <div class='button'
     :saved='saved'
-    :class='name'
     @click='changeSpread'>
-    {{ name }}
+    <slot name='title'>{{ name }}</slot>
   </div>
 </template>
 
@@ -28,11 +27,11 @@ export default {
   },
   methods: {
     changeSpread () {
-      if (this.$route.name !== 'Spread') {
+      if ( this.$route.name !== 'Spread' ) {
         this.$router.push('/')
       }
-      eventBus.$emit('fireCloseMenu')
-      eventBus.$emit('fireCloseDescription')
+      eventBus.$emit( 'fireCloseMenu' )
+      eventBus.$emit( 'fireCloseDescription' )
 
       const p = {
         saved: this.saved,
@@ -40,11 +39,11 @@ export default {
       }
 
       if ( this.saved ) {
-        this.$store.commit('openReading', p.name)
+        this.$store.commit( 'openReading', p.name )
       }
 
-      this.$store.commit('changeSpread', this.spreadKey)
-      eventBus.$emit('fireChangeSpread', p)
+      this.$store.commit( 'changeSpread', this.spreadKey )
+      eventBus.$emit( 'fireChangeSpread', p )
     }
   }
 }

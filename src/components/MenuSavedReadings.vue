@@ -4,6 +4,7 @@
     <Button v-for='(read, index) in savedReadings'
       :saved=true
       :name='index'
+      :date='read.date'
       :spreadKey='read.spread'
       :key='index'
       />
@@ -11,7 +12,7 @@
 </template>
 <script>
 // @ is an alias to /src
-import Button from '@/components/Button'
+import Button from '@/components/ButtonSavedReading'
 import { mapState } from 'vuex'
 
 export default {

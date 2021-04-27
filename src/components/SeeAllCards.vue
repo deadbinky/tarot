@@ -65,7 +65,7 @@
   .spread
     align-items: center
     display: grid
-    grid-template: repeat(20, 1fr) / repeat(4, 1fr)
+    grid-template: repeat(26, 1fr) / repeat(3, 1fr)
     height: auto
     min-height: $height100
     justify-content: center
@@ -85,7 +85,12 @@
         display: block
         padding-top: 166%
 
+  @media (min-width: 520px)
+    .spread
+      grid-template: repeat(20, 1fr) / repeat(4, 1fr)
+
   @media (max-width: 520px)
+
     .spread.description-open
       height: 0
       opacity: 0
