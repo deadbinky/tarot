@@ -364,6 +364,7 @@
     @include ribbon($orange)
     top: -100px
     z-index: 3
+    transition: all .45s ease-out .25s;
 
     &.show
       top: 75px
