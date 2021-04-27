@@ -35,7 +35,7 @@
         :class='{error: notesError}'
         v-model='notes'
         type='text'/>
-      <div class='button edit' v-if='disabled' @click='editSaveDetails'>edit</div>
+      <div class='button edit' v-if='disabled' @click='editSaveDetails'></div>
       <div class='button' v-if='!disabled' @click='submitSaveDetails'>save</div>
     </div>
   </div>
@@ -196,6 +196,18 @@
   @import '../assets/sass/_colours'
   @import '../assets/sass/_svgs'
 
+  @mixin icon()
+    background-size: cover
+    bottom: 0
+    content: ''
+    height: 30px
+    left: 0
+    margin: auto
+    position: absolute
+    right: 0
+    top: 0
+    width: 30px
+
   @mixin ribbon($color)
     border-radius: 0 0 20px 20px
     color: #fff
@@ -223,16 +235,7 @@
       transition: all 0 ease-in
 
     &:after
-      background-size: cover
-      bottom: 0
-      content: ''
-      height: 30px
-      left: 0
-      margin: auto
-      position: absolute
-      right: 0
-      top: 0
-      width: 30px
+      @include icon()
 
   .save-reading
     @include ribbon($mediumpink)
@@ -332,7 +335,16 @@
       font-size: .75em
       margin-top: 15px
       padding: 15px
+      position: relative
       text-transform: uppercase
+
+      &.edit
+        height: 25px
+        width: 25px
+
+      &.edit:before
+        @include icon()
+        background-image: url($pencil)
 
     .close
       background: $brown
@@ -359,6 +371,7 @@
 
     &:after
       background-image: url($book)
+      top: 20px
 
 
 </style>
