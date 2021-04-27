@@ -5,6 +5,7 @@
       :saved=true
       :name='index'
       :date='read.date'
+      :title='read.title'
       :spreadKey='read.spread'
       :key='index'
       />

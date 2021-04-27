@@ -6,12 +6,14 @@
     <template v-slot:title>
       <h4>{{ readDate }}</h4>
       <span>{{ spreadKey }}</span>
+      <h3>{{ title }}</h3>
     </template>
   </Button>
 </template>
 
 <script>
 import Button from '@/components/Button'
+import utility from '@/assets/js/utilityFunctions'
 
 export default {
   name: 'ButtonSavedReading',
@@ -27,6 +29,10 @@ export default {
       type: String,
       required: false
     },
+    title: {
+      type: String,
+      required: false
+    },
     saved: {
       type: Boolean,
       required: true
@@ -38,15 +44,7 @@ export default {
   },
   computed: {
     readDate () {
-      const d = new Date(this.date)
-      const e = new Intl.DateTimeFormat('en').format(d)
-
-      return e
-    },
-    title () {
-      let title = this.name
-
-      return title
+      return utility.formatDateUS(this.date)
     }
   },
   methods: {
@@ -64,6 +62,7 @@ export default {
     cursor: pointer
     display: flex
     flex-direction: row
+    flex-wrap: wrap
     font-size: 1em
     justify-content: space-between
     margin-top: 1em
@@ -82,4 +81,8 @@ export default {
       margin-bottom: 5px
       padding: 5px 15px
       text-transform: uppercase
+
+    h3
+      flex-basis: 100%
+      flex-grow: 1
 </style>

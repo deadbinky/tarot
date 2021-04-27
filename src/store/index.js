@@ -31,7 +31,10 @@ export default new Vuex.Store({
     },
     openReading (state, id) {
       state.readingID = id
-      console.log('open reading', id)
+      console.log(state.savedReadings[id])
+      state.reading = state.savedReadings[id]
+      state.spreadType = state.reading.spread
+      console.log('open reading', id, state.reading, state.spreadType)
     },
     getSavedReadings (state) {
       const r = localStorage.getItem('savedReadings')
@@ -66,8 +69,10 @@ export default new Vuex.Store({
       this.commit('getSavedReadings')
     },
 
-    saveReading (context) {
+    saveReading (context, p) {
       const id = context.state.readingID
+      context.state.reading.title = p.title
+      context.state.reading.notes = p.notes
 
       let r = {}
 

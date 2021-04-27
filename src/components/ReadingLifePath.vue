@@ -279,7 +279,7 @@
     top: -2em
     width: 160px
 
-  input[type="text"]
+  input[type="text"], textarea
     background-color: $orange
     border: 2px solid $mediumpink
     border-radius: 0 0 30px 30px

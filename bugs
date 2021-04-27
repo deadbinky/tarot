@@ -1,11 +1,5 @@
 
-*save readings with name and description
-
-*show date, name, spread type
-
-*confirm before delete
-
-*weird content jump when last celtic card flipped
+*weird jump when rotating cards in mobile mode
 *weird content jump when changing from life path to regular spreads
 
 *get lifepath cards to use card component

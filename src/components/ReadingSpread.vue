@@ -263,6 +263,7 @@
       margin: auto
 
       .card
+        border: 2px solid transparent
         width: 95%
 
         &.click:not(.flipped)

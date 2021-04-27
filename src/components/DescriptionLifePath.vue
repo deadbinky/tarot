@@ -125,6 +125,10 @@ export default {
     align-items: center
     display: flex
     flex-direction: column
+    height: 0
+
+    &.open
+      height: auto
 
     .content
       margin-top: 20px

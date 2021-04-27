@@ -64,11 +64,11 @@ export default {
     description: {
       upright: {
         keywords: ['control', 'rules', 'leadership'],
-        text: 'the %TITLE% is the authoritarian rule-maker of the deck.  the %TITLE% is to the point, a little bossy, and has the power to shape the future and control all the outcomes and variables in a situation to ensure success.  the %TITLE% believes in duty and honour above all else and a correct path to follow.  When the %TITLE% shows up in a reading, you can take it as a sign to harness their leadership energy in a situation'
+        text: 'The %TITLE% is the authoritarian rule-maker of the deck.  the %TITLE% is to the point, a little bossy, and has the power to shape the future and control all the outcomes and variables in a situation to ensure success.  the %TITLE% believes in duty and honour above all else and a correct path to follow.  When the %TITLE% shows up in a reading, you can take it as a sign to harness their leadership energy in a situation'
       },
       reversed:  {
-        keywords: ['overbearing', '', ''],
-        text: ''
+        keywords: ['overbearing', 'dominance', 'fear of control'],
+        text: 'When the %TITLE% appears in reverse, it can symbolize that all the negative aspects of the %TITLE% are in full force.  This can show up as micromanaging, or inability to listen to the advice of others, or even that your leadership abilities are eluding you.'
       },
       zodiac: 'Aries like to lead and be in control.  They are represented here by the Emperor, the ruling parental figure of the tarot deck.'
     }

@@ -13,6 +13,11 @@ export default {
   replace (pattern, title, element) {
     return element.replace(pattern, title)
   },
+  formatDateUS (date) {
+    const d = new Date(date)
+    const e = new Intl.DateTimeFormat('en').format(d)
+    return e
+  },
   formatDate (date) {
     const d = new Date(date)
     const f = new Intl.DateTimeFormat('en').format(d)
