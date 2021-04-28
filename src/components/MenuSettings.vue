@@ -1,5 +1,5 @@
 <template>
-  <div class='menu-settings'>
+  <div class='menu-content menu-settings'>
     <h2>Settings</h2>
     <Toggle
       :name='useReversals'

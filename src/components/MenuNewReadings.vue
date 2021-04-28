@@ -1,5 +1,5 @@
 <template>
-  <div class='menu-new-readings'>
+  <div class='menu-content menu-new-readings'>
     <h2>New Reading</h2>
     <Button v-for='(spread, index) in spreads'
       :name='spread.name'
@@ -9,9 +9,6 @@
     <a href='/#/LifePath'
       class='lifepath button'
       @click='toggleMenu'>Life Path</a>
-    <a href='/#/AllCards'
-      class='seeallcards button'
-      @click='toggleMenu'>See All Cards</a>
   </div>
 </template>
 
@@ -42,7 +39,7 @@ export default {
 <style scoped lang='sass'>
   @import '../assets/sass/menu'
 
-  .seeallcards
+  .lifepath
     display: inline-block
     &:before
       @include little-border-collapsed($lightpink)
@@ -58,7 +55,7 @@ export default {
     text-decoration: none
 
   .open
-    .seeallcards:before
+    .lifepath:before
       @include little-border-expand(1s)
 
 </style>

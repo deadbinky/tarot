@@ -122,7 +122,7 @@ export default {
   @import '../assets/sass/_decorations'
 
   .description
-    align-items: center
+    align-items: flex-start
     display: flex
     flex-direction: column
     height: 0
@@ -178,5 +178,5 @@ export default {
     .description
       .card-container
         margin-bottom: 0
-        margin-top: 0
+        margin-top: 0!important
 </style>

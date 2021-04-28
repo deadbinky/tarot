@@ -32,7 +32,6 @@
       <textarea name='notes'
         :disabled='disabled'
         maxlength='280'
-        :class='{error: notesError}'
         v-model='notes'
         type='text'/>
       <div class='button edit' v-if='disabled' @click='editSaveDetails'></div>
@@ -73,7 +72,6 @@
         title: '',
         titleError: false,
         notes: '',
-        notesError: false,
         savedShow: false,
         notesShow: false,
         disabled: false
@@ -167,11 +165,6 @@
       submitSaveDetails () {
         if (this.title === '' || this.title === null || this.title.value === 0){
             this.titleError=true
-            return
-        }
-
-        if (this.notes === '' || this.notes === null || this.notes.value === 0){
-            this.notesError=true
             return
         }
 
@@ -303,7 +296,6 @@
       &:nth-of-type(1)
         margin-top: 30px
 
-
     input[type='text'], textarea
       border-radius: 30px
       display: block
@@ -361,7 +353,7 @@
       transform: translateX(-50%) rotate(45deg)
 
   .notes
-    @include ribbon($orange)
+    @include ribbon($lightpink)
     top: -100px
     z-index: 3
     transition: all .45s ease-out .25s;

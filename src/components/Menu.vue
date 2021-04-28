@@ -3,18 +3,23 @@
     <div class='content'>
       <div class='menu-options'>
         <div class='menu-button'
-          @click='setMenu("New")'
-          v-if='component !== "New"'>
+          :class='{ active: (component === "New")}'
+          @click='setMenu("New")'>
           New Readings
         </div>
         <div class='menu-button'
-          @click='setMenu("Saved")'
-          v-if='component !== "Saved"'>
+          :class='{ active: (component === "Saved")}'
+          @click='setMenu("Saved")'>
           Saved Readings
         </div>
+        <a class='menu-button'
+        :class='{ active: (this.$router.name === "AllCards")}'
+          @click='goTo("AllCards")'>
+          All Cards
+        </a>
         <div class='menu-button'
-          @click='setMenu("Settings")'
-          v-if='component !== "Settings"'>
+          :class='{ active: (component === "Settings")}'
+          @click='setMenu("Settings")'>
           Settings
         </div>
       </div>
@@ -60,6 +65,12 @@ export default {
     },
     toggleMenu () {
       this.open = !this.open
+    },
+    goTo (link) {
+      if (this.$router.name !== link) {
+        this.$router.push(link)
+      }
+      eventBus.$emit('fireCloseMenu')
     }
   }
 }
@@ -72,6 +83,9 @@ export default {
   @import '../assets/sass/_decorations'
 
   .menu
+    background-color: $brown
+    background-image: url($churchTile)
+    box-sizing: border-box
     color: #fff
     height: auto!important
     left: -100%
@@ -79,29 +93,19 @@ export default {
     position: absolute
     text-align: left
     top: 0
-    width: 100vw
+    width: 100%
     z-index: 5
-    transition: left .5s cubic-bezier(0, 0.55, 0.45, 1)
-
-    &:before
-      background-color: $brown
-      background-image: url($churchTile)
-      bottom: 0
-      content: ' '
-      display: block
-      height: 100%
-      left: 0
-      opacity: 0
-      position: absolute
-      right: 0
-      top: 0
-      width: 100%
-      z-index: -1
-      transition: opacity .35s $easeOutCirc
+    transition: left .5s $easeOutCirc, opacity .35s $easeInCirc
 
     .content
+      box-sizing: border-box
       opacity: 0
-      padding: 60px 24px
+      margin: auto
+      padding: 60px 0
+      width: 90%
+
+      a
+        text-decoration: none
 
     &.open
       left: 0
@@ -122,6 +126,7 @@ export default {
       align-items: top
       display: flex
       flex-direction: row
+      margin: auto
       margin-bottom: 30px
       width: 100%
 
@@ -141,8 +146,15 @@ export default {
         text-transform: uppercase
         width: 45%
 
+        &.active
+          background: $darkpink
+
         & + .menu-button
           margin-left: 10px
 
+  @media (min-width: 520px)
+    .menu
+      .menu-options
+        width: 80%
 
 </style>

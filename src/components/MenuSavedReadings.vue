@@ -1,5 +1,5 @@
 <template>
-  <div class='menu-saved'>
+  <div class='menu-content menu-saved'>
     <h2>Saved Readings</h2>
     <Button v-for='(read, index) in savedReadings'
       :saved=true

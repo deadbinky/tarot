@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class='{ menuOpen: menuOpen }'>
     <MenuButton />
     <Menu />
     <transition name='fade'>
@@ -11,12 +11,23 @@
 <script>
   import Menu from '@/components/Menu'
   import MenuButton from '@/components/MenuButton'
+  import eventBus from '@/assets/js/eventBus'
 
   export default {
     name: 'App',
     components: {
       Menu,
       MenuButton
+    },
+    data () {
+      return {
+        menuOpen: false
+      }
+    },
+    created () {
+      eventBus.$on('fireToggleMenu', () => {
+        this.menuOpen = !this.menuOpen
+      })
     }
   }
 </script>
@@ -57,6 +68,11 @@
 
     p
       font-size: .9em
+
+  .menuOpen
+    max-height: 100%
+    height: 100%;
+    overflow: hidden
 
 </style>
 

@@ -1,5 +1,10 @@
 
-*weird jump when rotating cards in mobile mode
+*description see all next is firing the open/close description twice
+
+*go from see all cards and then open a saved read and it doesn't open the saved read
+
+
+*weird jump when rotating cards in smaller widths
 *weird content jump when changing from life path to regular spreads
 
 *get lifepath cards to use card component
