@@ -83,7 +83,7 @@ export default {
   },
   methods: {
     checkSpread () {
-      const saved = this.$props.saved
+      const saved = this.saved
 
       this.cross = this.spreadType === 'celticcross'
 
@@ -133,7 +133,7 @@ export default {
       const f = document.querySelectorAll('.spread .flipped').length + 1
 
       if (c === f) {
-        eventBus.$emit('fireEndReading')
+        this.$store.commit('changeShowBookmark', true)
       }
     },
 

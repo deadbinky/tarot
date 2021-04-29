@@ -11,7 +11,7 @@
 <script>
   import Menu from '@/components/Menu'
   import MenuButton from '@/components/MenuButton'
-  import eventBus from '@/assets/js/eventBus'
+  import { mapState } from 'vuex'
 
   export default {
     name: 'App',
@@ -19,15 +19,8 @@
       Menu,
       MenuButton
     },
-    data () {
-      return {
-        menuOpen: false
-      }
-    },
-    created () {
-      eventBus.$on('fireToggleMenu', () => {
-        this.menuOpen = !this.menuOpen
-      })
+    computed: {
+      ...mapState(['menuOpen'])
     }
   }
 </script>

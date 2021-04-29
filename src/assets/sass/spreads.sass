@@ -1,0 +1,179 @@
+@import '_measurements'
+
+.spread
+  align-items: center
+  display: grid
+  height: $height100
+  justify-content: center
+  padding: 10px
+  position: relative
+  vertical-align: middle
+  width: 100%
+
+  .card
+    margin: auto
+    max-width: 200px
+    width: 100%
+
+    &:before
+      content: ' '
+      display: block
+      padding-top: 166%
+
+  &.single
+    grid-template-columns: repeat(1, 1fr)
+
+  &.threecard
+    grid-template-columns: repeat(3, 1fr)
+
+    .card
+      width: 95%
+
+  &.jobinterview
+    height: auto
+    min-height: auto
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr)
+    max-width: 600px
+    margin: auto
+
+    .card
+      margin-bottom: 5px
+      width: 95%
+
+      &:nth-child(1)
+        grid-column: 1
+        grid-row: 1
+        left: 55%
+
+      &:nth-child(2)
+        grid-column: 2
+        grid-row: 1
+        left: 55%
+
+      &:nth-child(3)
+        grid-column: 1
+        grid-row: 2
+
+      &:nth-child(4)
+        grid-column: 2
+        grid-row: 2
+
+      &:nth-child(5)
+        grid-column: 3
+        grid-row: 2
+
+  &.horseshoe
+    height: auto
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr)
+    max-width: 600px
+    margin: auto
+
+    .card
+      width: 95%
+
+      &:nth-child(1)
+        grid-column: 1/2
+        grid-row: 1/2
+
+      &:nth-child(2)
+        grid-column: 1/2
+        grid-row: 1/2
+        left: 25%
+        top: 75%
+
+      &:nth-child(3)
+        grid-column: 1/2
+        grid-row: 2/3
+        left: 55%
+        top: 45%
+
+      &:nth-child(4)
+        grid-column: 2/3
+        grid-row: 3/4
+        left: 40%
+
+      &:nth-child(5)
+        grid-column: 3/4
+        grid-row: 2/3
+        left: 25%
+        top: 45%
+
+      &:nth-child(6)
+        grid-column: 3/4
+        grid-row: 1/2
+        left: 55%
+        top: 75%
+
+      &:nth-child(7)
+        grid-column: 4/5
+        grid-row: 1/2
+
+  &.celticcross
+    height: auto
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr)
+    max-width: 600px
+    margin: auto
+
+    .card
+      border: 2px solid transparent
+      width: 95%
+
+      &.click:not(.flipped)
+        border: 2px solid #fff
+        border-radius: 10px
+
+      &:nth-child(1)
+        grid-column: 2/3
+        grid-row: 2/3
+        top: 55%
+
+      &:nth-child(2)
+        grid-column: 2/3
+        grid-row: 2/3
+        top: 73%
+        transform: rotate(-90deg)
+        z-index: 2
+        &.reversed
+          transform: rotate(90deg)
+
+      &:nth-child(3)
+        grid-column: 1/2
+        grid-row: 2/3
+        top: 55%
+
+        &.flipped
+          z-index: 3
+
+      &:nth-child(4)
+        grid-column: 3/4
+        grid-row: 2/3
+        top: 55%
+
+        &.flipped
+          z-index: 3
+
+      &:nth-child(5)
+        grid-column: 2/3
+        grid-row: 1/2
+        top: 55%
+
+      &:nth-child(6)
+        grid-column: 2/3
+        grid-row: 3/4
+        top: 55%
+
+      &:nth-child(7)
+        grid-column: 4/5
+        grid-row: 4/5
+
+      &:nth-child(8)
+        grid-column: 4/5
+        grid-row: 3/4
+
+      &:nth-child(9)
+        grid-column: 4/5
+        grid-row: 2/3
+
+      &:nth-child(10)
+        grid-column: 4/5
+        grid-row: 1/2

@@ -15,7 +15,6 @@
 
 <script>
   import { mapState } from 'vuex'
-  import eventBus from '@/assets/js/eventBus.js'
 
   export default {
     name: 'Toggle',
@@ -32,7 +31,6 @@
       changeUseReversals () {
         const r = !this.useReversals
         this.$store.commit('changeUseReversals', r)
-        eventBus.$emit('fireUseReversals')
       }
     }
   }

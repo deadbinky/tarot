@@ -2,7 +2,9 @@
   <Button
     :saved='saved'
     :name='name'
-    :spreadKey='spreadKey'>
+    :spreadKey='spreadKey'
+    @clickAction='openReading()'
+    >
     <template v-slot:title>
       <h4>{{ readDate }}</h4>
       <span>{{ spreadKey }}</span>
@@ -48,7 +50,19 @@ export default {
     }
   },
   methods: {
+    openReading () {
+      this.$store.commit( 'openReading', this.name )
+      this.$store.commit( 'toggleMenu' )
 
+      //bookmark stuff?
+
+
+      if ( this.$route.name !== 'Spread' ) {
+        this.$router.push('/')
+      }
+
+      this.$root.$emit( 'readSavedReading' )
+    }
   }
 }
 </script>
@@ -83,6 +97,7 @@ export default {
       text-transform: uppercase
 
     h3
+      color: $lightpink
       flex-basis: 100%
       flex-grow: 1
 </style>

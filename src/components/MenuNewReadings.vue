@@ -14,9 +14,8 @@
 
 <script>
 // @ is an alias to /src
-import Button from '@/components/Button'
+import Button from '@/components/ButtonNewReading'
 import spreads from '@/assets/js/spreads'
-import eventBus from '@/assets/js/eventBus'
 
 export default {
   name: 'Menu',
@@ -30,7 +29,7 @@ export default {
   },
   methods: {
     toggleMenu () {
-      eventBus.$emit('fireCloseMenu')
+      this.$store.commit('toggleMenu')
     }
   }
 }

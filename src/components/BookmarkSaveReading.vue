@@ -3,16 +3,17 @@
     <div class='save-reading'
       :class='{
         saved: saved,
-        show: savedShow
+        show: showBookmark
       }'
       @click='saveOrRemove()'>
     </div>
     <div class='notes'
       :class='{
-        show: notesShow,
+        show: showBookmarkNotes,
       }'
       @click='showNotes()'>
     </div>
+
     <div class='save-reading-modal'
       :class='{
         open: open,
@@ -21,6 +22,7 @@
       <div class='close' @click='toggleModal()'>+</div>
       <label v-if='disabled'>Date</label>
       <h2 v-if='disabled'>{{ this.date }}</h2>
+
       <label>Title</label>
       <input name='title'
         :disabled='disabled'
@@ -28,12 +30,14 @@
         :class='{error: titleError}'
         v-model='title'
         type='text'/>
+
       <label>Notes</label>
       <textarea name='notes'
         :disabled='disabled'
         maxlength='280'
         v-model='notes'
         type='text'/>
+
       <div class='button edit' v-if='disabled' @click='editSaveDetails'></div>
       <div class='button' v-if='!disabled' @click='submitSaveDetails'>save</div>
     </div>
@@ -53,16 +57,9 @@
       eventBus.$on('fireChangeSpread', (p) => {
         this.readSavedReading(p)
       })
-      eventBus.$on('fireEndReading', () => {
-        this.savedShow = true
-      }),
       eventBus.$on('fireUseReversals', () => {
         this.saved = false
       })
-      eventBus.$on('fireCloseDescription', () => {
-        this.open = false
-      })
-      this.createReadingID()
     },
     data () {
       return {
@@ -72,40 +69,35 @@
         title: '',
         titleError: false,
         notes: '',
-        savedShow: false,
-        notesShow: false,
         disabled: false
       }
     },
     computed: {
-      ...mapState(['savedReadings', 'reading']),
+      ...mapState([
+        'savedReadings',
+        'reading',
+        'showBookmark',
+        'bookmarkSaved',
+        'showBookmarkNotes'
+      ]),
       date () {
         return utility.formatDateUS(this.reading.date)
       }
     },
     methods: {
-      createReadingID () {
-        const date = Date()
-        const d = utility.formatDate(date)
-        const id = d.join('-')
-        this.$store.dispatch('clearReading')
-        this.$store.commit('createReading', id)
-        this.$store.commit('updateReadingDate', date)
-      },
-
       readSavedReading (p) {
         if (!p.saved) {
-          this.savedShow = false
-          this.saved = false
-          this.notesShow = false
+          this.$store.commit('changeShowBookmark', false)
+          this.$store.commit('changeBookmarkSaved', false)
+          this.$store.commit('changeShowBookmarkNotes', false)
           this.createReadingID()
         }
         else {
-          this.savedShow = true
+          this.$store.commit('changeShowBookmark', true)
           this.name = p.name
-          this.saved = true
-          this.notesShow = true
-          console.log('read saved reading')
+          this.$store.commit('changeBookmarkSaved', true)
+          this.$store.commit('changeShowBookmarkNotes', true)
+          console.log('bookmark read saved reading')
         }
       },
 
@@ -118,8 +110,12 @@
 
       saveOrRemove () {
         console.log('saved')
-        this.saved = !this.saved
-        if (!this.saved) {
+        let s = this.bookmarkSaved
+        s = !s
+
+        this.$store.commit('changeBookmarkSaved', s)
+
+        if (!s) {
           this.removeReading()
           return
         }
@@ -135,9 +131,9 @@
       toggleModal () {
         this.open = !this.open
 
-        console.log('this.showNotes', this.notesShow)
+        console.log('this.showNotes', this.bookmarkSaved)
 
-        if (!this.open && !this.notesShow) {
+        if (!this.open && !this.bookmarkSaved) {
           console.log('do not save')
           this.reset(false)
         }
@@ -150,12 +146,13 @@
         this.notes = ''
 
         if (!saved) {
-          this.saved = false
-          this.notesShow = false
+          this.$store.commit('changeBookmarkSaved', false)
+          this.$store.commit('changeShochangeShowBookmarkNotes', false)
+
           return
         }
         console.log('show notes')
-        this.notesShow = true
+        this.$store.commit('changeShowBookmarkNotes', true)
       },
 
       editSaveDetails () {
@@ -173,13 +170,9 @@
           notes: this.notes
         }
 
-        this.saveReading(p)
+        this.$store.dispatch('saveReading', p)
 
         this.reset(true)
-      },
-
-      saveReading (p) {
-        this.$store.dispatch('saveReading', p)
       }
     }
   }

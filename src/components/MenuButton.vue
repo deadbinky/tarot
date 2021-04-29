@@ -1,12 +1,12 @@
 <template>
   <div class='menu-button'
-    :class='{ open: open }'
+    :class='{ open: menuOpen }'
     @click='toggleMenu'></div>
 </template>
 
 <script>
 // @ is an alias to /src
-import eventBus from '@/assets/js/eventBus'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Menu',
@@ -15,17 +15,12 @@ export default {
       open: false
     }
   },
-  created () {
-    eventBus.$on('fireCloseMenu', () => {
-      if (this.open) {
-        this.toggleMenu()
-      }
-    })
+  computed: {
+    ...mapState(['menuOpen'])
   },
   methods: {
     toggleMenu () {
-      this.open = !this.open
-      eventBus.$emit('fireToggleMenu')
+      this.$store.commit('toggleMenu')
     }
   }
 }

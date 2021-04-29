@@ -1,5 +1,5 @@
 <template>
-  <div class='menu' :class='{open: open}'>
+  <div class='menu' :class='{open: menuOpen}'>
     <div class='content'>
       <div class='menu-options'>
         <div class='menu-button'
@@ -34,7 +34,7 @@
 import New from '@/components/MenuNewReadings'
 import Saved from '@/components/MenuSavedReadings'
 import Settings from '@/components/MenuSettings'
-import eventBus from '@/assets/js/eventBus'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Menu',
@@ -49,28 +49,18 @@ export default {
       open: false
     }
   },
-  created () {
-    eventBus.$on('fireToggleMenu', () => {
-      this.toggleMenu()
-    }),
-    eventBus.$on('fireCloseMenu', () => {
-      if (this.open) {
-        this.toggleMenu()
-      }
-    })
+  computed: {
+    ...mapState(['menuOpen'])
   },
   methods: {
     setMenu (c) {
       this.component = c
     },
-    toggleMenu () {
-      this.open = !this.open
-    },
     goTo (link) {
       if (this.$router.name !== link) {
         this.$router.push(link)
       }
-      eventBus.$emit('fireCloseMenu')
+      this.$store.commit('toggleMenu')
     }
   }
 }
