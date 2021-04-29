@@ -18,7 +18,8 @@ export default new Vuex.Store({
     showBookmarkNotes: false,
     menuOpen: false,
     descriptionOpen: false,
-    useReversals: true
+    useReversals: true,
+    currentReversals: true
   },
 
   mutations: {
@@ -100,13 +101,9 @@ export default new Vuex.Store({
       context.state.reading.spread = context.state.spreadType
       context.state.reading.cards = {}
 
+      context.state.currentReversals = context.state.useReversals
       console.log(context.state.reading)
-      /*return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          commit('someMutation')
-          resolve()
-        }, 1000)
-      })*/
+      
     },
 
     createReadingID (context) {

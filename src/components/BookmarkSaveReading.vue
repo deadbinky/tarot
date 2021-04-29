@@ -57,9 +57,6 @@
       eventBus.$on('fireChangeSpread', (p) => {
         this.readSavedReading(p)
       })
-      eventBus.$on('fireUseReversals', () => {
-        this.saved = false
-      })
     },
     data () {
       return {

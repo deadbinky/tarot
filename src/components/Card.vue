@@ -12,17 +12,12 @@
 </template>
 
 <script>
-import eventBus from '@/assets/js/eventBus'
 import CardMixins from '@/components/CardMixins'
 
 export default {
   name: 'Card',
   mixins: [ CardMixins ],
   created () {
-    eventBus.$on('fireOpenDescription', () => {
-      console.log('fireOpenDescription')
-      this.openDescription()
-    })
   }
 }
 </script>

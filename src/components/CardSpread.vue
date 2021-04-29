@@ -45,26 +45,10 @@ export default {
   computed: {
     ...mapState([
       'spreadType',
-      'useReversals'
+      'currentReversals'
     ]),
     reversed () {
-      let reversed = false
-
-      if ( this.saved ) {
-        reversed = this.savedReverse
-        return reversed
-      }
-
-      if ( !this.useReversals ) {
-        return reversed
-      }
-
-      let d = Math.random()
-      if (d < .3) {
-        reversed = true
-      }
-
-      return reversed
+      return this.getReversed()
     }
   },
   props: {
@@ -98,6 +82,26 @@ export default {
         this.revealInOrder()
         return
       }
+    },
+
+    getReversed () {
+      let reversed = false
+
+      if ( this.saved ) {
+        reversed = this.savedReverse
+        return reversed
+      }
+
+      if ( !this.currentReversals ) {
+        return reversed
+      }
+
+      let d = Math.random()
+      if (d < .3) {
+        reversed = true
+      }
+
+      return reversed
     },
 
     revealInOrder () {
