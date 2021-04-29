@@ -1,6 +1,6 @@
 <template>
   <div class='description'
-    :class='{open: open}'>
+    :class='{open: descriptionOpen}'>
     <div class='close'
       @click='close'>x</div>
     <header>
@@ -43,18 +43,15 @@ export default {
     }
   },
   computed: {
-    ...mapState(['description'])
+    ...mapState(['descriptionOpen'])
   },
   created () {
     eventBus.$on('fireDescribeCard', (p) => {
-      this.open = true
+      this.$store.commit('changeShowDescription', true)
       this.describeCard(p)
     })
     eventBus.$on('fireReverseMeaning', (r) => {
       this.reverseMeaning(r)
-    })
-    eventBus.$on('fireCloseDescription', () => {
-      this.close()
     })
   },
   methods: {
@@ -84,8 +81,7 @@ export default {
       this.cardDescription = utility.replace(/%TITLE%/g, c.title, desc.text)
     },
     close () {
-      this.open = false
-      eventBus.$emit('fireDismissDescription')
+      this.$store.commit('changeShowDescription', false)
     }
   }
 }

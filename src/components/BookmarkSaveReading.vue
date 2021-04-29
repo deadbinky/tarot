@@ -2,7 +2,7 @@
   <div>
     <div class='save-reading'
       :class='{
-        saved: saved,
+        saved: bookmarkSaved,
         show: showBookmark
       }'
       @click='saveOrRemove()'>

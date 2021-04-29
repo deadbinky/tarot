@@ -17,6 +17,7 @@ export default new Vuex.Store({
     bookmarkSaved: false,
     showBookmarkNotes: false,
     menuOpen: false,
+    descriptionOpen: false,
     useReversals: true
   },
 
@@ -63,6 +64,10 @@ export default new Vuex.Store({
       state.reading.cards[position].reversed = a[2]
     },
 
+    changeShowDescription (state, x) {
+      state.descriptionOpen = x
+    },
+
     changeShowBookmark (state, x) {
       state.showBookmark = x
     },
@@ -77,6 +82,10 @@ export default new Vuex.Store({
 
     toggleMenu (state) {
       state.menuOpen = !state.menuOpen
+
+      if (state.menuOpen === true) {
+        state.descriptionOpen = false
+      }
     }
   },
   actions: {
