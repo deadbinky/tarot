@@ -28,7 +28,6 @@ import Description from '@/components/Description'
 import eventBus from '@/assets/js/eventBus'
 import spreads from '@/assets/js/spreads'
 import cards from '@/assets/js/cards'
-import utility from '@/assets/js/utilityFunctions'
 import { mapState } from 'vuex'
 
 export default {
@@ -61,7 +60,7 @@ export default {
       const c = this.cards[p.cardkey]
       this.reversed = p.reversed
 
-      this.name = utility.replace(/%TITLE%/g, c.title, c.name)
+      this.name = c.name
 
       this.img = require('@/assets/images/cards/' + p.image)
 

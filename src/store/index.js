@@ -103,7 +103,6 @@ export default new Vuex.Store({
 
       context.state.currentReversals = context.state.useReversals
       console.log(context.state.reading)
-      
     },
 
     createReadingID (context) {

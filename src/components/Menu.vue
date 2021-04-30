@@ -5,17 +5,22 @@
         <div class='menu-button'
           :class='{ active: (component === "New")}'
           @click='setMenu("New")'>
-          New Readings
+          New<br/>Readings
         </div>
         <div class='menu-button'
           :class='{ active: (component === "Saved")}'
           @click='setMenu("Saved")'>
-          Saved Readings
+          Saved<br/>Readings
+        </div>
+        <div class='menu-button'
+        :class='{ active: (this.$router.name === "AllCards")}'
+          @click='goTo("Patterns")'>
+          Tarot<br/>Patterns
         </div>
         <a class='menu-button'
         :class='{ active: (this.$router.name === "AllCards")}'
           @click='goTo("AllCards")'>
-          All Cards
+          All<br/>Cards
         </a>
         <div class='menu-button'
           :class='{ active: (component === "Settings")}'
@@ -127,7 +132,7 @@ export default {
         color: #fff
         cursor: pointer
         display: flex
-        font-size: .75em
+        font-size: .5em
         font-weight: bold
         height: 50px
         justify-content: center
@@ -146,5 +151,7 @@ export default {
     .menu
       .menu-options
         width: 80%
+        .menu-button
+          font-size: .65em
 
 </style>

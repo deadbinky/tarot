@@ -51,7 +51,6 @@
 import Description from '@/components/Description'
 import eventBus from '@/assets/js/eventBus'
 import cards from '@/assets/js/cards'
-import utility from '@/assets/js/utilityFunctions'
 
 export default {
   name: 'DescriptionSeeAllCards',
@@ -99,7 +98,7 @@ export default {
       const c = this.cards[p.cardkey]
       this.reversed = p.reversed
 
-      this.name = utility.replace(/%TITLE%/g, c.title, c.name)
+      this.name = c.name
 
       this.img = require('@/assets/images/cards/' + p.image)
 

@@ -68,7 +68,7 @@ export default {
       const desc = c.description[direction]
       this.card = c
 
-      this.cardDescription = utility.replace(/%TITLE%/g, c.title, desc.text)
+      this.cardDescription = desc.text
       this.keywords = desc.keywords
     },
     reverseMeaning (r) {
@@ -78,7 +78,7 @@ export default {
       const c = this.card
       const desc = c.description[direction]
       this.keywords = desc.keywords
-      this.cardDescription = utility.replace(/%TITLE%/g, c.title, desc.text)
+      this.cardDescription = desc.text
     },
     close () {
       this.$store.commit('changeShowDescription', false)

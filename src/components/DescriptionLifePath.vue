@@ -36,7 +36,6 @@ import Description from '@/components/Description'
 import cards from '@/assets/js/cards'
 import lifepath from '@/assets/js/lifepath'
 import eventBus from '@/assets/js/eventBus'
-import utility from '@/assets/js/utilityFunctions'
 import { mapState } from 'vuex'
 
 export default {
@@ -106,10 +105,9 @@ export default {
     },
     getZodiac (p) {
       const z =  this.cards[p].name
-      const title = this.cards[p].title
-      this.zodiacName = utility.replace(/%TITLE%/g, title, z)
-      this.zodiacDescription = utility.replace(/%TITLE%/g, title,
-      this.cards[p].description.upright.text)
+      this.zodiacName = z
+      this.zodiacDescription =
+      this.cards[p].description.upright.text
       //this.cards[p].description.zodiac
     }
   }

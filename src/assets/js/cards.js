@@ -2,6 +2,8 @@ export default {
   thefool: {
     name: 'The Fool',
     image: '0_-_The_Fool.jpg',
+    number: 'zero',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['fresh start', 'innocence', 'leap of faith'],
@@ -16,6 +18,8 @@ export default {
   themagician: {
     name: 'The Magician',
     image: '1_-_The_Magician.jpg',
+    number: 'one',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['manifest', 'willpower', 'creativity'],
@@ -28,47 +32,50 @@ export default {
     }
   },
   thehighpriestess: {
-    title: 'High Priestess',
-    name: 'The %TITLE%',
+    name: 'The High Priestess',
     image: '2_-_The_High_Priestess.jpg',
+    number: 'two',
+    suit: 'major',
     description: {
       upright:  {
         keywords: ['intuition', 'mystery', 'secrets'],
-        text: 'The %TITLE% is the first of the cards in the major arcana that hints at deeper knowledge.  They are the keeper of mysteries and secrets.  They urge you to look inside yourself and get in tune with your intuition, empathy, and your psychic self.'
+        text: 'The High Priestess is the first of the cards in the major arcana that hints at deeper knowledge.  They are the keeper of mysteries and secrets.  They urge you to look inside yourself and get in tune with your intuition, empathy, and your psychic self.'
       },
       reversed:  {
         keywords: ['lack of intuition', 'hidden truths', 'repression'],
-        text: 'When the %TITLE% appears reversed, they can be indicating that truths are being kept from you, or that you are keeping the truth from someone else.  They can also indicate that you are ignoring a nagging gut feeling that has been trying to steer you in a situation, or repressing feelings that really need to be dealt with'
+        text: 'When the High Priestess appears reversed, they can be indicating that truths are being kept from you, or that you are keeping the truth from someone else.  They can also indicate that you are ignoring a nagging gut feeling that has been trying to steer you in a situation, or repressing feelings that really need to be dealt with'
       }
     }
   },
   theempress: {
-    title: 'Empress',
-    name: 'The %TITLE%',
+    name: 'The Empress',
     image: '3_-_The_Empress.jpg',
+    number: 'three',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['nurturing', 'creation', 'compassion'],
-        text: 'The %TITLE% is the nurturing caregiver of the deck.  They are the person who will birth new creations into reality, whether those creations are ideas, opportunities, fur babies, or human babies.  The %TITLE% can turn up whenever something new is going to take form in your life.'
+        text: 'The Empress is the nurturing caregiver of the deck.  They are the person who will birth new creations into reality, whether those creations are ideas, opportunities, fur babies, or human babies.  The Empress can turn up whenever something new is going to take form in your life.'
       },
       reversed:  {
         keywords: ['smothering', 'self-neglect', 'blocked creativity'],
-        text: 'In reverse, the %TITLE% can suggest the negative sides of nurturing: placing everyone else\'s needs above your own, or, smothering others with your need to care for them or guide them.  The reversed %TITLE% can also speak to a difficulty bearing something to full term, such as a project or idea, or even sometimes a pregnancy'
+        text: 'In reverse, the Empress can suggest the negative sides of nurturing: placing everyone else\'s needs above your own, or, smothering others with your need to care for them or guide them.  The reversed Empress can also speak to a difficulty bearing something to full term, such as a project or idea, or even sometimes a pregnancy'
       }
     }
   },
   theemperor: {
-    title: 'Emperor',
-    name: 'The %TITLE%',
+    name: 'The Emperor',
     image: '4_-_The_Emperor.jpg',
+    number: 'four',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['control', 'rules', 'leadership'],
-        text: 'The %TITLE% is the authoritarian rule-maker of the deck.  the %TITLE% is to the point, a little bossy, and has the power to shape the future and control all the outcomes and variables in a situation to ensure success.  the %TITLE% believes in duty and honour above all else and a correct path to follow.  When the %TITLE% shows up in a reading, you can take it as a sign to harness their leadership energy in a situation'
+        text: 'The Emperor is the authoritarian rule-maker of the deck.  the Emperor is to the point, a little bossy, and has the power to shape the future and control all the outcomes and variables in a situation to ensure success.  the Emperor believes in duty and honour above all else and a correct path to follow.  When the Emperor shows up in a reading, you can take it as a sign to harness their leadership energy in a situation'
       },
       reversed:  {
         keywords: ['overbearing', 'dominance', 'fear of control'],
-        text: 'When the %TITLE% appears in reverse, it can symbolize that all the negative aspects of the %TITLE% are in full force.  This can show up as micromanaging, or inability to listen to the advice of others, or even that your leadership abilities are eluding you.'
+        text: 'When the Emperor appears in reverse, it can symbolize that all the negative aspects of the Emperor are in full force.  This can show up as micromanaging, or inability to listen to the advice of others, or even that your leadership abilities are eluding you.'
       },
       zodiac: 'Aries like to lead and be in control.  They are represented here by the Emperor, the ruling parental figure of the tarot deck.'
     }
@@ -76,6 +83,8 @@ export default {
   thehierophant: {
     name: 'The Hierophant',
     image: '5_-_The_Hierophant.jpg',
+    number: 'five',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['divine secrets', 'spiritual guidance', 'education'],
@@ -91,6 +100,8 @@ export default {
   thelovers: {
     name: 'The Lovers',
     image: '6_-_The_Lovers.jpg',
+    number: 'six',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['partnership', 'harmony', 'duality'],
@@ -106,6 +117,8 @@ export default {
   thechariot: {
     name: 'The Chariot',
     image: '7_-_The_Chariot.jpg',
+    number: 'seven',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['victory', 'certainty', 'journey', 'control'],
@@ -121,6 +134,8 @@ export default {
   strength: {
     name: 'Strength',
     image: '8_-_Strength.jpg',
+    number: 'eight',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['fortitude', 'courage', 'confidence'],
@@ -136,6 +151,8 @@ export default {
   thehermit: {
     name: 'The Hermit',
     image: '9_-_The_Hermit.jpg',
+    number: 'nine',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['self-reflection', 'solitude', 'contemplation'],
@@ -151,6 +168,8 @@ export default {
   thewheeloffortune: {
     name: 'The Wheel of Fortune',
     image: '10_-_Wheel_Of_Fortune.jpg',
+    number: 'ten',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['twists of fate', 'chance', 'good luck'],
@@ -165,6 +184,8 @@ export default {
   justice: {
     name: 'Justice',
     image: '11_-_Justice.jpg',
+    number: 'two',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['karma', 'equity', 'truth'],
@@ -178,13 +199,14 @@ export default {
     }
   },
   thehangedmoth: {
-    title: 'Hanged Moth',
-    name: 'The %TITLE%',
+    name: 'The Hanged Moth',
     image: '12_-_The_Hanged_Man.jpg',
+    number: 'three',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['self-sacrifice', 'change of perspective', 'enlightenment'],
-        text: 'The %TITLE% caught in the spider web is hanging there by choice.  Usually one to fly about and see the world passing by as a blur, the moth chooses to stop and hang upside down.  From this perspective, the moth can see that the world really isn\'t made of blurs, but instead its made of trees and flowers and other creatures.  This change of perspective leads to an epiphany about how the world works and their place in it.'
+        text: 'The Hanged Moth caught in the spider web is hanging there by choice.  Usually one to fly about and see the world passing by as a blur, the moth chooses to stop and hang upside down.  From this perspective, the moth can see that the world really isn\'t made of blurs, but instead its made of trees and flowers and other creatures.  This change of perspective leads to an epiphany about how the world works and their place in it.'
       },
       reversed:  {
         keywords: ['stuck', '', ''],
@@ -195,6 +217,8 @@ export default {
   death: {
     name: 'Death',
     image: '13_-_Death.jpg',
+    number: 'four',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['ending', 'transformation', 'change'],
@@ -210,6 +234,8 @@ export default {
   temperance: {
     name: 'Temperance',
     image: '14_-_Temperance.jpg',
+    number: 'five',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['balance', 'compromise', 'moderation'],
@@ -225,6 +251,8 @@ export default {
   thedevil: {
     name: 'The Devil',
     image: '15_-_The_Devil.jpg',
+    number: 'six',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['addiction', 'temptation', 'seduction'],
@@ -240,6 +268,8 @@ export default {
   thetower: {
     name: 'The Tower',
     image: '16_-_The_Tower.jpg',
+    number: 'seven',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['destruction', 'foundational shift', 'new beginnings'],
@@ -254,6 +284,8 @@ export default {
   thestar: {
     name: 'The Star',
     image: '17_-_The_Star.jpg',
+    number: 'eight',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['hope', 'renewal', 'goals'],
@@ -269,6 +301,8 @@ export default {
   themoon: {
     name: 'The Moon',
     image: '18_-_The_Moon.jpg',
+    number: 'nine',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['illusion', 'dreams', 'feelings'],
@@ -284,6 +318,8 @@ export default {
   theSun: {
     name: 'The Sun',
     image: '19_-_The_Sun.jpg',
+    number: 'ten',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['happiness', 'success', 'enlightenment'],
@@ -298,6 +334,8 @@ export default {
   judgement: {
     name: 'Judgement',
     image: '20_-_Judgement.jpg',
+    number: 'two',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['reckoning', 'weighing worth', 'resurrection'],
@@ -312,6 +350,8 @@ export default {
   theworld: {
     name: 'The World',
     image: '21_-_The_World.jpg',
+    number: 'three',
+    suit: 'major',
     description: {
       upright: {
         keywords: ['completion', 'end of a chapter', 'leveling up'],
@@ -326,6 +366,8 @@ export default {
   wandsace: {
     name: 'Ace of Wands',
     image: 'Ace_Of_Wands.jpg',
+    number: 'one',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['new adventure', 'new idea', 'creative opportunity'],
@@ -340,6 +382,8 @@ export default {
   wandstwo: {
     name: 'Two of Wands',
     image: '2_Of_Wands.jpg',
+    number: 'two',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['decision', 'new path', 'choice'],
@@ -354,6 +398,8 @@ export default {
   wandsthree: {
     name: 'Three of Wands',
     image: '3_Of_Wands.jpg',
+    number: 'three',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['expansion', 'exploration', 'planning'],
@@ -368,6 +414,8 @@ export default {
   wandsfour: {
     name: 'Four of Wands',
     image: '4_Of_Wands.jpg',
+    number: 'four',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['celebration', 'structure', 'home'],
@@ -382,6 +430,8 @@ export default {
   wandsfive: {
     name: 'Five of Wands',
     image: '5_Of_Wands.jpg',
+    number: 'five',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['conflict', 'courage to compete', 'sparring'],
@@ -396,6 +446,8 @@ export default {
   wandssix: {
     name: 'Six of Wands',
     image: '6_Of_Wands.jpg',
+    number: 'six',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['victory', 'recognition', 'triumph'],
@@ -410,6 +462,8 @@ export default {
   wandsseven: {
     name: 'Seven of Wands',
     image: '7_Of_Wands.jpg',
+    number: 'seven',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['overcoming challenges', 'security', 'preservation'],
@@ -424,6 +478,8 @@ export default {
   wandseight: {
     name: 'Eight of Wands',
     image: '8_Of_Wands.jpg',
+    number: 'eight',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['fast moving', 'travel', 'quick movement'],
@@ -438,6 +494,8 @@ export default {
   wandsnine: {
     name: 'Nine of Wands',
     image: '9_Of_Wands.jpg',
+    number: 'nine',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['persistance', 'tenacity', 'weariness'],
@@ -452,6 +510,8 @@ export default {
   wandsten: {
     name: 'Ten of Wands',
     image: '10_Of_Wands.jpg',
+    number: 'ten',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['overburdened', 'need to delegate', 'struggling'],
@@ -464,9 +524,10 @@ export default {
     }
   },
   wandspage: {
-    title: 'Page',
-    name: '%TITLE% of Wands',
+    name: 'Page of Wands',
     image: 'Page_Of_Wands.jpg',
+    number: 'Page',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['exploration', 'new project', 'excitement'],
@@ -479,9 +540,10 @@ export default {
     }
   },
   wandsknight: {
-    title: 'Knight',
-    name: '%TITLE% of Wands',
+    name: 'Knight of Wands',
     image: 'Knight_Of_Wands.jpg',
+    number: 'Knight',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['adventure', 'action', 'enthusiasm'],
@@ -494,9 +556,10 @@ export default {
     }
   },
   wandsqueen: {
-    title: 'Queen',
-    name: '%TITLE% of Wands',
+    name: 'Queen of Wands',
     image: 'Queen_Of_Wands.jpg',
+    number: 'Queen',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['determination', 'overcoming', 'nurturing adventure'],
@@ -509,9 +572,10 @@ export default {
     }
   },
   wandsking: {
-    title: 'King',
-    name: '%TITLE% of Wands',
+    name: 'King of Wands',
     image: 'King_Of_Wands.jpg',
+    number: 'King',
+    suit: 'Wands',
     description: {
       upright: {
         keywords: ['leadership', 'gut feelings', 'bravery'],
@@ -526,6 +590,8 @@ export default {
   cupsace: {
     name: 'Ace of Cups',
     image: 'Ace_Of_Cups.jpg',
+    number: 'one',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['new feelings', 'new relationship', 'new creativity'],
@@ -540,6 +606,8 @@ export default {
   cupstwo: {
     name: 'Two of Cups',
     image: '2_Of_Cups.jpg',
+    number: 'two',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['harmony', 'communication', 'duality'],
@@ -554,6 +622,8 @@ export default {
   cupsthree: {
     name: 'Three of Cups',
     image: '3_Of_Cups.jpg',
+    number: 'three',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['community', 'friendship', 'socializing'],
@@ -568,6 +638,8 @@ export default {
   cupsfour: {
     name: 'Four of Cups',
     image: '4_Of_Cups.jpg',
+    number: 'four',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['missed opportunity', 'apathy', 'boredom'],
@@ -582,6 +654,8 @@ export default {
   cupsfive: {
     name: 'Five of Cups',
     image: '5_Of_Cups.jpg',
+    number: 'five',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['loss', 'sadness', 'disappointment'],
@@ -596,6 +670,8 @@ export default {
   cupssix: {
     name: 'Six of Cups',
     image: '6_Of_Cups.jpg',
+    number: 'six',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['happy memories', 'childhood', 'nostalgia'],
@@ -610,6 +686,8 @@ export default {
   cupsseven: {
     name: 'Seven of Cups',
     image: '7_Of_Cups.jpg',
+    number: 'seven',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['options', 'opportunities', 'temptation'],
@@ -624,6 +702,8 @@ export default {
   cupseight: {
     name: 'Eight of Cups',
     image: '8_Of_Cups.jpg',
+    number: 'eight',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['moving on', 'liberation', 'surrender'],
@@ -638,6 +718,8 @@ export default {
   cupsnine: {
     name: 'Nine of Cups',
     image: '9_Of_Cups.jpg',
+    number: 'nine',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['luxury', 'wealth', 'happy life'],
@@ -652,6 +734,8 @@ export default {
   cupsten: {
     name: 'Ten of Cups',
     image: '10_Of_Cups.jpg',
+    number: 'ten',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['happy home', 'family life', 'contentment'],
@@ -664,9 +748,10 @@ export default {
     }
   },
   cupspage: {
-    title: 'Page',
-    name: '%TITLE% of Cups',
+    name: 'Page of Cups',
     image: 'Page_Of_Cups.jpg',
+    number: 'Page',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['happy surprise', 'intuition', 'empath'],
@@ -679,9 +764,10 @@ export default {
     }
   },
   cupsknight: {
-    title: 'Knight',
-    name: '%TITLE% of Cups',
+    name: 'Knight of Cups',
     image: 'Knight_Of_Cups.jpg',
+    number: 'Knight',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['messenger', 'adventure', 'romance'],
@@ -694,9 +780,10 @@ export default {
     }
   },
   cupsqueen: {
-    title: 'Queen',
-    name: '%TITLE% of Cups',
+    name: 'Queen of Cups',
     image: 'Queen_Of_Cups.jpg',
+    number: 'Queen',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['nurturing feelings', 'calm', 'comfort'],
@@ -709,9 +796,10 @@ export default {
     }
   },
   cupsking: {
-    title: 'King',
-    name: '%TITLE% of Cups',
+    name: 'King of Cups',
     image: 'King_Of_Cups.jpg',
+    number: 'King',
+    suit: 'Cups',
     description: {
       upright: {
         keywords: ['control of feelings', 'balance', 'diplomatic'],
@@ -726,6 +814,8 @@ export default {
   swordsace: {
     name: 'Ace of Swords',
     image: 'Ace_Of_Swords.jpg',
+    number: 'one',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['sharp mindedness', 'mental breakthrough', 'new ideas'],
@@ -740,6 +830,8 @@ export default {
   swordstwo: {
     name: 'Two of Swords',
     image: '2_Of_Swords.jpg',
+    number: 'two',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['difficult choices', 'closed off', 'willfully blind'],
@@ -754,6 +846,8 @@ export default {
   swordsthree: {
     name: 'Three of Swords',
     image: '3_Of_Swords.jpg',
+    number: 'three',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['heartbreak', 'guilt', 'betrayal'],
@@ -768,6 +862,8 @@ export default {
   swordsfour: {
     name: 'Four of Swords',
     image: '4_Of_Swords.jpg',
+    number: 'four',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['rest', 'contemplation', 'taking a break'],
@@ -782,6 +878,8 @@ export default {
   swordsfive: {
     name: 'Five of Swords',
     image: '5_Of_Swords.jpg',
+    number: 'five',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['unchecked ambition', 'gaslighting', 'conflict'],
@@ -796,6 +894,8 @@ export default {
   swordssix: {
     name: 'Six of Swords',
     image: '6_Of_Swords.jpg',
+    number: 'six',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['moving on', 'transition', 'healing'],
@@ -810,6 +910,8 @@ export default {
   swordsseven: {
     name: 'Seven of Swords',
     image: '7_Of_Swords.jpg',
+    number: 'seven',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['sneakiness', 'theft', 'dishonesty'],
@@ -824,6 +926,8 @@ export default {
   swordseight: {
     name: 'Eight of Swords',
     image: '8_Of_Swords.jpg',
+    number: 'eight',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['self-entrapment', 'wallowing in fear', 'bondage'],
@@ -838,6 +942,8 @@ export default {
   swordsnine: {
     name: 'Nine of Swords',
     image: '9_Of_Swords.jpg',
+    number: 'nine',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['anxiety', 'sleepless nights', 'restless'],
@@ -852,6 +958,8 @@ export default {
   swordsten: {
     name: 'Ten of Swords',
     image: '10_Of_Swords.jpg',
+    number: 'ten',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['failure', 'backstabbing', 'betrayal'],
@@ -864,9 +972,10 @@ export default {
     }
   },
   swordspage: {
-    title: 'Page',
-    name: '%TITLE% of Swords',
+    name: 'Page of Swords',
     image: 'Page_Of_Swords.jpg',
+    number: 'Page',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['restless curiosity', 'mental energy', 'new ideas'],
@@ -879,9 +988,10 @@ export default {
     }
   },
   swordsknight: {
-    title: 'Knight',
-    name: '%TITLE% of Swords',
+    name: 'Knight of Swords',
     image: 'Knight_Of_Swords.jpg',
+    number: 'Knight',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['chaotic energy', 'ambition', 'fast decisions'],
@@ -894,9 +1004,10 @@ export default {
     }
   },
   swordsqueen: {
-    title: 'Queen',
-    name: '%TITLE% of Swords',
+    name: 'Queen of Swords',
     image: 'Queen_Of_Swords.jpg',
+    number: 'Queen',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['nurturing ideas', 'clear minded', 'clinical'],
@@ -909,9 +1020,10 @@ export default {
     }
   },
   swordsking: {
-    title: 'King',
-    name: '%TITLE% of Swords',
+    name: 'King of Swords',
     image: 'King_Of_Swords.jpg',
+    number: 'King',
+    suit: 'Swords',
     description: {
       upright: {
         keywords: ['logical', 'mental control', 'decisive'],
@@ -926,6 +1038,8 @@ export default {
   pentaclesace: {
     name: 'Ace of Pentacles',
     image: 'Ace_Of_Pentacles.jpg',
+    number: 'one',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['new opportunity', 'new job', 'new money'],
@@ -940,6 +1054,8 @@ export default {
   pentaclestwo: {
     name: 'Two of Pentacles',
     image: '2_Of_Pentacles.jpg',
+    number: 'two',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['balance', 'harmony', 'time management'],
@@ -954,6 +1070,8 @@ export default {
   pentaclesthree: {
     name: 'Three of Pentacles',
     image: '3_Of_Pentacles.jpg',
+    number: 'three',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['mastery', 'contracts', 'apprenticeship'],
@@ -968,6 +1086,8 @@ export default {
   pentaclesfour: {
     name: 'Four of Pentacles',
     image: '4_Of_Pentacles.jpg',
+    number: 'four',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['investment', 'security', 'scarcity'],
@@ -982,6 +1102,8 @@ export default {
   pentaclesfive: {
     name: 'Five of Pentacles',
     image: '5_Of_Pentacles.jpg',
+    number: 'five',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['isolation', 'poverty', 'need'],
@@ -996,6 +1118,8 @@ export default {
   pentaclessix: {
     name: 'Six of Pentacles',
     image: '6_Of_Pentacles.jpg',
+    number: 'six',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['generosity', 'sharing', 'helping'],
@@ -1010,6 +1134,8 @@ export default {
   pentaclesseven: {
     name: 'Seven of Pentacles',
     image: '7_Of_Pentacles.jpg',
+    number: 'seven',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['progress', 'harvest', 'results'],
@@ -1024,6 +1150,8 @@ export default {
   pentacleseight: {
     name: 'Eight of Pentacles',
     image: '8_Of_Pentacles.jpg',
+    number: 'eight',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['hustling', 'working hard', 'apprenticeship'],
@@ -1038,6 +1166,8 @@ export default {
   pentaclesnine: {
     name: 'Nine of Pentacles',
     image: '9_Of_Pentacles.jpg',
+    number: 'nine',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['luxury', 'happiness', 'earned wealth'],
@@ -1052,6 +1182,8 @@ export default {
   pentaclesten: {
     name: 'Ten of Pentacles',
     image: '10_Of_Pentacles.jpg',
+    number: 'ten',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['inheritance', 'legacy', 'family reunion'],
@@ -1064,9 +1196,10 @@ export default {
     }
   },
   pentaclespage: {
-    title: 'Page',
-    name: '%TITLE% of Pentacles',
+    name: 'Page of Pentacles',
     image: 'Page_Of_Pentacles.jpg',
+    number: 'Page',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['new job', 'student', 'apprentice'],
@@ -1079,9 +1212,10 @@ export default {
     }
   },
   pentaclesknight: {
-    title: 'Knight',
-    name: '%TITLE% of Pentacles',
+    name: 'Knight of Pentacles',
     image: 'Knight_Of_Pentacles.jpg',
+    number: 'Knight',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['hard work', 'routine', 'efficient'],
@@ -1094,9 +1228,10 @@ export default {
     }
   },
   pentaclesqueen: {
-    title: 'Queen',
-    name: '%TITLE% of Pentacles',
+    name: 'Queen of Pentacles',
     image: 'Queen_Of_Pentacles.jpg',
+    number: 'Queen',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['nurturing energy', 'creature comforts', 'caring', 'problem solver'],
@@ -1109,9 +1244,10 @@ export default {
     }
   },
   pentaclesking: {
-    title: 'King',
-    name: '%TITLE% of Pentacles',
+    name: 'King of Pentacles',
     image: 'King_Of_Pentacles.jpg',
+    number: 'King',
+    suit: 'Pentacles',
     description: {
       upright: {
         keywords: ['engineer', 'shared abundance', 'miracle worker'],
